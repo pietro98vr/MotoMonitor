@@ -105,7 +105,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\aggiorna_pages.ps1 -Uninst
 ```
 
 `-Install` registra un'attività in *Utilità di pianificazione* con avvio "al
-login". Se non vuoi che rigiri a ogni accesso ravvicinato, usa
+login" ed **esecuzione senza finestra** (tramite un piccolo lanciatore
+`run_hidden.vbs`): non vedrai alcuna shell all'avvio. Se non vuoi che rigiri a
+ogni accesso ravvicinato, usa
 `-MinIntervalHours 12` (salta se l'ultimo giro è più recente di 12 ore). Le
 esecuzioni vengono annotate in `pages_update.log`. Se lo script non pubblica
 nulla, di norma è perché non ci sono novità (nessun commit vuoto) o perché da IP

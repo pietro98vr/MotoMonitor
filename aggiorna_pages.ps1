@@ -46,16 +46,22 @@ function Write-Log {
     Write-Host $line
 }
 
-# ---- Installazione avvio automatico al login ----
+# ---- Installazione avvio automatico al login (finestra nascosta) ----
 if ($Install) {
+    # Lanciatore VBS: avvia PowerShell in finestra nascosta, senza alcun flash.
+    $vbsPath = Join-Path $PSScriptRoot "run_hidden.vbs"
     $psExe = (Get-Command powershell.exe).Source
-    $arg = '-NoProfile -ExecutionPolicy Bypass -File "{0}"' -f $PSCommandPath
-    $action = New-ScheduledTaskAction -Execute $psExe -Argument $arg -WorkingDirectory $PSScriptRoot
+    $cmd = '{0} -NoProfile -ExecutionPolicy Bypass -File ""{1}""' -f $psExe, $PSCommandPath
+    $vbs = 'CreateObject("WScript.Shell").Run "{0}", 0, False' -f $cmd
+    Set-Content -Path $vbsPath -Value $vbs -Encoding ASCII
+
+    $wscript = Join-Path $env:WINDIR "System32\wscript.exe"
+    $action = New-ScheduledTaskAction -Execute $wscript -Argument ('"{0}"' -f $vbsPath) -WorkingDirectory $PSScriptRoot
     $trigger = New-ScheduledTaskTrigger -AtLogOn
     $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 1)
     Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger -Settings $settings `
-        -Description "Aggiorna la pagina Moto Monitor su GitHub Pages a ogni accesso a Windows." -Force | Out-Null
-    Write-Host "OK: attivita' '$TaskName' registrata. Verra' eseguita a ogni accesso a Windows."
+        -Description "Aggiorna la pagina Moto Monitor su GitHub Pages a ogni accesso a Windows (finestra nascosta)." -Force | Out-Null
+    Write-Host "OK: attivita' '$TaskName' registrata (esecuzione senza finestra) a ogni accesso a Windows."
     Write-Host "Per rimuoverla: powershell -NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" -Uninstall"
     Write-Host "Se la registrazione fallisce per permessi, esegui PowerShell come amministratore."
     exit 0
@@ -63,6 +69,8 @@ if ($Install) {
 
 if ($Uninstall) {
     Unregister-ScheduledTask -TaskName $TaskName -Confirm:$false
+    $vbsPath = Join-Path $PSScriptRoot "run_hidden.vbs"
+    if (Test-Path $vbsPath) { Remove-Item $vbsPath -Force }
     Write-Host "OK: attivita' '$TaskName' rimossa."
     exit 0
 }
