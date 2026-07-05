@@ -1,0 +1,60 @@
+{
+  "searches": [
+    {
+      "id": "kawasaki-350-s2",
+      "name": "Kawasaki 350 S2",
+      "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
+      "price_max": 20000,
+      "subito_category": "moto-e-scooter",
+      "relevance_filter": true,
+      "queries": [
+        {"text": "kawasaki 350 s2", "label": "diretta", "enabled": true},
+        {"text": "kawasaki s2 350", "label": "invertita", "enabled": true},
+        {"text": "kawasaki s2", "label": "corta", "enabled": true},
+        {"text": "kawasaki 350 s2 conservata", "label": "conservata", "enabled": true},
+        {"text": "kawasaki 350 s2 restauro", "label": "restauro", "enabled": true}
+      ]
+    },
+    {
+      "id": "ktm-125-gs",
+      "name": "KTM 125 GS",
+      "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
+      "price_max": 12000,
+      "subito_category": "moto-e-scooter",
+      "relevance_filter": true,
+      "queries": [
+        {"text": "ktm 125 gs", "label": "diretta", "enabled": true},
+        {"text": "ktm gs 125", "label": "invertita", "enabled": true},
+        {"text": "ktm 125 gs restauro", "label": "restauro", "enabled": true}
+      ]
+    },
+    {
+      "id": "ktm-175-gs",
+      "name": "KTM 175 GS",
+      "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
+      "price_max": 12000,
+      "subito_category": "moto-e-scooter",
+      "relevance_filter": true,
+      "queries": [
+        {"text": "ktm 175 gs", "label": "diretta", "enabled": true},
+        {"text": "ktm gs 175", "label": "invertita", "enabled": true},
+        {"text": "ktm 175 gs conservata", "label": "conservata", "enabled": true}
+      ]
+    },
+    {
+      "id": "ricambi-kawasaki-s2",
+      "name": "Ricambi Kawasaki S2 (attrezzi / parafango / portachiavi)",
+      "portals": ["subito", "ebay", "ebay_de", "kleinanzeigen"],
+      "price_max": null,
+      "subito_category": "accessori-moto",
+      "relevance_filter": true,
+      "queries": [
+        {"text": "kawasaki s2 borsa attrezzi", "label": "borsa attrezzi", "enabled": true},
+        {"text": "kawasaki s2 kit attrezzi", "label": "kit attrezzi", "enabled": true},
+        {"text": "kawasaki s2 parafango posteriore", "label": "parafango", "enabled": true},
+        {"text": "portachiavi kawasaki originale", "label": "portachiavi", "enabled": true},
+        {"text": "kawasaki 56008", "label": "codice 56008", "enabled": true}
+      ]
+    }
+  ]
+}

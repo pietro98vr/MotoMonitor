@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Officina — Editor ricerche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9db; --card:#fbf8f1; --ink:#16302e; --ink-soft:#3f5a56;
+    --amber:#cc5b22; --amber-dark:#a8481a; --teal:#2c6e6a; --muted:#8a7f68;
+    --line:rgba(22,48,46,.14); --line-strong:rgba(22,48,46,.28); --danger:#a6362b;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; color:var(--ink); background:var(--paper);
+       font-family:Inter,system-ui,Arial,sans-serif; line-height:1.5;
+       background-image:radial-gradient(var(--line) 1px, transparent 1px); background-size:22px 22px}
+  .wrap{max-width:980px; margin:0 auto; padding:0 20px}
+  a{color:var(--teal)}
+
+  header{position:sticky; top:0; z-index:10;
+    background:linear-gradient(var(--paper), rgba(239,233,219,.92)); backdrop-filter:blur(4px);
+    border-bottom:1px solid var(--line-strong)}
+  .eyebrow{font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--teal); margin:0 0 4px}
+  h1{font-family:"Saira Condensed",sans-serif; font-weight:800; text-transform:uppercase;
+     letter-spacing:.01em; font-size:clamp(26px,4.4vw,40px); line-height:.95; margin:0}
+  h1 .amp{color:var(--amber)}
+  .head-row{display:flex; flex-wrap:wrap; align-items:flex-end; gap:8px 16px; padding:18px 0 10px}
+  .actions{margin-left:auto; display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+
+  button{font-family:"Space Mono",monospace; font-size:12px; cursor:pointer; border-radius:7px;
+    border:1px solid var(--line-strong); background:var(--card); color:var(--ink); padding:9px 12px; transition:.15s}
+  button:hover{border-color:var(--ink)}
+  button:disabled{opacity:.5; cursor:not-allowed}
+  button:focus-visible{outline:3px solid var(--amber); outline-offset:2px}
+  .btn-primary{background:var(--amber); border-color:var(--amber-dark); color:#fff; font-weight:700}
+  .btn-primary:hover{background:var(--amber-dark)}
+  .btn-ghost{background:transparent}
+  .btn-danger{color:var(--danger); border-color:rgba(166,54,43,.4)}
+  .btn-sm{padding:5px 9px; font-size:11px}
+  .linkbtn{background:transparent;border:1px solid var(--line-strong);border-radius:7px;padding:9px 12px;
+    font-family:"Space Mono",monospace;font-size:12px;color:var(--ink);text-decoration:none;display:inline-block}
+  .linkbtn:hover{border-color:var(--ink)}
+
+  main{padding:18px 0 60px}
+  .search-card{background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:16px; margin-bottom:16px; box-shadow:0 10px 24px -20px rgba(22,48,46,.5)}
+  .sc-top{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+  .name-in{flex:1 1 260px; font-family:"Saira Condensed",sans-serif; font-weight:700; text-transform:uppercase;
+    letter-spacing:.02em; font-size:20px; color:var(--ink); border:none; border-bottom:2px solid var(--line-strong);
+    background:transparent; padding:4px 2px; min-width:0}
+  .name-in:focus{outline:none; border-color:var(--amber)}
+
+  .row{display:flex; flex-wrap:wrap; gap:14px 22px; margin-top:14px; align-items:flex-end}
+  .field{display:flex; flex-direction:column; gap:4px}
+  .lab{font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+  input[type=text], input[type=number], select{
+    font-family:Inter,sans-serif; font-size:14px; color:var(--ink); background:#fff;
+    border:1px solid var(--line-strong); border-radius:7px; padding:8px 10px; min-width:0}
+  input:focus, select:focus{outline:none; border-color:var(--amber)}
+  input[type=number]{width:120px}
+
+  .portals{display:flex; flex-wrap:wrap; gap:8px}
+  .pchip{display:inline-flex; align-items:center; gap:6px; font-family:"Space Mono",monospace; font-size:12px;
+    border:1px solid var(--line-strong); border-radius:999px; padding:5px 11px; cursor:pointer; user-select:none; color:var(--ink-soft)}
+  .pchip input{accent-color:var(--amber)}
+  .pchip.on{border-color:var(--teal); color:var(--teal); background:rgba(44,110,106,.06)}
+
+  .toggle{display:inline-flex; align-items:center; gap:8px; font-family:"Space Mono",monospace; font-size:12px; cursor:pointer; user-select:none}
+  .toggle input{position:absolute; opacity:0; width:0; height:0}
+  .sw{width:34px; height:18px; border-radius:10px; background:var(--line-strong); position:relative; transition:.2s; flex:0 0 auto}
+  .sw::after{content:""; position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:50%; background:#fff; transition:.2s}
+  .toggle input:checked + .sw{background:var(--amber)}
+  .toggle input:checked + .sw::after{transform:translateX(16px)}
+
+  .strings{margin-top:16px; border-top:1px dashed var(--line-strong); padding-top:12px}
+  .strings h4{font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 8px; display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .count-note{color:var(--muted); text-transform:none; letter-spacing:0}
+  .qrow{display:grid; grid-template-columns:1fr 150px auto auto; gap:8px; align-items:center; margin-bottom:7px}
+  .qrow .qtext, .qrow .qlabel{width:100%}
+  .qrow .qlabel{font-family:"Space Mono",monospace; font-size:12px}
+  @media (max-width:620px){
+    .qrow{grid-template-columns:1fr auto auto}
+    .qrow .qlabel{grid-column:1 / -1; order:5}
+  }
+  .string-actions{display:flex; gap:8px; margin-top:8px; flex-wrap:wrap}
+
+  .banner{background:rgba(204,91,34,.12); border:1px solid var(--amber); color:var(--amber-dark);
+    font-family:"Space Mono",monospace; font-size:12px; padding:8px 12px; border-radius:8px; margin:8px 0 12px}
+  .tokenbar{font-family:"Space Mono",monospace; font-size:11px; color:var(--muted); display:flex; align-items:center; gap:8px; margin-top:6px; flex-wrap:wrap}
+  .tokenbar input{width:180px; padding:5px 8px; font-size:12px}
+  .runbox{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .spinner{width:14px; height:14px; border:2px solid var(--line-strong); border-top-color:var(--amber);
+    border-radius:50%; animation:spin .8s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  .toast{position:fixed; bottom:20px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--ink); color:var(--paper); font-family:"Space Mono",monospace; font-size:13px;
+    padding:11px 16px; border-radius:9px; box-shadow:0 12px 30px -12px rgba(0,0,0,.5); opacity:0;
+    transition:.25s; pointer-events:none; z-index:50; max-width:90vw; text-align:center}
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+  @media (prefers-reduced-motion:reduce){ .spinner{animation:none} .toast{transition:none} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.24.4/babel.min.js" crossorigin></script>
+
+  <script type="text/babel" data-presets="react">
+  const { useState, useEffect, useCallback, useMemo, useRef, memo } = React;
+
+  // ---- utilita' (definite una volta, non ricreate nei render) ----
+  let _c = 0;
+  const uid = () => Date.now().toString(36) + (_c++).toString(36);
+  const CTX = ['conservata', 'restauro', 'originale', "d'epoca"];
+
+  function expand(base) {
+    const out = [], seen = {};
+    const add = (q) => { q = q.replace(/\s+/g, ' ').trim().toLowerCase(); if (q && !seen[q]) { seen[q] = 1; out.push(q); } };
+    add(base);
+    const t = base.split(' ');
+    for (let i = 0; i < t.length - 1; i++) { const s = t.slice(); const tmp = s[i]; s[i] = s[i + 1]; s[i + 1] = tmp; add(s.join(' ')); }
+    CTX.forEach(s => add(base + ' ' + s));
+    return out;
+  }
+
+  const SAMPLE_PORTALS = [
+    { id: 'subito', label: 'Subito' }, { id: 'ebay', label: 'eBay' },
+    { id: 'ebay_de', label: 'eBay.de' }, { id: 'mobile_de', label: 'Mobile.de' },
+    { id: 'kleinanzeigen', label: 'Kleinanzeigen' }
+  ];
+  const SAMPLE_SEARCHES = [
+    { name: 'Kawasaki 350 S2', portals: ['subito', 'ebay', 'ebay_de', 'mobile_de', 'kleinanzeigen'], subito_category: 'moto-e-scooter', price_max: 20000, relevance_filter: true,
+      queries: [{ text: 'kawasaki 350 s2', label: 'diretta', enabled: true }, { text: 'kawasaki s2 350', label: 'invertita', enabled: true }, { text: 'kawasaki s2', label: 'corta', enabled: true }] },
+    { name: 'KTM 175 GS', portals: ['subito', 'ebay', 'mobile_de', 'kleinanzeigen'], subito_category: 'moto-e-scooter', price_max: 12000, relevance_filter: true,
+      queries: [{ text: 'ktm 175 gs', label: 'diretta', enabled: true }, { text: 'ktm gs 175', label: 'invertita', enabled: true }] },
+    { name: 'Ricambi Kawasaki S2', portals: ['subito', 'ebay', 'ebay_de', 'kleinanzeigen'], subito_category: 'accessori-moto', price_max: null, relevance_filter: true,
+      queries: [{ text: 'kawasaki s2 borsa attrezzi', label: 'borsa attrezzi', enabled: true }, { text: 'portachiavi kawasaki originale', label: 'portachiavi', enabled: true }] }
+  ];
+
+  const normalize = (searches) => (searches || []).map(s => ({
+    id: s.id || uid(),
+    name: s.name || '',
+    portals: s.portals || [],
+    subito_category: s.subito_category || 'moto-e-scooter',
+    price_max: s.price_max != null ? s.price_max : '',
+    relevance_filter: s.relevance_filter !== false,
+    queries: (s.queries || []).map(q => ({ _id: uid(), text: q.text || '', label: q.label || '', enabled: q.enabled !== false }))
+  }));
+
+  // ---- Riga stringa (memoizzata) ----
+  const QueryRow = memo(function QueryRow({ sid, q, onChange, onRemove }) {
+    return (
+      <div className="qrow">
+        <input className="qtext" type="text" value={q.text} placeholder="es. kawasaki 350 s2"
+               onChange={e => onChange(sid, q._id, { text: e.target.value })} />
+        <input className="qlabel" type="text" value={q.label} placeholder="etichetta (es. invertita)"
+               onChange={e => onChange(sid, q._id, { label: e.target.value })} />
+        <label className="toggle" title="attiva/disattiva">
+          <input type="checkbox" checked={q.enabled} onChange={e => onChange(sid, q._id, { enabled: e.target.checked })} />
+          <span className="sw"></span>
+        </label>
+        <button className="btn-danger btn-sm" title="Rimuovi stringa" onClick={() => onRemove(sid, q._id)}>✕</button>
+      </div>
+    );
+  });
+
+  // ---- Scheda ricerca (memoizzata: si ri-renderizza solo quella modificata) ----
+  const SearchCard = memo(function SearchCard({ s, portals, categories, on }) {
+    const activeQ = s.queries.filter(q => q.enabled).length;
+    const cats = categories.includes(s.subito_category) || !s.subito_category ? categories : categories.concat(s.subito_category);
+    return (
+      <div className="search-card">
+        <div className="sc-top">
+          <input className="name-in" type="text" value={s.name} placeholder="Nome ricerca"
+                 onChange={e => on.update(s.id, { name: e.target.value })} />
+          <button className="btn-danger btn-sm" onClick={() => on.remove(s.id)}>Elimina ricerca</button>
+        </div>
+
+        <div className="row">
+          <div className="field" style={{ flex: '1 1 260px' }}>
+            <span className="lab">Portali</span>
+            <div className="portals">
+              {portals.map(p => {
+                const onp = s.portals.includes(p.id);
+                return (
+                  <label key={p.id} className={'pchip' + (onp ? ' on' : '')}>
+                    <input type="checkbox" checked={onp} onChange={() => on.togglePortal(s.id, p.id)} /> {p.label}
+                  </label>
+                );
+              })}
+            </div>
+          </div>
+          <div className="field">
+            <span className="lab">Categoria Subito</span>
+            <select value={s.subito_category} onChange={e => on.update(s.id, { subito_category: e.target.value })}>
+              {cats.map(c => <option key={c} value={c}>{c}</option>)}
+            </select>
+          </div>
+          <div className="field">
+            <span className="lab">Prezzo max (€)</span>
+            <input type="number" min="0" step="100" value={s.price_max} placeholder="—"
+                   onChange={e => on.update(s.id, { price_max: e.target.value })} />
+          </div>
+          <div className="field">
+            <span className="lab">Filtro pertinenza</span>
+            <label className="toggle">
+              <input type="checkbox" checked={s.relevance_filter} onChange={e => on.update(s.id, { relevance_filter: e.target.checked })} />
+              <span className="sw"></span> attivo
+            </label>
+          </div>
+        </div>
+
+        <div className="strings">
+          <h4>Stringhe di ricerca <span className="count-note">· {s.queries.length} stringhe, {activeQ} attive</span></h4>
+          <div>
+            {s.queries.map(q => (
+              <QueryRow key={q._id} sid={s.id} q={q} onChange={on.updateQuery} onRemove={on.removeQuery} />
+            ))}
+          </div>
+          <div className="string-actions">
+            <button className="btn-sm" onClick={() => on.addQuery(s.id)}>+ Aggiungi stringa</button>
+            <button className="btn-sm btn-ghost" onClick={() => on.genVariants(s.id)}>Proponi varianti</button>
+          </div>
+        </div>
+      </div>
+    );
+  });
+
+  // ---- App ----
+  function App() {
+    const [searches, setSearches] = useState([]);
+    const [portals, setPortals] = useState([]);
+    const [categories, setCategories] = useState(['moto-e-scooter', 'accessori-moto']);
+    const [offline, setOffline] = useState(false);
+    const [running, setRunning] = useState(false);
+    const [lastRun, setLastRun] = useState(null);
+    const [notify, setNotify] = useState(false);
+    const [token, setToken] = useState('');
+    const [toast, setToast] = useState('');
+    const toastTimer = useRef(null);
+    const pollTimer = useRef(null);
+
+    const showToast = useCallback((msg) => {
+      setToast(msg);
+      clearTimeout(toastTimer.current);
+      toastTimer.current = setTimeout(() => setToast(''), 2600);
+    }, []);
+
+    const headers = useCallback(() => {
+      const h = { 'Content-Type': 'application/json' };
+      if (token.trim()) h['X-Token'] = token.trim();
+      return h;
+    }, [token]);
+
+    const refreshStatus = useCallback(() => {
+      fetch('/api/status').then(r => r.json()).then(st => { if (st.last_run) setLastRun(st.last_run); }).catch(() => {});
+    }, []);
+
+    useEffect(() => {
+      Promise.all([
+        fetch('/api/portals').then(r => { if (!r.ok) throw 0; return r.json(); }),
+        fetch('/api/searches').then(r => { if (!r.ok) throw 0; return r.json(); })
+      ]).then(([p, s]) => {
+        setPortals(p.portals || SAMPLE_PORTALS);
+        setCategories(p.subito_categories || ['moto-e-scooter', 'accessori-moto']);
+        setSearches(normalize(s.searches));
+        refreshStatus();
+      }).catch(() => {
+        setOffline(true);
+        setPortals(SAMPLE_PORTALS);
+        setSearches(normalize(SAMPLE_SEARCHES));
+      });
+    }, [refreshStatus]);
+
+    // Handlers stabili (functional setState → nessuna dipendenza da searches)
+    const update = useCallback((id, patch) => setSearches(prev => prev.map(s => s.id === id ? { ...s, ...patch } : s)), []);
+    const remove = useCallback((id) => setSearches(prev => prev.filter(s => s.id !== id)), []);
+    const togglePortal = useCallback((id, pid) => setSearches(prev => prev.map(s => {
+      if (s.id !== id) return s;
+      const has = s.portals.includes(pid);
+      return { ...s, portals: has ? s.portals.filter(x => x !== pid) : [...s.portals, pid] };
+    })), []);
+    const addQuery = useCallback((id) => setSearches(prev => prev.map(s => s.id === id
+      ? { ...s, queries: [...s.queries, { _id: uid(), text: '', label: '', enabled: true }] } : s)), []);
+    const updateQuery = useCallback((id, qid, patch) => setSearches(prev => prev.map(s => s.id === id
+      ? { ...s, queries: s.queries.map(q => q._id === qid ? { ...q, ...patch } : q) } : s)), []);
+    const removeQuery = useCallback((id, qid) => setSearches(prev => prev.map(s => s.id === id
+      ? { ...s, queries: s.queries.filter(q => q._id !== qid) } : s)), []);
+    const genVariants = useCallback((id) => setSearches(prev => prev.map(s => {
+      if (s.id !== id) return s;
+      const base = (s.queries[0] && s.queries[0].text.trim()) || s.name.trim();
+      if (!base) { showToast('Scrivi prima una stringa o un nome'); return s; }
+      const existing = new Set(s.queries.map(q => q.text.trim().toLowerCase()));
+      const add = expand(base).filter(v => !existing.has(v)).map(v => ({ _id: uid(), text: v, label: 'auto', enabled: true }));
+      showToast(add.length ? ('Aggiunte ' + add.length + ' varianti') : 'Nessuna nuova variante');
+      return { ...s, queries: [...s.queries, ...add] };
+    })), [showToast]);
+
+    const on = useMemo(() => ({ update, remove, togglePortal, addQuery, updateQuery, removeQuery, genVariants }),
+      [update, remove, togglePortal, addQuery, updateQuery, removeQuery, genVariants]);
+
+    const addSearch = useCallback(() => {
+      setSearches(prev => [...prev, {
+        id: uid(), name: 'Nuova ricerca', portals: SAMPLE_PORTALS.map(p => p.id),
+        subito_category: 'moto-e-scooter', price_max: '', relevance_filter: true,
+        queries: [{ _id: uid(), text: '', label: '', enabled: true }]
+      }]);
+      setTimeout(() => window.scrollTo(0, document.body.scrollHeight), 0);
+    }, []);
+
+    const payload = useCallback(() => ({
+      searches: searches.map(s => ({
+        id: s.id, name: s.name.trim(), portals: s.portals, subito_category: s.subito_category,
+        price_max: s.price_max === '' || s.price_max == null ? null : Number(s.price_max),
+        relevance_filter: s.relevance_filter,
+        queries: s.queries.filter(q => q.text.trim()).map(q => ({ text: q.text.trim(), label: q.label.trim(), enabled: q.enabled }))
+      })).filter(s => s.name)
+    }), [searches]);
+
+    const save = useCallback(() => {
+      return fetch('/api/searches', { method: 'PUT', headers: headers(), body: JSON.stringify(payload()) })
+        .then(r => r.json().then(j => ({ ok: r.ok, j })))
+        .then(res => { showToast(res.ok ? ('Salvate ' + res.j.count + ' ricerche') : ('Errore: ' + (res.j.error || ''))); return res.ok; })
+        .catch(() => { showToast('Errore di rete nel salvataggio'); return false; });
+    }, [headers, payload, showToast]);
+
+    const poll = useCallback(() => {
+      setRunning(true);
+      clearInterval(pollTimer.current);
+      pollTimer.current = setInterval(() => {
+        fetch('/api/status').then(r => r.json()).then(st => {
+          if (!st.running) {
+            clearInterval(pollTimer.current);
+            setRunning(false);
+            if (st.error) showToast('Errore esecuzione: ' + st.error);
+            else if (st.summary) showToast('Fatto: ' + st.summary.total_current + ' attivi, ' + st.summary.total_new + ' nuovi');
+            refreshStatus();
+          }
+        }).catch(() => { clearInterval(pollTimer.current); setRunning(false); });
+      }, 1500);
+    }, [showToast, refreshStatus]);
+
+    const run = useCallback(() => {
+      save().then(ok => {
+        if (ok === false) return;
+        return fetch('/api/run', { method: 'POST', headers: headers(), body: JSON.stringify({ notify }) })
+          .then(r => r.json())
+          .then(j => { if (j.started) { showToast('Esecuzione avviata…'); poll(); } else { showToast('Errore: ' + (j.error || '')); } });
+      }).catch(() => showToast('Errore di rete'));
+    }, [save, headers, notify, showToast, poll]);
+
+    return (
+      <React.Fragment>
+        <header>
+          <div className="wrap">
+            <div className="head-row">
+              <div>
+                <p className="eyebrow">Configurazione · fonte unica delle ricerche</p>
+                <h1>Editor <span className="amp">·</span> Ricerche</h1>
+              </div>
+              <div className="actions">
+                <div className="runbox">
+                  <label className="toggle">
+                    <input type="checkbox" checked={notify} onChange={e => setNotify(e.target.checked)} />
+                    <span className="sw"></span> invia e-mail
+                  </label>
+                  {running ? <span className="spinner" aria-label="in corso"></span> : null}
+                  <button className="btn-ghost" onClick={run} disabled={running}>Esegui ora</button>
+                </div>
+                <a className="linkbtn" href="/view" target="_blank" rel="noopener">Apri vista annunci ↗</a>
+                <button className="btn-primary" onClick={save}>Salva ricerche</button>
+              </div>
+            </div>
+            {offline
+              ? <div className="banner">Anteprima non collegata al server: le modifiche non verranno salvate. Avvia <b>python server.py</b> e apri http://127.0.0.1:8000</div>
+              : null}
+            <div className="tokenbar">
+              <span>token (solo se il server è protetto):</span>
+              <input type="text" placeholder="X-Token" autoComplete="off" value={token} onChange={e => setToken(e.target.value)} />
+              {lastRun ? <span>· ultimo giro: {lastRun.replace('T', ' ')}</span> : null}
+            </div>
+          </div>
+        </header>
+
+        <main className="wrap">
+          {searches.map(s => <SearchCard key={s.id} s={s} portals={portals} categories={categories} on={on} />)}
+          <button className="btn-ghost" onClick={addSearch}>+ Aggiungi ricerca</button>
+        </main>
+
+        <div className={'toast' + (toast ? ' show' : '')}>{toast}</div>
+      </React.Fragment>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

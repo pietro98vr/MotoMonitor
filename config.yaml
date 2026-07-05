@@ -1,0 +1,75 @@
+# =====================================================================
+#  Moto Monitor — configurazione
+#  Modifica liberamente: aggiungi/rimuovi "watches", cambia le parole
+#  chiave o i portali. Ogni "watch" diventa piu' ricerche automatiche.
+# =====================================================================
+
+# ---- Portali attivi ----
+# Attiva/disattiva un portale per tutte le ricerche. Nell'editor web puoi poi
+# scegliere per ogni singola ricerca su quali di questi cercare.
+portals:
+  subito: true          # Italia — portale principale
+  ebay: true            # eBay.it — utile per i ricambi
+  ebay_de: true         # eBay.de — ricambi dal mercato tedesco (Kawasaki S2)
+  mobile_de: true       # Mobile.de — usato d'epoca (Germania). Best-effort, vedi README
+  kleinanzeigen: true   # Kleinanzeigen.de — annunci tedeschi, moto e ricambi. Best-effort
+
+ebay_domain: "www.ebay.it"
+
+# ---- Comportamento ----
+request_delay_seconds: 3       # pausa tra una richiesta e l'altra (buona educazione verso i portali)
+notify_email: true             # invia il riepilogo via e-mail
+notify_telegram: false         # in alternativa/aggiunta, invia su Telegram
+notify_when_empty: false       # true = ricevi il messaggio anche se non ci sono novita'
+
+# ---- Web app (docs/index.html) ----
+webapp_title: "Officina — Monitor annunci"
+webapp_subtitle: "Annunci aggregati di moto d'epoca e ricambi"
+
+# ---- Server locale (server.py) ----
+server_host: "127.0.0.1"   # solo il tuo computer. Metti "0.0.0.0" per esporlo in rete (vedi README).
+server_port: 8000
+
+# NOTA: le RICERCHE ora vivono in searches.json (modificabile dall'interfaccia web).
+# I 'watches' qui sotto servono solo a creare searches.json al primo avvio, se manca.
+
+# ---- Ricerche ----
+# keywords  = termini base; il programma genera da solo le varianti
+# synonyms  = termini di contesto aggiunti alla prima keyword (es. "conservata")
+# price_max = filtro prezzo massimo in euro (facoltativo)
+watches:
+  - name: "Kawasaki 350 S2"
+    keywords: ["kawasaki 350 s2", "kawasaki s2 350", "kawasaki s2"]
+    synonyms: ["conservata", "restauro", "d'epoca", "originale"]
+    subito_category: "moto-e-scooter"
+    price_max: 20000
+
+  - name: "KTM 125 GS"
+    keywords: ["ktm 125 gs", "ktm gs 125"]
+    synonyms: ["restauro", "conservata"]
+    subito_category: "moto-e-scooter"
+    price_max: 12000
+
+  - name: "KTM 175 GS"
+    keywords: ["ktm 175 gs", "ktm gs 175"]
+    synonyms: ["restauro", "conservata", "originale"]
+    subito_category: "moto-e-scooter"
+    price_max: 12000
+
+  - name: "Ricambi Kawasaki S2 (attrezzi / parafango / portachiavi)"
+    keywords:
+      - "kawasaki s2 borsa attrezzi"
+      - "kawasaki s2 kit attrezzi"
+      - "kawasaki s2 parafango posteriore"
+      - "portachiavi kawasaki originale"
+    subito_category: "accessori-moto"
+    relevance_filter: true
+
+# ---- Recapiti (meglio impostarli come "secrets", NON qui in chiaro) ----
+# I valori qui sotto sono usati solo se le variabili d'ambiente non esistono.
+mail_to: ""            # es. "tuo.indirizzo@email.it"  (destinatario del riepilogo)
+smtp_host: ""          # es. "smtp.gmail.com"
+smtp_port: 587
+smtp_user: ""          # es. "tuo.indirizzo@gmail.com"  (la password va in SMTP_PASS)
+telegram_token: ""     # token del bot (facoltativo)
+telegram_chat_id: ""   # id chat Telegram (facoltativo)

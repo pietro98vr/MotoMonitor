@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Officina — Monitor annunci</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#efe9db; --paper-2:#e7e0cf; --card:#fbf8f1;
+    --ink:#16302e; --ink-soft:#3f5a56;
+    --amber:#cc5b22; --amber-dark:#a8481a; --teal:#2c6e6a; --muted:#8a7f68;
+    --line:rgba(22,48,46,.14); --line-strong:rgba(22,48,46,.28);
+    --shadow:0 1px 0 rgba(22,48,46,.05), 0 10px 24px -18px rgba(22,48,46,.45);
+    --safe: env(safe-area-inset-bottom, 0px);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0; color:var(--ink); background:var(--paper);
+    font-family:Inter,system-ui,Arial,sans-serif; line-height:1.5;
+    background-image:radial-gradient(var(--line) 1px, transparent 1px); background-size:22px 22px;
+    -webkit-tap-highlight-color:transparent}
+  a{color:inherit}
+  .wrap{max-width:1200px; margin:0 auto; padding:0 clamp(14px,4vw,20px)}
+
+  /* ---- Header ---- */
+  header{position:sticky; top:0; z-index:20;
+    background:linear-gradient(var(--paper), rgba(239,233,219,.94));
+    backdrop-filter:saturate(1.1) blur(6px); border-bottom:1px solid var(--line-strong)}
+  .eyebrow{font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--teal); margin:0 0 4px}
+  .masthead{display:flex; flex-wrap:wrap; align-items:flex-end; gap:6px 18px; padding:16px 0 4px}
+  h1{font-family:"Saira Condensed",sans-serif; font-weight:800; letter-spacing:.01em;
+    text-transform:uppercase; font-size:clamp(28px,6vw,46px); line-height:.95; margin:0}
+  h1 .amp{color:var(--amber)}
+  .subtitle{color:var(--ink-soft); font-size:14px; margin:2px 0 0}
+  .summary{font-family:"Space Mono",monospace; font-size:12px; color:var(--muted); margin-left:auto; white-space:nowrap; align-self:center}
+  .summary b{color:var(--amber-dark)}
+  @media (max-width:640px){ .summary{margin-left:0; width:100%; align-self:auto} }
+
+  /* ---- Toolbar ---- */
+  .toolbar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px 0 10px}
+  .search{flex:1 1 240px; position:relative; min-width:180px}
+  .search input{width:100%; padding:10px 34px 10px 34px; border:1px solid var(--line-strong);
+    border-radius:8px; background:var(--card); color:var(--ink); font-family:Inter,sans-serif; font-size:15px}
+  .search input:focus{outline:none; border-color:var(--amber)}
+  .search .ico{position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:.5; pointer-events:none}
+  .search .clear{position:absolute; right:6px; top:50%; transform:translateY(-50%); border:none; background:transparent;
+    color:var(--muted); font-size:16px; cursor:pointer; padding:6px; line-height:1; border-radius:6px}
+  .search .clear:hover{color:var(--ink)}
+  .ctrl{font-family:"Space Mono",monospace; font-size:12px; color:var(--ink);
+    border:1px solid var(--line-strong); background:var(--card); border-radius:8px; padding:10px 12px; min-height:42px}
+  select.ctrl{cursor:pointer}
+  .toggle{display:inline-flex; align-items:center; gap:8px; user-select:none; cursor:pointer}
+  .toggle input{position:absolute; opacity:0; width:0; height:0}
+  .sw{width:34px; height:18px; border-radius:10px; background:var(--line-strong); position:relative; transition:background .2s; flex:0 0 auto}
+  .sw::after{content:""; position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:50%; background:#fff; transition:transform .2s}
+  .toggle input:checked + .sw{background:var(--amber)}
+  .toggle input:checked + .sw::after{transform:translateX(16px)}
+  @media (max-width:520px){
+    .search{flex-basis:100%}
+    .toggle.ctrl{flex:1 1 auto; justify-content:center}
+    select.ctrl{flex:1 1 auto}
+  }
+
+  /* ---- Tabs ---- */
+  nav.index{display:flex; gap:8px; overflow-x:auto; padding:2px 0 14px; scrollbar-width:thin; -webkit-overflow-scrolling:touch; scroll-snap-type:x proximity}
+  nav.index::-webkit-scrollbar{height:6px}
+  nav.index::-webkit-scrollbar-thumb{background:var(--line-strong); border-radius:3px}
+  .tab{flex:0 0 auto; scroll-snap-align:start; display:inline-flex; align-items:center; gap:8px;
+    padding:8px 13px; border:1px solid var(--line-strong); border-radius:999px; background:transparent;
+    color:var(--ink-soft); cursor:pointer; font-size:13px; font-weight:600; white-space:nowrap; transition:.15s; min-height:38px}
+  .tab .cnt{font-family:"Space Mono",monospace; font-size:11px; color:var(--muted)}
+  .tab .newdot{font-family:"Space Mono",monospace; font-size:10px; font-weight:700; color:#fff; background:var(--amber); border-radius:999px; padding:1px 6px}
+  .tab:hover{border-color:var(--ink); color:var(--ink)}
+  .tab[aria-selected="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  .tab[aria-selected="true"] .cnt{color:rgba(239,233,219,.7)}
+  .tab:focus-visible{outline:3px solid var(--amber); outline-offset:2px}
+
+  .resultbar{font-family:"Space Mono",monospace; font-size:12px; color:var(--muted); padding:4px 0 14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+  .resultbar .reset{border:none; background:transparent; color:var(--teal); font-family:inherit; font-size:12px; cursor:pointer; text-decoration:underline; padding:0}
+
+  /* ---- Grid + cards ---- */
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(258px,1fr)); gap:18px; padding-bottom:calc(48px + var(--safe))}
+  .card{display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line);
+    border-radius:12px; overflow:hidden; text-decoration:none; box-shadow:var(--shadow);
+    transition:transform .18s, box-shadow .18s, border-color .18s}
+  @media (hover:hover){ .card:hover{transform:translateY(-3px); border-color:var(--line-strong); box-shadow:0 18px 34px -20px rgba(22,48,46,.5)} }
+  .card:active{transform:translateY(-1px)}
+  .card:focus-visible{outline:3px solid var(--amber); outline-offset:2px}
+  .thumb{position:relative; aspect-ratio:4/3; background:var(--paper-2); overflow:hidden}
+  .thumb img{width:100%; height:100%; object-fit:cover; display:block}
+  .noimg{width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:var(--muted);
+    font-family:"Space Mono",monospace; font-size:12px; letter-spacing:.08em;
+    background-image:repeating-linear-gradient(45deg, rgba(22,48,46,.05) 0 8px, transparent 8px 16px)}
+  .stamp{position:absolute; top:10px; left:10px; transform:rotate(-7deg);
+    font-family:"Saira Condensed",sans-serif; font-weight:800; letter-spacing:.06em; font-size:13px;
+    color:var(--amber); text-transform:uppercase; border:2px solid var(--amber); border-radius:4px;
+    padding:2px 7px; background:rgba(251,248,241,.85); box-shadow:0 1px 0 rgba(168,72,26,.25)}
+  .body{padding:12px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1}
+  .ttl{font-weight:600; font-size:14.5px; color:var(--ink); line-height:1.32;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+  .price{font-family:"Space Mono",monospace; font-weight:700; font-size:15px; color:var(--amber-dark)}
+  .foot{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:8px; padding-top:4px}
+  .chip{font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--teal); border:1px solid var(--teal); border-radius:5px; padding:2px 6px; flex:0 0 auto}
+  .loc{font-size:12.5px; color:var(--ink-soft); display:flex; align-items:center; gap:4px; min-width:0}
+  .loc span{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .meta{font-family:"Space Mono",monospace; font-size:11px; color:var(--muted); display:flex; flex-direction:column; gap:2px}
+
+  .empty{grid-column:1/-1; text-align:center; padding:56px 20px; color:var(--ink-soft)}
+  .empty h3{font-family:"Saira Condensed",sans-serif; text-transform:uppercase; letter-spacing:.02em; font-size:22px; margin:0 0 6px}
+
+  footer{border-top:1px solid var(--line-strong); padding:16px 0 calc(40px + var(--safe)); color:var(--muted);
+    font-size:12px; font-family:"Space Mono",monospace; display:flex; flex-wrap:wrap; gap:6px 16px; justify-content:space-between}
+
+  @media (max-width:560px){ .grid{grid-template-columns:1fr 1fr; gap:12px} .ttl{font-size:13.5px} .stamp{font-size:12px} }
+  @media (max-width:390px){ .grid{grid-template-columns:1fr} }
+
+  @keyframes rise{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
+  .card.enter{animation:rise .36s ease both}
+  @media (prefers-reduced-motion:reduce){ .card{transition:none} .card.enter{animation:none} }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script id="moto-data" type="application/json">{"generated_at": "2026-07-01T11:24:17", "title": "Officina — Monitor annunci", "subtitle": "Annunci aggregati di moto d'epoca e ricambi (anteprima con dati di esempio)", "total_current": 8, "total_new": 5, "watches": [{"name": "Kawasaki 350 S2", "current": 3, "new": 2, "items": [{"title": "Kawasaki 350 S2 del 1972, conservata e targhata ASI", "price": "9.500 €", "location": "Verona", "url": "https://www.subito.it/", "portal": "Subito", "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzdhNWMxZSIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMDIyIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyMCIgY3k9IjIwNSIgcj0iNDYiLz48Y2lyY2xlIGN4PSIzMDAiIGN5PSIyMDUiIHI9IjQ2Ii8+PHBhdGggZD0iTTEyMCAyMDUgTDE5NSAyMDUgTDIyNSAxNTAgTDI4NSAxNTAgTTIyNSAxNTAgTDI1NSAyMDUiLz48L2c+PHRleHQgeD0iMjAwIiB5PSI0NiIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxOCIgZmlsbD0iI2ZmZmZmZmNjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5LQVdBU0FLSSBTMjwvdGV4dD48L3N2Zz4=", "first_seen": "2026-07-01T11:24:17", "is_new": true, "via": "diretta · Subito"}, {"title": "Kawasaki S2 350 Oldtimer, restauriert", "price": "8.900 EUR", "location": "München (DE)", "url": "https://www.subito.it/", "portal": "Mobile.de", "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzNhNGE1YSIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMDIyIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyMCIgY3k9IjIwNSIgcj0iNDYiLz48Y2lyY2xlIGN4PSIzMDAiIGN5PSIyMDUiIHI9IjQ2Ii8+PHBhdGggZD0iTTEyMCAyMDUgTDE5NSAyMDUgTDIyNSAxNTAgTDI4NSAxNTAgTTIyNSAxNTAgTDI1NSAyMDUiLz48L2c+PHRleHQgeD0iMjAwIiB5PSI0NiIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxOCIgZmlsbD0iI2ZmZmZmZmNjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NT0JJTEUuREU8L3RleHQ+PC9zdmc+", "first_seen": "2026-07-01T11:24:17", "is_new": true, "via": "invertita · Mobile.de"}, {"title": "Kawasaki S2 350 progetto restauro, motore completo", "price": "4.200 €", "location": "Bologna", "url": "https://www.subito.it/", "portal": "Subito", "image": "", "first_seen": "2026-06-25T11:24:17", "is_new": false, "via": "corta · Subito"}]}, {"name": "KTM 125 GS", "current": 1, "new": 1, "items": [{"title": "KTM 125 GS 1974 Sachs, restauro completo", "price": "5.400 €", "location": "Modena", "url": "https://www.subito.it/", "portal": "Subito", "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iI2I1NjUxZCIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMDIyIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyMCIgY3k9IjIwNSIgcj0iNDYiLz48Y2lyY2xlIGN4PSIzMDAiIGN5PSIyMDUiIHI9IjQ2Ii8+PHBhdGggZD0iTTEyMCAyMDUgTDE5NSAyMDUgTDIyNSAxNTAgTDI4NSAxNTAgTTIyNSAxNTAgTDI1NSAyMDUiLz48L2c+PHRleHQgeD0iMjAwIiB5PSI0NiIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxOCIgZmlsbD0iI2ZmZmZmZmNjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5LVE0gMTI1IEdTPC90ZXh0Pjwvc3ZnPg==", "first_seen": "2026-07-01T11:24:17", "is_new": true, "via": "diretta · Subito"}]}, {"name": "KTM 175 GS", "current": 1, "new": 0, "items": [{"title": "KTM 175 GS Enduro, konserviert", "price": "3.700 EUR", "location": "Wien", "url": "https://www.subito.it/", "portal": "Kleinanzeigen", "image": "", "first_seen": "2026-06-25T11:24:17", "is_new": false, "via": "diretta · Kleinanzeigen"}]}, {"name": "Ricambi Kawasaki S2 (attrezzi / parafango / portachiavi)", "current": 3, "new": 2, "items": [{"title": "Kawasaki S2 Schutzblech hinten original", "price": "120,00 EUR", "location": "Köln (DE)", "url": "https://www.subito.it/", "portal": "eBay.de", "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgZmlsbD0iIzJjNmU2YSIvPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMDIyIiBzdHJva2Utd2lkdGg9IjIiPjxjaXJjbGUgY3g9IjEyMCIgY3k9IjIwNSIgcj0iNDYiLz48Y2lyY2xlIGN4PSIzMDAiIGN5PSIyMDUiIHI9IjQ2Ii8+PHBhdGggZD0iTTEyMCAyMDUgTDE5NSAyMDUgTDIyNSAxNTAgTDI4NSAxNTAgTTIyNSAxNTAgTDI1NSAyMDUiLz48L2c+PHRleHQgeD0iMjAwIiB5PSI0NiIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgZm9udC1zaXplPSIxOCIgZmlsbD0iI2ZmZmZmZmNjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FQkFZLkRFPC90ZXh0Pjwvc3ZnPg==", "first_seen": "2026-07-01T11:24:17", "is_new": true, "via": "parafango · eBay.de"}, {"title": "Kawasaki S2 Werkzeugtasche original", "price": "45 €", "location": "München (DE)", "url": "https://www.subito.it/", "portal": "Kleinanzeigen", "image": "", "first_seen": "2026-07-01T11:24:17", "is_new": true, "via": "borsa attrezzi · Kleinanzeigen"}, {"title": "Portachiavi Kawasaki originale anni '70", "price": "25 €", "location": "Milano", "url": "https://www.subito.it/", "portal": "eBay", "image": "", "first_seen": "2026-06-25T11:24:17", "is_new": false, "via": "portachiavi · eBay"}]}]}</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.24.4/babel.min.js" crossorigin></script>
+
+  <script type="text/babel" data-presets="react">
+  const { useState, useMemo, memo } = React;
+
+  // ---- Dati (iniettati dal servizio; fallback di esempio se non popolato) ----
+  const SAMPLE = {
+    generated_at: new Date().toISOString(),
+    title: "Officina — Monitor annunci",
+    subtitle: "Annunci aggregati di moto d'epoca e ricambi (dati di esempio)",
+    total_current: 3, total_new: 2,
+    watches: [
+      { name: "Kawasaki 350 S2", current: 2, new: 1, items: [
+        { title: "Kawasaki 350 S2 del 1972, conservata e targhata", price: "9.500 €", location: "Verona", url: "#", portal: "Subito", image: "", first_seen: new Date().toISOString(), is_new: true, via: "diretta · Subito" },
+        { title: "Kawasaki S2 350 progetto restauro, motore completo", price: "4.200 €", location: "Bologna", url: "#", portal: "Subito", image: "", first_seen: new Date(Date.now() - 5 * 864e5).toISOString(), is_new: false, via: "invertita · Subito" }
+      ]},
+      { name: "KTM 175 GS", current: 1, new: 1, items: [
+        { title: "KTM 175 GS motore nero, conservata originale", price: "3.900 €", location: "Ragusa", url: "#", portal: "Subito", image: "", first_seen: new Date().toISOString(), is_new: true, via: "diretta · Subito" }
+      ]}
+    ]
+  };
+
+  let DATA;
+  try { DATA = JSON.parse(document.getElementById('moto-data').textContent.trim()); if (!DATA || !DATA.watches) DATA = SAMPLE; }
+  catch (e) { DATA = SAMPLE; }
+
+  const pad = (n) => (n < 10 ? '0' : '') + n;
+  const fmtDate = (iso) => { const d = new Date(iso); return isNaN(d) ? '' : pad(d.getDate()) + '/' + pad(d.getMonth() + 1) + '/' + d.getFullYear(); };
+  const fmtDateTime = (iso) => { const d = new Date(iso); return isNaN(d) ? '' : fmtDate(iso) + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()); };
+  const numPrice = (p) => { const s = String(p || '').replace(/\D/g, ''); return s ? parseInt(s, 10) : Number.MAX_SAFE_INTEGER; };
+
+  // ---- Immagine con fallback su errore di caricamento ----
+  function Thumb({ src, alt, isNew }) {
+    const [err, setErr] = useState(false);
+    return (
+      <div className="thumb">
+        {src && !err
+          ? <img loading="lazy" src={src} alt={alt} onError={() => setErr(true)} />
+          : <div className="noimg">senza foto</div>}
+        {isNew ? <div className="stamp">Nuovo</div> : null}
+      </div>
+    );
+  }
+
+  // ---- Scheda annuncio (memoizzata) ----
+  const Card = memo(function Card({ it, i }) {
+    const external = it.url && it.url !== '#';
+    return (
+      <a className="card enter" href={it.url || '#'} target={external ? '_blank' : undefined}
+         rel={external ? 'noopener' : undefined} style={{ animationDelay: Math.min(i * 26, 340) + 'ms' }}>
+        <Thumb src={it.image} alt={it.title} isNew={it.is_new} />
+        <div className="body">
+          <div className="ttl">{it.title}</div>
+          <div className="price">{it.price || 'n.d.'}</div>
+          <div className="foot">
+            {it.location
+              ? <span className="loc">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 21s-7-5.2-7-11a7 7 0 1 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  <span>{it.location}</span>
+                </span>
+              : <span />}
+            <span className="chip">{it.portal}</span>
+          </div>
+          <div className="meta">
+            {it.first_seen ? <span>primo avvistamento {fmtDate(it.first_seen)}</span> : null}
+            {it.via ? <span>trovato con {it.via}</span> : null}
+          </div>
+        </div>
+      </a>
+    );
+  });
+
+  function App() {
+    const [tab, setTab] = useState('__all__');
+    const [q, setQ] = useState('');
+    const [onlynew, setOnlynew] = useState(false);
+    const [sort, setSort] = useState('recenti');
+
+    const allNew = DATA.watches.reduce((s, w) => s + (w.new || 0), 0);
+    const tabs = [{ key: '__all__', name: 'Tutti', current: DATA.total_current, new: allNew }]
+      .concat(DATA.watches.map(w => ({ key: w.name, name: w.name, current: w.current, new: w.new })));
+
+    const items = useMemo(() => {
+      let list = [];
+      DATA.watches.forEach(w => {
+        if (tab === '__all__' || tab === w.name) w.items.forEach(it => list.push(it));
+      });
+      if (onlynew) list = list.filter(it => it.is_new);
+      const needle = q.trim().toLowerCase();
+      if (needle) list = list.filter(it =>
+        (it.title || '').toLowerCase().includes(needle) || (it.location || '').toLowerCase().includes(needle));
+      const sorted = list.slice();
+      sorted.sort((a, b) => {
+        if (sort === 'prezzo') return numPrice(a.price) - numPrice(b.price);
+        if (sort === 'az') return (a.title || '').localeCompare(b.title || '', 'it');
+        return (b.first_seen || '').localeCompare(a.first_seen || '');
+      });
+      return sorted;
+    }, [tab, q, onlynew, sort]);
+
+    const totalItems = DATA.watches.reduce((s, w) => s + w.items.length, 0);
+    const filtered = q.trim() || onlynew || tab !== '__all__';
+
+    return (
+      <React.Fragment>
+        <header>
+          <div className="wrap">
+            <div className="masthead">
+              <div>
+                <p className="eyebrow">Catalogo annunci · aggiornamento giornaliero</p>
+                <h1 dangerouslySetInnerHTML={{ __html: (DATA.title || 'Officina — Monitor annunci').replace('—', '<span class="amp">—</span>') }} />
+                <p className="subtitle">{DATA.subtitle || ''}</p>
+              </div>
+              <div className="summary">
+                <b>{DATA.total_current}</b> attivi · <b>{DATA.total_new}</b> nuovi<br />agg. {fmtDateTime(DATA.generated_at)}
+              </div>
+            </div>
+
+            <div className="toolbar">
+              <label className="search">
+                <span className="ico">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                </span>
+                <input type="search" value={q} onChange={e => setQ(e.target.value)} placeholder="Cerca per titolo o luogo…" aria-label="Cerca" />
+                {q ? <button className="clear" onClick={() => setQ('')} aria-label="Cancella ricerca">✕</button> : null}
+              </label>
+              <label className="toggle ctrl">
+                <input type="checkbox" checked={onlynew} onChange={e => setOnlynew(e.target.checked)} />
+                <span className="sw"></span> Solo nuovi
+              </label>
+              <select className="ctrl" value={sort} onChange={e => setSort(e.target.value)} aria-label="Ordina">
+                <option value="recenti">Più recenti</option>
+                <option value="prezzo">Prezzo crescente</option>
+                <option value="az">Titolo A–Z</option>
+              </select>
+            </div>
+
+            <nav className="index" role="tablist" aria-label="Categorie">
+              {tabs.map(t => (
+                <button key={t.key} className="tab" role="tab" aria-selected={t.key === tab} onClick={() => setTab(t.key)}>
+                  {t.name} <span className="cnt">{t.current}</span>
+                  {t.new > 0 ? <span className="newdot">{t.new} nuovi</span> : null}
+                </button>
+              ))}
+            </nav>
+          </div>
+        </header>
+
+        <main className="wrap">
+          <div className="resultbar">
+            <span>{items.length}{items.length === 1 ? ' annuncio' : ' annunci'}{onlynew ? ' · solo nuovi' : ''}{q.trim() ? ' · «' + q.trim() + '»' : ''}</span>
+            {filtered ? <button className="reset" onClick={() => { setTab('__all__'); setQ(''); setOnlynew(false); }}>azzera filtri</button> : null}
+          </div>
+
+          <section className="grid" aria-live="polite">
+            {items.length === 0
+              ? (totalItems === 0
+                  ? <div className="empty"><h3>Nessun annuncio ancora</h3><p>Il monitor controlla i portali ogni giorno: qui compariranno le moto e i ricambi trovati.</p></div>
+                  : <div className="empty"><h3>Nessun risultato</h3><p>Prova a togliere i filtri o a cambiare ricerca.</p></div>)
+              : items.map((it, i) => <Card key={(it.url || it.title) + i} it={it} i={i} />)}
+          </section>
+        </main>
+
+        <footer className="wrap">
+          <span>{DATA.total_current} annunci attivi · {DATA.total_new} nuovi</span>
+          <span>Generato automaticamente · dati da Subito ed eBay</span>
+        </footer>
+      </React.Fragment>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
