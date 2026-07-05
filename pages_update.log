@@ -1,0 +1,157 @@
+2026-07-05 20:58:19  === Avvio aggiornamento pagina ===
+2026-07-05 20:58:19  Eseguo python monitor.py ...
+
+== Kawasaki 350 S2 ==  portali=['subito', 'ebay', 'ebay_de', 'mobile_de', 'kleinanzeigen']  stringhe attive=5
+  - [Subito] 'kawasaki 350 s2'  (etichetta: diretta)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'kawasaki s2 350'  (etichetta: invertita)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'kawasaki s2'  (etichetta: corta)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'kawasaki 350 s2 conservata'  (etichetta: conservata)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'kawasaki 350 s2 restauro'  (etichetta: restauro)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [eBay] 'kawasaki 350 s2'  (etichetta: diretta)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'kawasaki s2 350'  (etichetta: invertita)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'kawasaki s2'  (etichetta: corta)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'kawasaki 350 s2 conservata'  (etichetta: conservata)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'kawasaki 350 s2 restauro'  (etichetta: restauro)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki 350 s2'  (etichetta: diretta)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki s2 350'  (etichetta: invertita)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki s2'  (etichetta: corta)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki 350 s2 conservata'  (etichetta: conservata)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki 350 s2 restauro'  (etichetta: restauro)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [Mobile.de] 'kawasaki 350 s2'  (etichetta: diretta)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'kawasaki s2 350'  (etichetta: invertita)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'kawasaki s2'  (etichetta: corta)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'kawasaki 350 s2 conservata'  (etichetta: conservata)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'kawasaki 350 s2 restauro'  (etichetta: restauro)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Kleinanzeigen] 'kawasaki 350 s2'  (etichetta: diretta)
+  - [Kleinanzeigen] 'kawasaki s2 350'  (etichetta: invertita)
+  - [Kleinanzeigen] 'kawasaki s2'  (etichetta: corta)
+  - [Kleinanzeigen] 'kawasaki 350 s2 conservata'  (etichetta: conservata)
+  - [Kleinanzeigen] 'kawasaki 350 s2 restauro'  (etichetta: restauro)
+  => 0 attivi, 0 nuovi
+
+== KTM 125 GS ==  portali=['subito', 'ebay', 'ebay_de', 'mobile_de', 'kleinanzeigen']  stringhe attive=3
+  - [Subito] 'ktm 125 gs'  (etichetta: diretta)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'ktm gs 125'  (etichetta: invertita)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'ktm 125 gs restauro'  (etichetta: restauro)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [eBay] 'ktm 125 gs'  (etichetta: diretta)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'ktm gs 125'  (etichetta: invertita)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'ktm 125 gs restauro'  (etichetta: restauro)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay.de] 'ktm 125 gs'  (etichetta: diretta)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'ktm gs 125'  (etichetta: invertita)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'ktm 125 gs restauro'  (etichetta: restauro)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [Mobile.de] 'ktm 125 gs'  (etichetta: diretta)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'ktm gs 125'  (etichetta: invertita)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'ktm 125 gs restauro'  (etichetta: restauro)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Kleinanzeigen] 'ktm 125 gs'  (etichetta: diretta)
+  - [Kleinanzeigen] 'ktm gs 125'  (etichetta: invertita)
+  - [Kleinanzeigen] 'ktm 125 gs restauro'  (etichetta: restauro)
+  => 0 attivi, 0 nuovi
+
+== KTM 175 GS ==  portali=['subito', 'ebay', 'ebay_de', 'mobile_de', 'kleinanzeigen']  stringhe attive=3
+  - [Subito] 'ktm 175 gs'  (etichetta: diretta)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'ktm gs 175'  (etichetta: invertita)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [Subito] 'ktm 175 gs conservata'  (etichetta: conservata)
+    [http] https://www.subito.it/annunci-italia/vendita/moto-e-scooter/ -> HTTP 403
+  - [eBay] 'ktm 175 gs'  (etichetta: diretta)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'ktm gs 175'  (etichetta: invertita)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'ktm 175 gs conservata'  (etichetta: conservata)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay.de] 'ktm 175 gs'  (etichetta: diretta)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'ktm gs 175'  (etichetta: invertita)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'ktm 175 gs conservata'  (etichetta: conservata)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [Mobile.de] 'ktm 175 gs'  (etichetta: diretta)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'ktm gs 175'  (etichetta: invertita)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Mobile.de] 'ktm 175 gs conservata'  (etichetta: conservata)
+    [http] https://suchen.mobile.de/fahrzeuge/search.html -> HTTP 403
+  - [Kleinanzeigen] 'ktm 175 gs'  (etichetta: diretta)
+  - [Kleinanzeigen] 'ktm gs 175'  (etichetta: invertita)
+  - [Kleinanzeigen] 'ktm 175 gs conservata'  (etichetta: conservata)
+  => 0 attivi, 0 nuovi
+
+== Ricambi Kawasaki S2 (attrezzi / parafango / portachiavi) ==  portali=['subito', 'ebay', 'ebay_de', 'kleinanzeigen']  stringhe attive=5
+  - [Subito] 'kawasaki s2 borsa attrezzi'  (etichetta: borsa attrezzi)
+    [http] https://www.subito.it/annunci-italia/vendita/accessori-moto/ -> HTTP 403
+  - [Subito] 'kawasaki s2 kit attrezzi'  (etichetta: kit attrezzi)
+    [http] https://www.subito.it/annunci-italia/vendita/accessori-moto/ -> HTTP 403
+  - [Subito] 'kawasaki s2 parafango posteriore'  (etichetta: parafango)
+    [http] https://www.subito.it/annunci-italia/vendita/accessori-moto/ -> HTTP 403
+  - [Subito] 'portachiavi kawasaki originale'  (etichetta: portachiavi)
+    [http] https://www.subito.it/annunci-italia/vendita/accessori-moto/ -> HTTP 403
+  - [Subito] 'kawasaki 56008'  (etichetta: codice 56008)
+    [http] https://www.subito.it/annunci-italia/vendita/accessori-moto/ -> HTTP 403
+  - [eBay] 'kawasaki s2 borsa attrezzi'  (etichetta: borsa attrezzi)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'kawasaki s2 kit attrezzi'  (etichetta: kit attrezzi)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'kawasaki s2 parafango posteriore'  (etichetta: parafango)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'portachiavi kawasaki originale'  (etichetta: portachiavi)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay] 'kawasaki 56008'  (etichetta: codice 56008)
+    [http] https://www.ebay.it/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki s2 borsa attrezzi'  (etichetta: borsa attrezzi)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki s2 kit attrezzi'  (etichetta: kit attrezzi)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki s2 parafango posteriore'  (etichetta: parafango)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'portachiavi kawasaki originale'  (etichetta: portachiavi)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [eBay.de] 'kawasaki 56008'  (etichetta: codice 56008)
+    [http] https://www.ebay.de/sch/i.html -> HTTP 403
+  - [Kleinanzeigen] 'kawasaki s2 borsa attrezzi'  (etichetta: borsa attrezzi)
+  - [Kleinanzeigen] 'kawasaki s2 kit attrezzi'  (etichetta: kit attrezzi)
+  - [Kleinanzeigen] 'kawasaki s2 parafango posteriore'  (etichetta: parafango)
+  - [Kleinanzeigen] 'portachiavi kawasaki originale'  (etichetta: portachiavi)
+  - [Kleinanzeigen] 'kawasaki 56008'  (etichetta: codice 56008)
+  => 0 attivi, 0 nuovi
+[webapp] docs/index.html aggiornato (0 annunci)
+
+Fatto. Nuovi: 0 À Attivi: 0. Report in report.md / report.html À Web app in docs/index.html
+[main da44e3e] Aggiornamento pagina 2026-07-05 21:02
+ 4 files changed, 30 insertions(+), 58 deletions(-)
+ create mode 100644 state.json
+To https://github.com/pietro98vr/MotoMonitor.git
+   021fcaf..da44e3e  main -> main
+2026-07-05 21:02:20  Pagina aggiornata e pubblicata su GitHub Pages.
