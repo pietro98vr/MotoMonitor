@@ -4,6 +4,7 @@
       "id": "kawasaki-350-s2",
       "name": "Kawasaki 350 S2",
       "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
+      "price_min": 500,
       "price_max": 20000,
       "subito_category": "moto-e-scooter",
       "relevance_filter": true,
@@ -16,22 +17,30 @@
       ]
     },
     {
-      "id": "ktm-125-gs",
-      "name": "KTM 125 GS",
+      "id": "ktm-125-sachs",
+      "name": "KTM 125 Sachs 1970–72 (parafanghi in metallo)",
       "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
+      "price_min": 500,
       "price_max": 12000,
       "subito_category": "moto-e-scooter",
       "relevance_filter": true,
       "queries": [
-        {"text": "ktm 125 gs", "label": "diretta", "enabled": true},
-        {"text": "ktm gs 125", "label": "invertita", "enabled": true},
-        {"text": "ktm 125 gs restauro", "label": "restauro", "enabled": true}
+        {"text": "ktm 125 sachs", "label": "sachs", "enabled": true},
+        {"text": "ktm sachs 125", "label": "sachs invertita", "enabled": true},
+        {"text": "ktm 125 gs sachs", "label": "gs sachs", "enabled": true},
+        {"text": "ktm 125 gs 1971", "label": "anno 1971", "enabled": true},
+        {"text": "ktm 125 gs 1972", "label": "anno 1972", "enabled": true},
+        {"text": "ktm 125 regolarità", "label": "regolarità", "enabled": true},
+        {"text": "ktm 125 gs epoca", "label": "epoca", "enabled": true},
+        {"text": "ktm 125 gs oldtimer", "label": "oldtimer (DE)", "enabled": true},
+        {"text": "ktm 125 gs", "label": "generica (accendila se serve)", "enabled": false}
       ]
     },
     {
       "id": "ktm-175-gs",
       "name": "KTM 175 GS",
       "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
+      "price_min": 500,
       "price_max": 12000,
       "subito_category": "moto-e-scooter",
       "relevance_filter": true,
