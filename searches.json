@@ -1,22 +1,6 @@
 {
   "searches": [
     {
-      "id": "kawasaki-350-s2",
-      "name": "Kawasaki 350 S2",
-      "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
-      "price_min": 500,
-      "price_max": 20000,
-      "subito_category": "moto-e-scooter",
-      "relevance_filter": true,
-      "queries": [
-        {"text": "kawasaki 350 s2", "label": "diretta", "enabled": true},
-        {"text": "kawasaki s2 350", "label": "invertita", "enabled": true},
-        {"text": "kawasaki s2", "label": "corta", "enabled": true},
-        {"text": "kawasaki 350 s2 conservata", "label": "conservata", "enabled": true},
-        {"text": "kawasaki 350 s2 restauro", "label": "restauro", "enabled": true}
-      ]
-    },
-    {
       "id": "ktm-125-sachs",
       "name": "KTM 125 Sachs 1970–72 (parafanghi in metallo)",
       "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
@@ -37,31 +21,54 @@
       ]
     },
     {
-      "id": "ktm-175-gs",
-      "name": "KTM 175 GS",
+      "id": "ktm-175-sachs",
+      "name": "KTM 175 Sachs 1970–72 (parafanghi in metallo)",
       "portals": ["subito", "ebay", "ebay_de", "mobile_de", "kleinanzeigen"],
       "price_min": 500,
       "price_max": 12000,
       "subito_category": "moto-e-scooter",
       "relevance_filter": true,
       "queries": [
-        {"text": "ktm 175 gs", "label": "diretta", "enabled": true},
-        {"text": "ktm gs 175", "label": "invertita", "enabled": true},
-        {"text": "ktm 175 gs conservata", "label": "conservata", "enabled": true}
+        {"text": "ktm 175 sachs", "label": "sachs", "enabled": true},
+        {"text": "ktm sachs 175", "label": "sachs invertita", "enabled": true},
+        {"text": "ktm 175 gs sachs", "label": "gs sachs", "enabled": true},
+        {"text": "ktm 175 gs 1971", "label": "anno 1971", "enabled": true},
+        {"text": "ktm 175 gs 1972", "label": "anno 1972", "enabled": true},
+        {"text": "ktm 175 regolarità", "label": "regolarità", "enabled": true},
+        {"text": "ktm 175 gs epoca", "label": "epoca", "enabled": true},
+        {"text": "ktm 175 gs oldtimer", "label": "oldtimer (DE)", "enabled": true},
+        {"text": "ktm 175 gs", "label": "generica (accendila se serve)", "enabled": false}
       ]
     },
     {
-      "id": "ricambi-kawasaki-s2",
-      "name": "Ricambi Kawasaki S2 (attrezzi / parafango / portachiavi)",
+      "id": "portachiavi-kawasaki",
+      "name": "Portachiavi Kawasaki",
       "portals": ["subito", "ebay", "ebay_de", "kleinanzeigen"],
+      "price_min": null,
+      "price_max": null,
+      "subito_category": "accessori-moto",
+      "relevance_filter": true,
+      "queries": [
+        {"text": "portachiavi kawasaki originale", "label": "originale", "enabled": true},
+        {"text": "portachiavi kawasaki", "label": "diretta", "enabled": true},
+        {"text": "kawasaki schlüsselanhänger", "label": "schlüsselanhänger (DE)", "enabled": true}
+      ]
+    },
+    {
+      "id": "attrezzi-kawasaki-350-s2",
+      "name": "Borsa/kit attrezzi Kawasaki 350 S2",
+      "portals": ["subito", "ebay", "ebay_de", "kleinanzeigen"],
+      "price_min": null,
       "price_max": null,
       "subito_category": "accessori-moto",
       "relevance_filter": true,
       "queries": [
         {"text": "kawasaki s2 borsa attrezzi", "label": "borsa attrezzi", "enabled": true},
         {"text": "kawasaki s2 kit attrezzi", "label": "kit attrezzi", "enabled": true},
-        {"text": "kawasaki s2 parafango posteriore", "label": "parafango", "enabled": true},
-        {"text": "portachiavi kawasaki originale", "label": "portachiavi", "enabled": true},
+        {"text": "kawasaki 350 borsa attrezzi", "label": "350 borsa", "enabled": true},
+        {"text": "kawasaki s2 tool kit", "label": "tool kit (EN)", "enabled": true},
+        {"text": "kawasaki s2 werkzeugtasche", "label": "werkzeugtasche (DE)", "enabled": true},
+        {"text": "kawasaki bordwerkzeug", "label": "bordwerkzeug (DE)", "enabled": true},
         {"text": "kawasaki 56008", "label": "codice 56008", "enabled": true}
       ]
     }

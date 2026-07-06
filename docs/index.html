@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#efe9db">
 <title>Officina — Monitor annunci</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +51,11 @@
   .search .clear:hover{color:var(--ink)}
   .ctrl{font-size:12px; color:var(--ink); border:1px solid var(--line-strong); background:var(--card);
     border-radius:8px; padding:10px 12px; min-height:42px}
+  .pricerange{display:inline-flex; align-items:center; gap:6px}
+  .pricerange .dash{color:var(--muted); font-family:"Space Mono",monospace}
+  .price-in{width:96px; font-family:"Space Mono",monospace; -moz-appearance:textfield}
+  .price-in::-webkit-outer-spin-button,.price-in::-webkit-inner-spin-button{-webkit-appearance:none; margin:0}
+  .price-in:focus{outline:none; border-color:var(--amber)}
   select.ctrl{cursor:pointer; font-family:"Space Mono",monospace}
   .toggle{display:inline-flex; align-items:center; gap:8px; user-select:none; cursor:pointer; font-family:"Space Mono",monospace}
   .toggle input{position:absolute; opacity:0; width:0; height:0}
@@ -58,6 +64,23 @@
   .toggle input:checked + .sw{background:var(--amber)}
   .toggle input:checked + .sw::after{transform:translateX(16px)}
   @media (max-width:520px){ .search{flex-basis:100%} .toggle.ctrl,select.ctrl{flex:1 1 auto; justify-content:center} }
+
+  /* ---- Mobile: barra filtri compatta e niente zoom iOS sui campi ---- */
+  #ftoggle{display:none; cursor:pointer; font-family:"Space Mono",monospace}
+  #ftoggle.has{border-color:var(--amber); color:var(--amber-dark); font-weight:700}
+  @media (max-width:640px){
+    .masthead{padding:10px 0 2px}
+    .toolbar{padding:10px 0 8px; gap:8px}
+    #ftoggle{display:inline-flex; align-items:center; flex:0 0 auto}
+    .search{flex-basis:auto; flex:1 1 120px}
+    .toolbar .toggle.ctrl, .toolbar .pricerange, .toolbar select.ctrl, #selmode{display:none}
+    .toolbar.open .toggle.ctrl{display:inline-flex}
+    .toolbar.open .pricerange{display:inline-flex}
+    .toolbar.open select.ctrl{display:block}
+    .toolbar.open #selmode{display:block}
+    .search input, .price-in, select.ctrl{font-size:16px} /* evita lo zoom automatico di iOS */
+    .price-in{width:110px}
+  }
 
   nav.index{display:flex; gap:8px; overflow-x:auto; padding:2px 0 14px; -webkit-overflow-scrolling:touch}
   nav.index::-webkit-scrollbar{height:6px}
@@ -101,6 +124,57 @@
   .loc span{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
   .meta{font-family:"Space Mono",monospace; font-size:11px; color:var(--muted); display:flex; flex-direction:column; gap:2px}
 
+  .warnbar{margin:0 0 14px; padding:10px 12px; border:1px solid var(--amber); border-radius:8px;
+    background:rgba(204,91,34,.10); color:var(--amber-dark); font-family:"Space Mono",monospace; font-size:12px; line-height:1.6}
+  .stamp.drop{color:var(--teal); border-color:var(--teal); box-shadow:0 1px 0 rgba(44,110,106,.25);
+    top:auto; bottom:10px; transform:rotate(-3deg)}
+  .price .old{font-family:"Space Mono",monospace; font-weight:400; font-size:12px; color:var(--muted);
+    text-decoration:line-through; margin-right:7px}
+  .price .pct{font-size:11px; color:var(--teal); font-weight:700; margin-left:6px}
+  .card.stale{opacity:.78}
+  .card.stale .thumb::after{content:"non verificato oggi"; position:absolute; left:0; right:0; bottom:0;
+    background:rgba(22,48,46,.72); color:var(--paper); font-family:"Space Mono",monospace; font-size:10px;
+    letter-spacing:.06em; text-transform:uppercase; text-align:center; padding:3px 0}
+
+  .favbtn{position:absolute; top:8px; right:8px; z-index:2; width:36px; height:36px; border-radius:50%;
+    border:1px solid var(--line-strong); background:rgba(251,248,241,.92); color:var(--muted);
+    font-size:18px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    transition:.15s; padding:0}
+  .favbtn:hover{color:var(--amber-dark); border-color:var(--amber)}
+  .favbtn.on{color:#fff; background:var(--amber); border-color:var(--amber-dark)}
+  .bottombar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:center;
+    border-top:1px dashed var(--line-strong); margin:8px 0 0; padding:16px 0 8px}
+  .chipbtn{font-family:"Space Mono",monospace; font-size:12px; border:1px solid var(--line-strong);
+    background:var(--card); color:var(--ink-soft); border-radius:999px; padding:8px 13px; cursor:pointer; min-height:38px}
+  .chipbtn:hover{border-color:var(--ink); color:var(--ink)}
+  .chipbtn.on{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  #selmode{cursor:pointer; font-family:"Space Mono",monospace}
+  .card.sel{outline:3px solid var(--teal); outline-offset:2px}
+  .card.sel .thumb::before{content:"✓"; position:absolute; top:8px; left:8px; z-index:3; width:26px; height:26px;
+    border-radius:50%; background:var(--teal); color:#fff; font-weight:700; font-size:15px;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,.25)}
+  .card.sel .stamp{display:none}
+  .selbar{position:fixed; left:50%; transform:translateX(-50%); bottom:calc(14px + var(--safe)); z-index:40;
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:center;
+    background:var(--ink); color:var(--paper); border-radius:12px; padding:10px 14px; max-width:94vw;
+    box-shadow:0 14px 34px -12px rgba(0,0,0,.55); font-family:"Space Mono",monospace; font-size:12px}
+  .selbar button{font-family:inherit; font-size:12px; border-radius:8px; border:1px solid rgba(239,233,219,.35);
+    background:transparent; color:var(--paper); padding:8px 11px; cursor:pointer; min-height:36px}
+  .selbar button:hover{background:rgba(239,233,219,.12)}
+  .selbar .primary{background:var(--amber); border-color:var(--amber-dark); font-weight:700}
+  .toast{position:fixed; bottom:calc(70px + var(--safe)); left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--ink); color:var(--paper); font-family:"Space Mono",monospace; font-size:13px;
+    padding:11px 16px; border-radius:9px; box-shadow:0 12px 30px -12px rgba(0,0,0,.5); opacity:0;
+    transition:.25s; pointer-events:none; z-index:50; max-width:90vw; text-align:center}
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+  #fab{position:fixed; right:14px; bottom:calc(18px + var(--safe)); z-index:35; width:46px; height:46px;
+    border-radius:50%; border:1px solid var(--line-strong); background:var(--card); color:var(--ink);
+    font-size:19px; cursor:pointer; box-shadow:0 10px 24px -12px rgba(22,48,46,.6);
+    opacity:0; transform:translateY(8px); pointer-events:none; transition:.2s}
+  #fab.show{opacity:1; transform:translateY(0); pointer-events:auto}
+  #fab:hover{border-color:var(--amber); color:var(--amber-dark)}
+  @media (prefers-reduced-motion:reduce){ #fab{transition:none} }
+
   .empty{grid-column:1/-1; text-align:center; padding:56px 20px; color:var(--ink-soft)}
   .empty h3{font-family:"Saira Condensed",sans-serif; text-transform:uppercase; letter-spacing:.02em; font-size:22px; margin:0 0 6px}
 
@@ -132,38 +206,70 @@
           <input id="q" type="search" placeholder="Cerca per titolo o luogo…" autocomplete="off" aria-label="Cerca">
           <button class="clear" id="clear" aria-label="Cancella ricerca">✕</button>
         </label>
+        <button id="ftoggle" class="ctrl" type="button" aria-expanded="false" aria-controls="tools">Filtri ▾</button>
         <label class="toggle ctrl"><input id="onlynew" type="checkbox"><span class="sw"></span> Solo nuovi</label>
+        <label class="toggle ctrl"><input id="onlyfav" type="checkbox"><span class="sw"></span> ★ Preferiti</label>
+        <span class="pricerange">
+          <input id="pmin" class="ctrl price-in" type="number" inputmode="numeric" min="0" step="50" placeholder="€ min" aria-label="Prezzo minimo">
+          <span class="dash">–</span>
+          <input id="pmax" class="ctrl price-in" type="number" inputmode="numeric" min="0" step="100" placeholder="€ max" aria-label="Prezzo massimo">
+        </span>
         <select id="sort" class="ctrl" aria-label="Ordina">
           <option value="recenti">Più recenti</option>
+          <option value="ribassi">Ribassi prima</option>
           <option value="prezzo">Prezzo crescente</option>
+          <option value="prezzo-desc">Prezzo decrescente</option>
+          <option value="giorni">In vendita da più tempo</option>
           <option value="az">Titolo A–Z</option>
         </select>
+        <button id="selmode" class="ctrl" type="button">Seleziona</button>
       </div>
       <nav class="index" id="tabs" role="tablist" aria-label="Categorie"></nav>
     </div>
   </header>
 
   <main class="wrap">
+    <div class="warnbar" id="warnbar" hidden></div>
     <div class="resultbar" id="resultbar"></div>
     <section class="grid" id="grid" aria-live="polite"></section>
+    <div class="bottombar" id="bottombar" aria-label="Comandi rapidi">
+      <button class="chipbtn" data-sort="prezzo">Meno caro</button>
+      <button class="chipbtn" data-sort="prezzo-desc">Più caro</button>
+      <button class="chipbtn" data-sort="recenti">Più recenti</button>
+      <button class="chipbtn" data-sort="ribassi">Ribassi</button>
+      <button class="chipbtn" id="bfav">★ Preferiti</button>
+      <button class="chipbtn" id="bsel">Seleziona</button>
+      <button class="chipbtn" id="btop">↑ Torna ai filtri</button>
+    </div>
   </main>
+
+  <div class="selbar" id="selbar" hidden>
+    <span id="selcount">0 selezionati</span>
+    <button id="selall">Tutti</button>
+    <button id="selfav" class="primary">★ Preferiti</button>
+    <button id="selshare">Condividi</button>
+    <button id="selhide">Elimina</button>
+    <button id="selcancel">Annulla</button>
+  </div>
+  <button id="fab" aria-label="Torna in cima">↑</button>
+  <div class="toast" id="toast"></div>
 
   <footer class="wrap">
     <span id="foot-left"></span>
-    <span>Generato automaticamente · dati da Subito ed eBay</span>
+    <span id="foot-right">Generato automaticamente</span>
   </footer>
 
-  <script id="moto-data" type="application/json">{"generated_at": "2026-07-06T11:46:23", "title": "Officina — Monitor annunci", "subtitle": "Annunci aggregati di moto d'epoca e ricambi", "total_current": 0, "total_new": 0, "watches": [{"name": "Kawasaki 350 S2", "current": 0, "new": 0, "items": []}, {"name": "KTM 125 Sachs 1970–72 (parafanghi in metallo)", "current": 0, "new": 0, "items": []}, {"name": "KTM 175 GS", "current": 0, "new": 0, "items": []}, {"name": "Ricambi Kawasaki S2 (attrezzi / parafango / portachiavi)", "current": 0, "new": 0, "items": []}]}</script>
+  <script id="moto-data" type="application/json">{"generated_at": "2026-07-06T18:20:52", "title": "Officina — Monitor annunci", "subtitle": "Annunci aggregati di moto d'epoca e ricambi", "total_current": 11, "total_new": 7, "total_drops": 0, "portal_issues": [{"label": "eBay.de", "level": "down", "detail": "HTTP 403"}, {"label": "eBay", "level": "partial", "detail": "HTTP 403"}], "watches": [{"name": "KTM 125 Sachs 1970–72 (parafanghi in metallo)", "current": 5, "new": 1, "items": [{"title": "1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro", "price": "EUR 760,51", "location": "", "url": "https://www.ebay.it/itm/277951421651", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg", "first_seen": "2026-07-06T18:14:07", "is_new": true, "via": "sachs · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "Ktm 125 gs - 1972", "price": "n.d.", "location": "Meldola", "url": "https://www.subito.it/moto-e-scooter/ktm-125-gs-1972-forli-cesena-626984346.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7a/7a0cdaad-d30f-40f6-9a71-17e85b04c564", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "sachs · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "KTM 125 GS - 1974 - sachs - restauro completo", "price": "n.d.", "location": "Modena", "url": "https://www.subito.it/moto-e-scooter/ktm-125-gs-1974-sachs-restauro-completo-modena-453533888.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5d/5d71c2df-f2d2-4090-896c-3a892edf406d", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "sachs · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "Ktm 125 gs 1972", "price": "n.d.", "location": "Tolentino", "url": "https://www.subito.it/moto-e-scooter/ktm-125-gs-1972-macerata-650250161.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b1/b1748d6b-d8c3-4ca8-b121-fcb39f1f89da", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "anno 1972 · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "Ktm 125 sachs 6 marce", "price": "n.d.", "location": "Cavezzo", "url": "https://www.subito.it/moto-e-scooter/ktm-125-sachs-6-marce-modena-646465997.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8d/8d4ea830-ab16-4500-b603-365092f52c19", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "sachs · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}]}, {"name": "KTM 175 Sachs 1970–72 (parafanghi in metallo)", "current": 4, "new": 4, "items": [{"title": "Ktm 175 GS - 1972", "price": "n.d.", "location": "Reggio nell'Emilia", "url": "https://www.subito.it/moto-e-scooter/ktm-175-gs-1972-reggio-emilia-626086616.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8b/8b11ae72-7ee4-4596-b431-8a52882be314", "first_seen": "2026-07-06T18:14:07", "is_new": true, "via": "anno 1972 · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "Ktm 175 gs d'epoca", "price": "n.d.", "location": "Tolmezzo", "url": "https://www.subito.it/moto-e-scooter/ktm-175-gs-d-epoca-udine-637316568.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a3/a38d8460-e436-4fea-ac02-b88ebc08aa13", "first_seen": "2026-07-06T18:14:07", "is_new": true, "via": "epoca · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "Ktm 175 GS Regolarità", "price": "n.d.", "location": "Sarnico", "url": "https://www.subito.it/moto-e-scooter/ktm-175-gs-regolarita-bergamo-644351453.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1f/1f0e5735-bcba-4902-a92d-122d7a5f3292", "first_seen": "2026-07-06T18:14:07", "is_new": true, "via": "regolarità · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "KTM GS 175 1972", "price": "n.d.", "location": "Vicenza", "url": "https://www.subito.it/moto-e-scooter/ktm-gs-175-1972-vicenza-637774338.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/4e/4ed367f1-fb32-44a5-b5f1-2c01875398e8", "first_seen": "2026-07-06T18:14:07", "is_new": true, "via": "anno 1972 · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}]}, {"name": "Portachiavi Kawasaki", "current": 2, "new": 2, "items": [{"title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX", "price": "n.d.", "location": "Roma", "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/06/0685c5f1-abfe-4686-848b-9bd941782cc1", "first_seen": "2026-07-06T18:14:07", "is_new": true, "via": "originale · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}, {"title": "Portachiavi originale KAWASAKI", "price": "n.d.", "location": "Caserta", "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/92/924d5b91-9828-48bc-a7fe-2b3ccb31a1f5", "first_seen": "2026-07-06T18:14:07", "is_new": true, "via": "originale · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false}]}, {"name": "Borsa/kit attrezzi Kawasaki 350 S2", "current": 0, "new": 0, "items": []}]}</script>
   <script>
   (function(){
     var SAMPLE = {
       generated_at:new Date().toISOString(), title:"Officina — Monitor annunci",
       subtitle:"Annunci aggregati di moto d'epoca e ricambi (dati di esempio)",
-      total_current:3, total_new:2,
+      total_current:3, total_new:2, total_drops:1, portal_issues:[],
       watches:[
         {name:"Kawasaki 350 S2", current:2, new:1, items:[
           {title:"Kawasaki 350 S2 del 1972, conservata e targhata", price:"9.500 €", location:"Verona", url:"#", portal:"Subito", image:"", first_seen:new Date().toISOString(), is_new:true, via:"diretta · Subito"},
-          {title:"Kawasaki S2 350 progetto restauro, motore completo", price:"4.200 €", location:"Bologna", url:"#", portal:"Subito", image:"", first_seen:new Date(Date.now()-5*864e5).toISOString(), is_new:false, via:"invertita · Subito"}
+          {title:"Kawasaki S2 350 progetto restauro, motore completo", price:"4.200 €", location:"Bologna", url:"#", portal:"Subito", image:"", first_seen:new Date(Date.now()-5*864e5).toISOString(), is_new:false, via:"invertita · Subito", price_drop_old:"4.800 €", price_drop_pct:12}
         ]},
         {name:"KTM 175 GS", current:1, new:1, items:[
           {title:"KTM 175 GS motore nero, conservata originale", price:"3.900 €", location:"Ragusa", url:"#", portal:"Subito", image:"", first_seen:new Date().toISOString(), is_new:true, via:"diretta · Subito"}
@@ -179,14 +285,100 @@
     function pad(n){ return (n<10?'0':'')+n; }
     function fmtDate(iso){ var d=new Date(iso); return isNaN(d)?'':pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear(); }
     function fmtDateTime(iso){ var d=new Date(iso); return isNaN(d)?'':fmtDate(iso)+' '+pad(d.getHours())+':'+pad(d.getMinutes()); }
-    function numPrice(p){ var s=String(p||'').replace(/\D/g,''); return s?parseInt(s,10):Number.MAX_SAFE_INTEGER; }
+    // Parser prezzi europeo: "9.500 €"->9500, "120,00 EUR"->120, "45 €"->45.
+    // Restituisce null se il prezzo non è leggibile.
+    function numPrice(p){
+      var s = String(p==null?'':p).replace(/[^\d.,]/g,'');
+      if(!s) return null;
+      if(s.indexOf('.')>-1 && s.indexOf(',')>-1){ s = s.replace(/\./g,'').replace(',', '.'); }
+      else if(s.indexOf(',')>-1){ s = s.replace(/,/g, '.'); }
+      else if(/\.\d{3}(\.\d{3})*$/.test(s)){ s = s.replace(/\./g,''); }
+      var v = parseFloat(s);
+      return isNaN(v) ? null : v;
+    }
+    function sortPrice(it, missing){ var v=numPrice(it.price); return v==null?missing:v; }
 
     document.getElementById('title').innerHTML = esc(DATA.title||'Officina — Monitor annunci').replace('—','<span class="amp">—</span>');
     document.getElementById('subtitle').textContent = DATA.subtitle||'';
-    document.getElementById('summary').innerHTML = '<b>'+DATA.total_current+'</b> attivi · <b>'+DATA.total_new+'</b> nuovi<br>agg. '+fmtDateTime(DATA.generated_at);
+    document.getElementById('summary').innerHTML = '<b>'+DATA.total_current+'</b> attivi · <b>'+DATA.total_new+'</b> nuovi'+(DATA.total_drops?' · <b>'+DATA.total_drops+'</b> ribassi':'')+'<br>agg. '+fmtDateTime(DATA.generated_at);
     document.getElementById('foot-left').textContent = DATA.total_current+' annunci attivi · '+DATA.total_new+' nuovi';
+    (function(){
+      var ports = {};
+      (DATA.watches||[]).forEach(function(w){ (w.items||[]).forEach(function(it){ if(it.portal) ports[it.portal]=1; }); });
+      var names = Object.keys(ports).sort();
+      if(names.length) document.getElementById('foot-right').textContent = 'Generato automaticamente · dati da '+names.join(', ');
+    })();
 
-    var state = { tab:"__all__", q:"", onlynew:false, sort:"recenti" };
+    // Avviso salute portali: distingue "nessun annuncio" da "portale non raggiunto"
+    (function(){
+      var issues = DATA.portal_issues || [];
+      if(!issues.length) return;
+      var down = issues.filter(function(i){return i.level==='down'}).map(function(i){return i.label});
+      var partial = issues.filter(function(i){return i.level!=='down'}).map(function(i){return i.label});
+      var parts = [];
+      if(down.length) parts.push('senza risposta: <b>'+down.map(esc).join(', ')+'</b>');
+      if(partial.length) parts.push('risposte parziali: <b>'+partial.map(esc).join(', ')+'</b>');
+      var el = document.getElementById('warnbar');
+      el.innerHTML = '⚠ Oggi ' + parts.join(' · ') + ' — l\'elenco potrebbe essere incompleto.';
+      el.hidden = false;
+    })();
+
+    var state = { tab:"__all__", q:"", onlynew:false, onlyfav:false, sort:"recenti", pmin:"", pmax:"", selecting:false };
+    var sel = {};
+
+    // Filtri e ordinamento ricordati tra una visita e l'altra (per dispositivo)
+    var STATEKEY = 'motoMonitorFiltri';
+    (function(){
+      var saved;
+      try { saved = JSON.parse(localStorage.getItem(STATEKEY)||'null'); } catch(e){ saved = null; }
+      if(!saved) return;
+      ['q','onlynew','onlyfav','sort','pmin','pmax','tab'].forEach(function(k){
+        if(saved[k] !== undefined) state[k] = saved[k];
+      });
+      var names = DATA.watches.map(function(w){ return w.name; });
+      if(state.tab !== '__all__' && names.indexOf(state.tab) === -1) state.tab = '__all__';
+      var sorts = ['recenti','ribassi','prezzo','prezzo-desc','giorni','az'];
+      if(sorts.indexOf(state.sort) === -1) state.sort = 'recenti';
+    })();
+    function saveFilters(){
+      try {
+        localStorage.setItem(STATEKEY, JSON.stringify({
+          q:state.q, onlynew:state.onlynew, onlyfav:state.onlyfav,
+          sort:state.sort, pmin:state.pmin, pmax:state.pmax, tab:state.tab
+        }));
+      } catch(e){}
+    }
+
+    // Preferiti: stelline salvate nel browser (localStorage), per dispositivo.
+    var FAVKEY = 'motoMonitorPreferiti';
+    function loadFavs(){ try { return JSON.parse(localStorage.getItem(FAVKEY)||'{}') || {}; } catch(e){ return {}; } }
+    function saveFavs(f){ try { localStorage.setItem(FAVKEY, JSON.stringify(f)); } catch(e){} }
+    var favs = loadFavs();
+    function favId(it){ return it.url || it.title || ''; }
+
+    // Annunci eliminati: nascosti subito su questo dispositivo e, se la pagina
+    // è servita dal server locale, aggiunti alla blacklist del monitor.
+    var HIDEKEY = 'motoMonitorNascosti';
+    function loadHidden(){ try { return JSON.parse(localStorage.getItem(HIDEKEY)||'{}') || {}; } catch(e){ return {}; } }
+    function saveHidden(h){ try { localStorage.setItem(HIDEKEY, JSON.stringify(h)); } catch(e){} }
+    var hidden = loadHidden();
+    var serverBl = {};
+    try {
+      fetch('/api/blacklist').then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+        if(j && j.items){ j.items.forEach(function(e){ var u = e && e.url ? e.url : e; if(u) serverBl[u]=1; }); render(); }
+      }).catch(function(){});
+    } catch(e){}
+
+    var BYID = {};
+    DATA.watches.forEach(function(w){ (w.items||[]).forEach(function(it){ BYID[favId(it)] = it; }); });
+
+    var toastTimer = null;
+    function toast(msg){
+      var t = document.getElementById('toast');
+      t.textContent = msg; t.className = 'toast show';
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function(){ t.className = 'toast'; }, 3600);
+    }
 
     var tabsEl = document.getElementById('tabs');
     var allNew = DATA.watches.reduce(function(s,w){return s+(w.new||0)},0);
@@ -208,28 +400,202 @@
     qEl.addEventListener('input', function(){ state.q=qEl.value; clearEl.style.display=qEl.value?'block':'none'; render(); });
     clearEl.addEventListener('click', function(){ qEl.value=''; state.q=''; clearEl.style.display='none'; render(); qEl.focus(); });
     document.getElementById('onlynew').addEventListener('change', function(e){ state.onlynew=e.target.checked; render(); });
-    document.getElementById('sort').addEventListener('change', function(e){ state.sort=e.target.value; render(); });
+    document.getElementById('sort').addEventListener('change', function(e){ state.sort=e.target.value; syncSortUi(); render(); });
+    var pminEl=document.getElementById('pmin'), pmaxEl=document.getElementById('pmax');
+    pminEl.addEventListener('input', function(){ state.pmin=pminEl.value; render(); });
+    pmaxEl.addEventListener('input', function(){ state.pmax=pmaxEl.value; render(); });
+
+    // Ripristina i controlli dai filtri salvati
+    qEl.value = state.q; clearEl.style.display = state.q ? 'block' : 'none';
+    document.getElementById('onlynew').checked = state.onlynew;
+    pminEl.value = state.pmin; pmaxEl.value = state.pmax;
+
+    // ---- Preferiti e barra comandi in fondo alla pagina ----
+    function syncSortUi(){
+      document.getElementById('sort').value = state.sort;
+      [].forEach.call(document.querySelectorAll('#bottombar .chipbtn[data-sort]'), function(b){
+        b.classList.toggle('on', b.getAttribute('data-sort')===state.sort);
+      });
+    }
+    function syncFavUi(){
+      document.getElementById('onlyfav').checked = state.onlyfav;
+      document.getElementById('bfav').classList.toggle('on', state.onlyfav);
+    }
+    // Su mobile la barra filtri parte compressa: il pulsante "Filtri" la apre,
+    // e si accende quando c'è un filtro attivo anche se è chiusa.
+    var ftoggle = document.getElementById('ftoggle');
+    ftoggle.addEventListener('click', function(){
+      var tb = document.querySelector('.toolbar');
+      var open = tb.classList.toggle('open');
+      ftoggle.textContent = open ? 'Filtri ▴' : 'Filtri ▾';
+      ftoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    function updateFtoggle(){
+      var active = state.onlynew || state.onlyfav || state.pmin!=='' || state.pmax!=='' || state.sort!=='recenti';
+      ftoggle.classList.toggle('has', !!active);
+    }
+    // Tastiera (desktop): "/" va alla ricerca, Esc esce dalla selezione
+    document.addEventListener('keydown', function(e){
+      var tag = (e.target && e.target.tagName) || '';
+      if(e.key === '/' && !/INPUT|SELECT|TEXTAREA/.test(tag)){ e.preventDefault(); qEl.focus(); }
+      if(e.key === 'Escape' && state.selecting){ setSelecting(false); }
+    });
+    document.getElementById('onlyfav').addEventListener('change', function(e){ state.onlyfav=e.target.checked; syncFavUi(); render(); });
+    [].forEach.call(document.querySelectorAll('#bottombar .chipbtn[data-sort]'), function(b){
+      b.addEventListener('click', function(){
+        state.sort=b.getAttribute('data-sort'); syncSortUi(); render();
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+    });
+    document.getElementById('bfav').addEventListener('click', function(){
+      state.onlyfav=!state.onlyfav; syncFavUi(); render();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+    document.getElementById('btop').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+    // Freccia flottante "torna su": compare dopo un po' di scorrimento
+    var fabEl = document.getElementById('fab');
+    fabEl.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    var fabTick = false;
+    function updateFab(){
+      fabEl.classList.toggle('show', window.scrollY > 600 && !state.selecting);
+      fabTick = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!fabTick){ fabTick = true; requestAnimationFrame(updateFab); }
+    }, {passive:true});
+
+    // ---- Multi-selezione: bulk preferiti / elimina (blacklist) ----
+    function updateSelbar(){
+      var n = Object.keys(sel).length;
+      document.getElementById('selcount').textContent = n + (n===1 ? ' selezionato' : ' selezionati');
+    }
+    function setSelecting(on){
+      state.selecting = on;
+      if(!on) sel = {};
+      document.getElementById('selbar').hidden = !on;
+      document.getElementById('selmode').textContent = on ? 'Fine selezione' : 'Seleziona';
+      document.getElementById('bsel').classList.toggle('on', on);
+      if(on) fabEl.classList.remove('show');
+      updateSelbar(); render();
+    }
+    document.getElementById('selmode').addEventListener('click', function(){ setSelecting(!state.selecting); });
+    document.getElementById('bsel').addEventListener('click', function(){ setSelecting(!state.selecting); window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('selcancel').addEventListener('click', function(){ setSelecting(false); });
+    document.getElementById('selall').addEventListener('click', function(){
+      sel = {};
+      collect().forEach(function(it){ sel[favId(it)] = 1; });
+      updateSelbar(); render();
+    });
+    document.getElementById('selshare').addEventListener('click', function(){
+      var ids = Object.keys(sel);
+      if(!ids.length){ toast('Nessun annuncio selezionato'); return; }
+      var text = ids.map(function(k){
+        var it = BYID[k] || {};
+        return '• ' + (it.title||'Annuncio') + (it.price ? ' — ' + it.price : '') + '\n' + (it.url||k);
+      }).join('\n\n');
+      if(navigator.share){
+        navigator.share({ text: text }).catch(function(){});
+      } else if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          toast('Copiati '+ids.length+' annunci negli appunti');
+        }).catch(function(){ toast('Copia non riuscita'); });
+      } else {
+        toast('Condivisione non disponibile su questo browser');
+      }
+    });
+    document.getElementById('selfav').addEventListener('click', function(){
+      var n = 0;
+      for(var k in sel){ if(!favs[k]){ favs[k]=1; n++; } }
+      saveFavs(favs);
+      toast(n ? ('Aggiunti '+n+' annunci ai preferiti') : 'Erano già tutti nei preferiti');
+      setSelecting(false);
+    });
+    document.getElementById('selhide').addEventListener('click', function(){
+      var urls = Object.keys(sel);
+      if(!urls.length){ toast('Nessun annuncio selezionato'); return; }
+      urls.forEach(function(u){ hidden[u] = 1; });
+      saveHidden(hidden);
+      var payload = urls.map(function(u){ var it = BYID[u] || {}; return { url:u, title:it.title||'', portal:it.portal||'' }; });
+      setSelecting(false);
+      try {
+        fetch('/api/blacklist', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({items:payload}) })
+          .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+          .then(function(j){ toast('Eliminati '+urls.length+' annunci: in blacklist, il monitor non li riproporrà ('+j.total+' totali)'); })
+          .catch(function(){ toast('Nascosti '+urls.length+' annunci su questo dispositivo. Per la blacklist definitiva usa la vista dal server locale.'); });
+      } catch(e){ toast('Nascosti '+urls.length+' annunci su questo dispositivo.'); }
+    });
+
+    // Clic sulle schede: in selezione scelgo, altrimenti gestisco la stellina
+    document.getElementById('grid').addEventListener('click', function(ev){
+      if(state.selecting){
+        var card = ev.target && ev.target.closest ? ev.target.closest('a.card') : null;
+        if(card){
+          ev.preventDefault(); ev.stopPropagation();
+          var fid = card.getAttribute('data-fid') || '';
+          if(sel[fid]) delete sel[fid]; else sel[fid] = 1;
+          card.classList.toggle('sel', !!sel[fid]);
+          updateSelbar();
+        }
+        return;
+      }
+      var b = ev.target && ev.target.closest ? ev.target.closest('.favbtn') : null;
+      if(!b) return;
+      ev.preventDefault(); ev.stopPropagation();
+      var id = b.getAttribute('data-fid') || '';
+      if(favs[id]) delete favs[id]; else favs[id]=1;
+      saveFavs(favs);
+      b.classList.toggle('on', !!favs[id]);
+      b.setAttribute('aria-pressed', favs[id] ? 'true' : 'false');
+      if(state.onlyfav) render();
+    });
 
     function collect(){
       var list=[];
       DATA.watches.forEach(function(w){ if(state.tab==="__all__"||state.tab===w.name){ w.items.forEach(function(it){ list.push(it); }); } });
+      list=list.filter(function(it){ var k=favId(it); return !hidden[k] && !serverBl[k]; });
       if(state.onlynew) list=list.filter(function(it){return it.is_new});
+      if(state.onlyfav) list=list.filter(function(it){return favs[favId(it)]});
       var n=state.q.trim().toLowerCase();
       if(n) list=list.filter(function(it){ return (it.title||'').toLowerCase().indexOf(n)>-1 || (it.location||'').toLowerCase().indexOf(n)>-1; });
+      // Fascia di prezzo: con un limite attivo gli annunci senza prezzo leggibile sono esclusi
+      var pmin = state.pmin!=='' && state.pmin!=null ? parseFloat(state.pmin) : null;
+      var pmax = state.pmax!=='' && state.pmax!=null ? parseFloat(state.pmax) : null;
+      if(pmin!=null || pmax!=null){
+        list=list.filter(function(it){
+          var v=numPrice(it.price);
+          if(v==null) return false;
+          if(pmin!=null && v<pmin) return false;
+          if(pmax!=null && v>pmax) return false;
+          return true;
+        });
+      }
       list.sort(function(a,b){
-        if(state.sort==="prezzo") return numPrice(a.price)-numPrice(b.price);
+        if(state.sort==="prezzo") return sortPrice(a, Number.MAX_SAFE_INTEGER)-sortPrice(b, Number.MAX_SAFE_INTEGER);
+        if(state.sort==="prezzo-desc") return sortPrice(b, -1)-sortPrice(a, -1);
         if(state.sort==="az") return (a.title||'').localeCompare(b.title||'','it');
+        if(state.sort==="giorni") return (a.first_seen||'9999').localeCompare(b.first_seen||'9999');
+        if(state.sort==="ribassi"){
+          var d=(b.price_drop_old?1:0)-(a.price_drop_old?1:0);
+          if(d) return d;
+        }
         return (b.first_seen||'').localeCompare(a.first_seen||'');
       });
       return list;
     }
 
     function render(){
+      updateFtoggle();
+      saveFilters();
       var items=collect(), grid=document.getElementById('grid');
-      var filtered = state.q.trim()||state.onlynew||state.tab!=="__all__";
+      var filtered = state.q.trim()||state.onlynew||state.onlyfav||state.tab!=="__all__"||state.pmin!==''||state.pmax!=='';
+      var rangeTxt = (state.pmin!==''||state.pmax!=='')
+        ? ' · prezzo '+(state.pmin!==''?state.pmin:'0')+'–'+(state.pmax!==''?state.pmax:'∞')+' €' : '';
+      var hc = Object.keys(hidden).length;
       document.getElementById('resultbar').innerHTML =
-        '<span>'+items.length+(items.length===1?' annuncio':' annunci')+(state.onlynew?' · solo nuovi':'')+(state.q.trim()?' · «'+esc(state.q.trim())+'»':'')+'</span>'+
-        (filtered?'<button class="reset" id="reset">azzera filtri</button>':'');
+        '<span>'+items.length+(items.length===1?' annuncio':' annunci')+(state.onlynew?' · solo nuovi':'')+(state.onlyfav?' · preferiti':'')+rangeTxt+(state.q.trim()?' · «'+esc(state.q.trim())+'»':'')+'</span>'+
+        (filtered?'<button class="reset" id="reset">azzera filtri</button>':'')+
+        (hc?'<button class="reset" id="unhide">ripristina '+hc+' nascosti</button>':'');
       grid.innerHTML='';
 
       if(!items.length){
@@ -242,20 +608,33 @@
         items.forEach(function(it,i){
           var a=document.createElement('a');
           a.className='card enter'; a.href=it.url||'#';
+          a.setAttribute('data-fid', favId(it));
+          if(state.selecting && sel[favId(it)]) a.className+=' sel';
           if(it.url && it.url!=='#'){ a.target='_blank'; a.rel='noopener'; }
           a.style.animationDelay=Math.min(i*26,340)+'ms';
           var thumb = it.image
-            ? '<img class="thumb-img" loading="lazy" src="'+esc(it.image)+'" alt="'+esc(it.title)+'">'
+            ? '<img class="thumb-img" loading="lazy" decoding="async" src="'+esc(it.image)+'" alt="'+esc(it.title)+'">'
             : '<div class="noimg">senza foto</div>';
-          var stamp = it.is_new?'<div class="stamp">Nuovo</div>':'';
+          var stamp = (it.is_new?'<div class="stamp">Nuovo</div>':'')+(it.price_drop_old?'<div class="stamp drop">Prezzo ↓</div>':'');
           var loc = it.location
             ? '<span class="loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.2-7-11a7 7 0 1 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><span>'+esc(it.location)+'</span></span>'
             : '<span></span>';
-          a.innerHTML='<div class="thumb">'+thumb+stamp+'</div><div class="body">'+
+          var priceHtml = (it.price_drop_old?'<span class="old">'+esc(it.price_drop_old)+'</span>':'')
+            + esc(it.price||'n.d.')
+            + (it.price_drop_pct?'<span class="pct">−'+esc(it.price_drop_pct)+'%</span>':'');
+          var days = null;
+          if(it.first_seen){ var fd=new Date(it.first_seen); if(!isNaN(fd)) days=Math.max(0, Math.floor((Date.now()-fd.getTime())/864e5)); }
+          var seenTxt = it.first_seen ? 'primo avvistamento '+fmtDate(it.first_seen)+(days===0?' · oggi':(days!=null?' · da '+days+' g':'')) : '';
+          if(it.stale) seenTxt = (seenTxt? seenTxt+' · ':'') + 'non verificato oggi';
+          if(it.stale) a.className += ' stale';
+          var favOn = !!favs[favId(it)];
+          var favB = '<button class="favbtn'+(favOn?' on':'')+'" data-fid="'+esc(favId(it))+'"'+
+            ' aria-pressed="'+(favOn?'true':'false')+'" title="Aggiungi o togli dai preferiti">★</button>';
+          a.innerHTML='<div class="thumb">'+thumb+stamp+favB+'</div><div class="body">'+
             '<div class="ttl">'+esc(it.title)+'</div>'+
-            '<div class="price">'+esc(it.price||'n.d.')+'</div>'+
+            '<div class="price">'+priceHtml+'</div>'+
             '<div class="foot">'+loc+'<span class="chip">'+esc(it.portal)+'</span></div>'+
-            '<div class="meta">'+(it.first_seen?'<span>primo avvistamento '+fmtDate(it.first_seen)+'</span>':'')+(it.via?'<span>trovato con '+esc(it.via)+'</span>':'')+'</div>'+
+            '<div class="meta">'+(seenTxt?'<span>'+seenTxt+'</span>':'')+(it.via?'<span>trovato con '+esc(it.via)+'</span>':'')+'</div>'+
             '</div>';
           frag.appendChild(a);
         });
@@ -266,13 +645,21 @@
       }
       var reset=document.getElementById('reset');
       if(reset) reset.addEventListener('click', function(){
-        state.tab="__all__"; state.q=""; state.onlynew=false;
+        state.tab="__all__"; state.q=""; state.onlynew=false; state.onlyfav=false; state.pmin=""; state.pmax="";
+        pminEl.value=''; pmaxEl.value=''; syncFavUi();
         qEl.value=''; clearEl.style.display='none'; document.getElementById('onlynew').checked=false;
         [].forEach.call(tabsEl.children,function(c,idx){ c.setAttribute('aria-selected', idx===0?'true':'false'); });
         render();
       });
+      var unhide=document.getElementById('unhide');
+      if(unhide) unhide.addEventListener('click', function(){
+        hidden={}; saveHidden(hidden); render();
+        toast('Nascosti ripristinati su questo dispositivo (la blacklist del monitor non cambia)');
+      });
     }
 
+    syncSortUi();
+    syncFavUi();
     render();
   })();
   </script>
