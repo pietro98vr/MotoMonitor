@@ -1,11 +1,14 @@
-# Riepilogo annunci moto — 07/07/2026
+# Riepilogo annunci moto — 08/07/2026
 
-**Nuovi: 11 · Ribassi: 5 · Rimossi: 0**
+**Nuovi: 2 · Ribassi: 0 · Rimossi: 0**
 
 > ⚠ eBay.de: nessuna risposta (HTTP 403) — l'elenco potrebbe essere incompleto.
 
 ## KTM 125 Sachs 1970–72 (parafanghi in metallo)
-### Tutti gli annunci in elenco (7)
+### Nuovi (1)
+- **Moto regolarità KTM 125 GS 1976** — n.d. · Pontirolo Nuovo · Subito
+  https://www.subito.it/moto-e-scooter/moto-regolarita-ktm-125-gs-1976-bergamo-653328585.htm
+### Tutti gli annunci in elenco (8)
 - 1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro — EUR 760,51 ·  · eBay
   https://www.ebay.it/itm/277951421651
 - Cilindro 125cc per KTM LC2 / Derbi GPR / Sachs XTC ZX ZZ — EUR 591,83 ·  · eBay
@@ -20,6 +23,8 @@
   https://www.subito.it/moto-e-scooter/ktm-125-sachs-6-marce-modena-646465997.htm
 - KTM GS 125 SACHS 1974 - 1975 - SCARICO RACING - RACING EXHAUST - SITO — EUR 638,00 ·  · eBay
   https://www.ebay.it/itm/265105898416
+- 🆕 Moto regolarità KTM 125 GS 1976 — n.d. · Pontirolo Nuovo · Subito
+  https://www.subito.it/moto-e-scooter/moto-regolarita-ktm-125-gs-1976-bergamo-653328585.htm
 
 ## KTM 175 Sachs 1970–72 (parafanghi in metallo)
 ### Tutti gli annunci in elenco (4)
@@ -33,38 +38,6 @@
   https://www.subito.it/moto-e-scooter/ktm-gs-175-1972-vicenza-637774338.htm
 
 ## Portachiavi Kawasaki
-### Nuovi (10)
-- **2026 per Kawasaki Z 400 NINJA 400 copri portachiavi moto nuovo** — EUR 15,70 ·  · eBay
-  https://www.ebay.it/itm/358734877251
-- **KAWASAKI Portachiavi Moto KAWASAKI Portachiavi + Confezione Regalo** — EUR 14,99 ·  · eBay
-  https://www.ebay.it/itm/366516032114
-- **KAWASAKI Portachiavi Moto KAWASAKI Portachiavi KAWASAKI** — EUR 12,00 ·  · eBay
-  https://www.ebay.it/itm/366516042668
-- **Per Kawasaki NINJA 650 NINJA650 Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo** — EUR 5,70 ·  · eBay
-  https://www.ebay.it/itm/800301948882
-- **Portachiavi in metallo dorato emblema serbatoio Kawasaki** — EUR 33,06 ·  · eBay
-  https://www.ebay.it/itm/318519741571
-- **Portachiavi KAWASAKI FOGLIA Gomma Ninja Z750 Z900 Antigraffio Moto Gadget Biker** — EUR 19,99 ·  · eBay
-  https://www.ebay.it/itm/125941329258
-- **Portachiavi Kawasaki Frontale Coppa dell'Imperatore Vittoria Pennant Calcio Memorabilia** — EUR 72,93 ·  · eBay
-  https://www.ebay.it/itm/158039335144
-- **Portachiavi Rin Itoshi Kawasaki Frontale Lega BLUELOCK da collezione** — EUR 50,61 ·  · eBay
-  https://www.ebay.it/itm/398121443207
-- **Portachiavi stemma logo auto texture fibra di carbonio nero moto Kawasaki** — EUR 16,00 ·  · eBay
-  https://www.ebay.it/itm/168520317073
-- **Portachiavi supporto acrilico acquario Attack on Titan Levi Kawasui Kawasaki** — EUR 59,57 ·  · eBay
-  https://www.ebay.it/itm/358739697524
-### Prezzi calati (5)
-- **Kawasaki Portachiavi Metallo Veicolo Ferroviario Targa Interno Collezione 2019** — EUR 81,03 → EUR 72,93 (−10%) · eBay
-  https://www.ebay.it/itm/158058187097
-- **Portachiavi emblema Kawasaki ZX-10 ZZR Turbo** — EUR 56,85 → EUR 51,17 (−10%) · eBay
-  https://www.ebay.it/itm/147414358920
-- **Portachiavi Kawasaki Frontale Deca Acrilico Blu Lucchetto J.League 30° Usato** — EUR 36,83 → EUR 34,99 (−5%) · eBay
-  https://www.ebay.it/itm/398148101628
-- **Portachiavi Ragazze Fascia Cry Inosera Nina Domino Kawasaki Limited** — EUR 51,27 → EUR 46,14 (−10%) · eBay
-  https://www.ebay.it/itm/158057507197
-- **Portachiavi targhetta interno ferrovia metallo Kawasaki 1996 mai usato** — EUR 81,03 → EUR 72,93 (−10%) · eBay
-  https://www.ebay.it/itm/158058187102
 ### Tutti gli annunci in elenco (129)
 - 1 Paio Tappo Coperchio Stelo Valvola Pneumatici Moto + Portachiavi per Kawasaki Z1000SX — EUR 15,70 ·  · eBay
   https://www.ebay.it/itm/800291468064
@@ -72,7 +45,7 @@
   https://www.ebay.it/itm/800291424652
 - 15460-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZXR 400 — EUR 21,77 ·  · eBay
   https://www.ebay.it/itm/188587765380
-- 🆕 2026 per Kawasaki Z 400 NINJA 400 copri portachiavi moto nuovo — EUR 15,70 ·  · eBay
+- 2026 per Kawasaki Z 400 NINJA 400 copri portachiavi moto nuovo — EUR 15,70 ·  · eBay
   https://www.ebay.it/itm/358734877251
 - 21055-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZXR 750 — EUR 21,77 ·  · eBay
   https://www.ebay.it/itm/206387651430
@@ -110,13 +83,13 @@
   https://www.ebay.it/itm/405471663894
 - Kawasaki portachiavi antigraffio artigianale in legno — EUR 3,49 ·  · eBay
   https://www.ebay.it/itm/395609931874
-- 📉 Kawasaki Portachiavi Metallo Veicolo Ferroviario Targa Interno Collezione 2019 — EUR 72,93 ·  · eBay
+- Kawasaki Portachiavi Metallo Veicolo Ferroviario Targa Interno Collezione 2019 — EUR 72,93 ·  · eBay
   https://www.ebay.it/itm/158058187097
 - KAWASAKI Portachiavi Moto KAWASAKI Filettatura Nera — EUR 12,00 ·  · eBay
   https://www.ebay.it/itm/366516047324
-- 🆕 KAWASAKI Portachiavi Moto KAWASAKI Portachiavi + Confezione Regalo — EUR 14,99 ·  · eBay
+- KAWASAKI Portachiavi Moto KAWASAKI Portachiavi + Confezione Regalo — EUR 14,99 ·  · eBay
   https://www.ebay.it/itm/366516032114
-- 🆕 KAWASAKI Portachiavi Moto KAWASAKI Portachiavi KAWASAKI — EUR 12,00 ·  · eBay
+- KAWASAKI Portachiavi Moto KAWASAKI Portachiavi KAWASAKI — EUR 12,00 ·  · eBay
   https://www.ebay.it/itm/366516042668
 - Kawasaki Portachiavi Ninja Bianco Nuovo — EUR 11,22 ·  · eBay
   https://www.ebay.it/itm/135452314349
@@ -128,7 +101,7 @@
   https://www.ebay.it/itm/192927194199
 - Original OEM KAWASAKI Portachiavi ninja 107SPM0025 KEY RING Fan Articolo Merchan — EUR 9,80 ·  · eBay
   https://www.ebay.it/itm/192927191156
-- 🆕 Per Kawasaki NINJA 650 NINJA650 Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo — EUR 5,70 ·  · eBay
+- Per Kawasaki NINJA 650 NINJA650 Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo — EUR 5,70 ·  · eBay
   https://www.ebay.it/itm/800301948882
 - Per Kawasaki Z1000SX 1000SX Tappo Coperchio Stelo Valvola Pneumatici Moto +Portachiavi -2pz — EUR 15,70 ·  · eBay
   https://www.ebay.it/itm/158056739972
@@ -190,20 +163,20 @@ _…e altri 69 annunci nella web app._
 
 ## Borsa/kit attrezzi Kawasaki 350 S2
 ### Nuovi (1)
-- **Kawasaki OEM 56008-0001 BagTool** — EUR 28,27 ·  · eBay
-  https://www.ebay.it/itm/168519776043
-### Tutti gli annunci in elenco (71)
-- 1999 - 2004 Kawasaki KDX200 KDX220R Rear Storage Bag Cargo Luggage 56008-1073-MW — EUR 74,64 ·  · eBay
+- **Kawasaki OEM Part New 56008-0036** — EUR 23,95 ·  · eBay
+  https://www.ebay.it/itm/226161133514
+### Tutti gli annunci in elenco (72)
+- 1999 - 2004 Kawasaki KDX200 KDX220R Rear Storage Bag Cargo Luggage 56008-1073-MW — EUR 74,82 ·  · eBay
   https://www.ebay.it/itm/198465562422
-- 2021 Kawasaki KLX300 OEM Rear Tool Bag 56008-0580 — EUR 53,32 ·  · eBay
+- 2021 Kawasaki KLX300 OEM Rear Tool Bag 56008-0580 — EUR 53,45 ·  · eBay
   https://www.ebay.it/itm/147391806252
 - 21-25 Kawasaki KLX300E Rear Tool Bag 56008-0580 — EUR 79,88 ·  · eBay
   https://www.ebay.it/itm/168364516817
-- 4 FORI!  KAWASAKI KLX300SM KLX300 21-2024 BORSA, STRUMENTO, NERO 56008-0037-MA fuoristrada — EUR 132,81 ·  · eBay
+- 4 FORI!  KAWASAKI KLX300SM KLX300 21-2024 BORSA, STRUMENTO, NERO 56008-0037-MA fuoristrada — EUR 132,82 ·  · eBay
   https://www.ebay.it/itm/204693464619
-- 4 FORI! KAWASAKI KLX250 KLX250S 11-20 BORSA,UTENSILE,NERO 56008-0037-MA para moto — EUR 132,81 ·  · eBay
+- 4 FORI! KAWASAKI KLX250 KLX250S 11-20 BORSA,UTENSILE,NERO 56008-0037-MA para moto — EUR 132,82 ·  · eBay
   https://www.ebay.it/itm/193298221527
-- 4 HOLES!  KAWASAKI KLX300SM KLX300 21-2024 BAG,TOOL,BLACK 56008-0037-MA offroad — EUR 133,45 ·  · eBay
+- 4 HOLES!  KAWASAKI KLX300SM KLX300 21-2024 BAG,TOOL,BLACK 56008-0037-MA offroad — EUR 133,79 ·  · eBay
   https://www.ebay.it/itm/358115969748
 - Bordwerkzeug Tasche Set Utensili Chiave A Pappagallo Kawasaki ZR 7S ZR750F 99-04 — EUR 51,98 ·  · eBay
   https://www.ebay.it/itm/168389462506
@@ -213,71 +186,73 @@ _…e altri 69 annunci nella web app._
   https://www.ebay.it/itm/206231438762
 - Kawasaki 56008-1077 BORSA,STRUMENTO NOS NUOVO originale xn10644 — EUR 14,90 ·  · eBay
   https://www.ebay.it/itm/133679634669
-- KAWASAKI Genuine 56008-006 OWNER TOOLS BAG VOYAGER VULCAN NINJA ZX GPZ Z1 A/B — EUR 13,14 ·  · eBay
+- KAWASAKI Genuine 56008-006 OWNER TOOLS BAG VOYAGER VULCAN NINJA ZX GPZ Z1 A/B — EUR 13,17 ·  · eBay
   https://www.ebay.it/itm/198210450085
-- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag NOS Pouch 56008-006 — EUR 17,64 ·  · eBay
+- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag NOS Pouch 56008-006 — EUR 17,68 ·  · eBay
   https://www.ebay.it/itm/297476957134
-- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch 56008-006 NOS — EUR 26,74 ·  · eBay
+- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch 56008-006 NOS — EUR 26,81 ·  · eBay
   https://www.ebay.it/itm/306400937000
-- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 — EUR 18,75 ·  · eBay
+- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 — EUR 18,80 ·  · eBay
   https://www.ebay.it/itm/166957730357
-- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 new — EUR 17,85 ·  · eBay
+- KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 new — EUR 17,89 ·  · eBay
   https://www.ebay.it/itm/147216824003
-- Kawasaki Genuine Tool Bag Onboard Tool Case 56008-006 New Unused — EUR 181,80 ·  · eBay
+- Kawasaki Genuine Tool Bag Onboard Tool Case 56008-006 New Unused — EUR 182,26 ·  · eBay
   https://www.ebay.it/itm/198134663744
-- KAWASAKI KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 Genuine — EUR 18,75 ·  · eBay
+- KAWASAKI KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 Genuine — EUR 18,80 ·  · eBay
   https://www.ebay.it/itm/389900213563
-- KAWASAKI KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS Genuine 56008-006 — EUR 28,24 ·  · eBay
+- KAWASAKI KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS Genuine 56008-006 — EUR 28,31 ·  · eBay
   https://www.ebay.it/itm/365973575142
 - KAWASAKI KLX230 DF ABS 2026 BORSA 56008-0591 — EUR 8,57 ·  · eBay
   https://www.ebay.it/itm/206263148016
-- KAWASAKI KLX300SM KLX300 2021-2023 BAG,TOOL 56008-0580 MOUNT WITH X2 HOLES — EUR 175,61 ·  · eBay
+- KAWASAKI KLX300SM KLX300 2021-2023 BAG,TOOL 56008-0580 MOUNT WITH X2 HOLES — EUR 176,06 ·  · eBay
   https://www.ebay.it/itm/358196020797
-- KAWASAKI KLX300SM KLX300 2021-2023 BORSA,STRUMENTO 56008-0580 ATTACCO CON FORI X2 — EUR 172,79 ·  · eBay
+- KAWASAKI KLX300SM KLX300 2021-2023 BORSA,STRUMENTO 56008-0580 ATTACCO CON FORI X2 — EUR 172,81 ·  · eBay
   https://www.ebay.it/itm/195403326078
 - KAWASAKI NINJA 300 ABS 2026 BORSA, STRUMENTO 56008-0575 — EUR 14,28 ·  · eBay
   https://www.ebay.it/itm/198322371817
 - KAWASAKI NINJA 400 2018 EX400G BORSA ATTREZZI PROPRIETARIO,UTENSILE 56008-0036 — EUR 10,00 ·  · eBay
   https://www.ebay.it/itm/193028891088
-- KAWASAKI NINJA 500 ABS 2026 BORSA, STRUMENTO 56008-0036 — EUR 11,42 ·  · eBay
+- KAWASAKI NINJA 500 ABS 2026 BORSA, STRUMENTO 56008-0036 — EUR 11,43 ·  · eBay
   https://www.ebay.it/itm/206243758804
-- KAWASAKI NINJA ZX-10R 2026 BORSA, STRUMENTO 56008-0577 — EUR 11,42 ·  · eBay
+- KAWASAKI NINJA ZX-10R 2026 BORSA, STRUMENTO 56008-0577 — EUR 11,43 ·  · eBay
   https://www.ebay.it/itm/198322113059
-- Kawasaki NOS Universal Tool Bag Pouch Black OEM Part #56008-006 — EUR 26,61 ·  · eBay
+- Kawasaki NOS Universal Tool Bag Pouch Black OEM Part #56008-006 — EUR 26,67 ·  · eBay
   https://www.ebay.it/itm/377092885162
-- 🆕 Kawasaki OEM 56008-0001 BagTool — EUR 28,27 ·  · eBay
+- Kawasaki OEM 56008-0001 BagTool — EUR 28,34 ·  · eBay
   https://www.ebay.it/itm/168519776043
 - Kawasaki OEM 56008-0001 BagTool — EUR 28,27 ·  · eBay
   https://www.ebay.it/itm/167915280318
-- Kawasaki OEM 56008-0024 BagTool — EUR 21,69 ·  · eBay
+- Kawasaki OEM 56008-0024 BagTool — EUR 21,74 ·  · eBay
   https://www.ebay.it/itm/168283724655
-- Kawasaki OEM 56008-0037-MA BagToolBlack — EUR 211,28 ·  · eBay
+- Kawasaki OEM 56008-0037-MA BagToolBlack — EUR 211,81 ·  · eBay
   https://www.ebay.it/itm/168012488118
-- Kawasaki OEM 56008-0038 Bag — EUR 14,11 ·  · eBay
+- Kawasaki OEM 56008-0038 Bag — EUR 14,14 ·  · eBay
   https://www.ebay.it/itm/168283795920
-- Kawasaki OEM 56008-0045 Bag — EUR 20,75 ·  · eBay
+- Kawasaki OEM 56008-0045 Bag — EUR 20,80 ·  · eBay
   https://www.ebay.it/itm/168283723692
-- Kawasaki OEM 56008-0046 BagTool — EUR 20,75 ·  · eBay
+- Kawasaki OEM 56008-0046 BagTool — EUR 20,80 ·  · eBay
   https://www.ebay.it/itm/168283725855
-- Kawasaki OEM 56008-0050 BagTool — EUR 23,80 ·  · eBay
+- Kawasaki OEM 56008-0050 BagTool — EUR 23,86 ·  · eBay
   https://www.ebay.it/itm/168283725037
-- Kawasaki OEM 56008-006 BagTool — EUR 26,48 ·  · eBay
+- Kawasaki OEM 56008-006 BagTool — EUR 26,55 ·  · eBay
   https://www.ebay.it/itm/168347446867
-- Kawasaki OEM 56008-006 BagTool From Japan — EUR 63,93 ·  · eBay
+- Kawasaki OEM 56008-006 BagTool From Japan — EUR 64,09 ·  · eBay
   https://www.ebay.it/itm/205905308619
-- Kawasaki OEM 56008-0563 BagTool — EUR 20,44 ·  · eBay
+- Kawasaki OEM 56008-0563 BagTool — EUR 20,50 ·  · eBay
   https://www.ebay.it/itm/168283712771
-- Kawasaki OEM 56008-0580 BagTool — EUR 211,28 ·  · eBay
+- Kawasaki OEM 56008-0580 BagTool — EUR 211,81 ·  · eBay
   https://www.ebay.it/itm/168283797053
-- Kawasaki OEM 56008-0580 BagTool — EUR 158,55 ·  · eBay
+- Kawasaki OEM 56008-0580 BagTool — EUR 158,96 ·  · eBay
   https://www.ebay.it/itm/226347218960
-- Kawasaki OEM 56008-1007 BagTool — EUR 14,31 ·  · eBay
+- Kawasaki OEM 56008-1007 BagTool — EUR 14,34 ·  · eBay
   https://www.ebay.it/itm/168000464706
-- KAWASAKI OEM KDX Ninja Vulcan ZRX ZZR Black Tool Bag 56008-006 Pouch NOS — EUR 26,55 ·  · eBay
+- KAWASAKI OEM KDX Ninja Vulcan ZRX ZZR Black Tool Bag 56008-006 Pouch NOS — EUR 26,62 ·  · eBay
   https://www.ebay.it/itm/357223200096
+- 🆕 Kawasaki OEM Part New 56008-0036 — EUR 23,95 ·  · eBay
+  https://www.ebay.it/itm/226161133514
 - Kawasaki OEM Parte Nuovo 56008-0036 — EUR 25,34 ·  · eBay
   https://www.ebay.it/itm/226306659753
-- Kawasaki OEM Tool Bag 56008-1075 — EUR 19,10 ·  · eBay
+- Kawasaki OEM Tool Bag 56008-1075 — EUR 19,15 ·  · eBay
   https://www.ebay.it/itm/168069542871
 - KAWASAKI TOOL KIT PLIERS KZ1000 Z1000 TOOL KIT Z1 R  Z1-R 900 KZ900 H2 H1 S3 S2 — EUR 10,65 ·  · eBay
   https://www.ebay.it/itm/167758721568
@@ -305,12 +280,10 @@ _…e altri 69 annunci nella web app._
   https://www.ebay.it/itm/257495994242
 - Pour KAWASAKI 900 Z1 Z1000 - Pochette de trousse à outil - #56008-006 — EUR 29,90 ·  · eBay
   https://www.ebay.it/itm/286205374713
-- Ricambio originale Kawasaki BAG DUST# 56008-W001 — EUR 96,11 ·  · eBay
+- Ricambio originale Kawasaki BAG DUST# 56008-W001 — EUR 96,35 ·  · eBay
   https://www.ebay.it/itm/282345137433
 - Roll Up Tool Kit Bag Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1 — EUR 18,07 ·  · eBay
   https://www.ebay.it/itm/198468010645
 - Roll Up Tool Kit Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1 Bag — EUR 58,57 ·  · eBay
   https://www.ebay.it/itm/198468146020
-- Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 — EUR 34,07 ·  · eBay
-  https://www.ebay.it/itm/168491983498
-_…e altri 11 annunci nella web app._
+_…e altri 12 annunci nella web app._
