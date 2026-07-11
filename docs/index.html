@@ -3,34 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f6f8">
 <title>Officina — Monitor annunci</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#efe9db; --paper-2:#e7e0cf; --card:#fbf8f1;
-    --ink:#16302e; --ink-soft:#3f5a56;
-    --amber:#cc5b22; --amber-dark:#a8481a; --teal:#2c6e6a; --muted:#8a7f68;
-    --line:rgba(22,48,46,.14); --line-strong:rgba(22,48,46,.28);
-    --shadow:0 1px 0 rgba(22,48,46,.05), 0 10px 24px -18px rgba(22,48,46,.45);
+    --paper:#f5f6f8; --paper-2:#eceef2; --card:#ffffff;
+    --ink:#16181d; --ink-soft:#4b5563;
+    --amber:#f25c05; --amber-dark:#c94b02; --teal:#0f9d76; --muted:#8a94a3;
+    --line:#e4e7ec; --line-strong:#cdd3dc;
+    --shadow:0 1px 2px rgba(16,24,40,.05), 0 10px 26px -14px rgba(16,24,40,.14);
     --safe: env(safe-area-inset-bottom, 0px);
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
   body{margin:0; color:var(--ink); background:var(--paper);
     font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.5;
-    background-image:radial-gradient(var(--line) 1px, transparent 1px); background-size:22px 22px;
     -webkit-tap-highlight-color:transparent}
   a{color:inherit}
   .wrap{max-width:1200px; margin:0 auto; padding:0 clamp(14px,4vw,20px)}
-  .mono{font-family:"Space Mono",ui-monospace,Menlo,Consolas,monospace}
-  .cond{font-family:"Saira Condensed",Inter,sans-serif}
+  .mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}
+  .cond{font-family:Archivo,Inter,sans-serif}
 
   header{position:sticky; top:0; z-index:20;
-    background:linear-gradient(var(--paper), rgba(239,233,219,.94));
-    backdrop-filter:saturate(1.1) blur(6px); border-bottom:1px solid var(--line-strong)}
-  .eyebrow{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin:0 0 4px}
+    background:rgba(245,246,248,.88);
+    backdrop-filter:saturate(1.2) blur(10px); border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 0 4px}
   .masthead{display:flex; flex-wrap:wrap; align-items:flex-end; gap:6px 18px; padding:16px 0 4px}
   h1{font-weight:800; letter-spacing:.01em; text-transform:uppercase; font-size:clamp(28px,6vw,46px); line-height:.95; margin:0}
   h1 .amp{color:var(--amber)}
@@ -42,16 +42,21 @@
   .toolbar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding:12px 0 10px}
   .search{flex:1 1 240px; position:relative; min-width:180px}
   .search input{width:100%; padding:10px 34px 10px 34px; border:1px solid var(--line-strong);
-    border-radius:8px; background:var(--card); color:var(--ink); font-family:inherit; font-size:15px}
-  .search input:focus{outline:none; border-color:var(--amber)}
+    border-radius:12px; background:var(--card); color:var(--ink); font-family:inherit; font-size:15px}
+  .search input:focus{outline:none; border-color:var(--amber); box-shadow:0 0 0 3px rgba(242,92,5,.14)}
   .search .ico{position:absolute; left:10px; top:50%; transform:translateY(-50%); opacity:.5; pointer-events:none}
   .search .clear{position:absolute; right:6px; top:50%; transform:translateY(-50%); border:none; background:transparent;
     color:var(--muted); font-size:16px; cursor:pointer; padding:6px; line-height:1; border-radius:6px; display:none}
   .search .clear:hover{color:var(--ink)}
   .ctrl{font-size:12px; color:var(--ink); border:1px solid var(--line-strong); background:var(--card);
-    border-radius:8px; padding:10px 12px; min-height:42px}
-  select.ctrl{cursor:pointer; font-family:"Space Mono",monospace}
-  .toggle{display:inline-flex; align-items:center; gap:8px; user-select:none; cursor:pointer; font-family:"Space Mono",monospace}
+    border-radius:10px; padding:10px 12px; min-height:42px}
+  .pricerange{display:inline-flex; align-items:center; gap:6px}
+  .pricerange .dash{color:var(--muted); font-family:"JetBrains Mono",ui-monospace,monospace}
+  .price-in{width:96px; font-family:"JetBrains Mono",ui-monospace,monospace; -moz-appearance:textfield}
+  .price-in::-webkit-outer-spin-button,.price-in::-webkit-inner-spin-button{-webkit-appearance:none; margin:0}
+  .price-in:focus{outline:none; border-color:var(--amber)}
+  select.ctrl{cursor:pointer; font-family:"JetBrains Mono",ui-monospace,monospace}
+  .toggle{display:inline-flex; align-items:center; gap:8px; user-select:none; cursor:pointer; font-family:"JetBrains Mono",ui-monospace,monospace}
   .toggle input{position:absolute; opacity:0; width:0; height:0}
   .sw{width:34px; height:18px; border-radius:10px; background:var(--line-strong); position:relative; transition:background .2s; flex:0 0 auto}
   .sw::after{content:""; position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:50%; background:#fff; transition:transform .2s}
@@ -59,53 +64,137 @@
   .toggle input:checked + .sw::after{transform:translateX(16px)}
   @media (max-width:520px){ .search{flex-basis:100%} .toggle.ctrl,select.ctrl{flex:1 1 auto; justify-content:center} }
 
+  /* Selettore di vista Tutti/Nuovi/Preferiti: solo su mobile, sempre a portata di pollice */
+  .viewseg{display:none}
+  @media (max-width:640px){
+    .viewseg{display:flex; gap:0; margin:0 0 10px; border:1px solid var(--line-strong);
+      border-radius:10px; overflow:hidden; background:var(--card)}
+    .viewseg button{flex:1; min-height:42px; border:none; background:transparent; color:var(--ink-soft);
+      font-family:"JetBrains Mono",ui-monospace,monospace; font-size:13px; cursor:pointer; border-right:1px solid var(--line)}
+    .viewseg button:last-child{border-right:none}
+    .viewseg button.on{background:var(--ink); color:var(--paper); font-weight:700}
+    .bottombar .hide-sm{display:none}
+    .favbtn{width:32px; height:32px; font-size:16px}
+  }
+
+  /* ---- Mobile: barra filtri compatta e niente zoom iOS sui campi ---- */
+  #ftoggle{display:none; cursor:pointer; font-family:"JetBrains Mono",ui-monospace,monospace}
+  #ftoggle.has{border-color:var(--amber); color:var(--amber-dark); font-weight:700}
+  @media (max-width:640px){
+    .masthead{padding:10px 0 2px}
+    .toolbar{padding:10px 0 8px; gap:8px}
+    #ftoggle{display:inline-flex; align-items:center; flex:0 0 auto}
+    .search{flex-basis:auto; flex:1 1 120px}
+    .toolbar .toggle.ctrl, .toolbar .pricerange, .toolbar select.ctrl, #selmode{display:none}
+    .toolbar.open .toggle.ctrl{display:inline-flex}
+    .toolbar.open .pricerange{display:inline-flex}
+    .toolbar.open select.ctrl{display:block}
+    .toolbar.open #selmode{display:block}
+    .search input, .price-in, select.ctrl{font-size:16px} /* evita lo zoom automatico di iOS */
+    .price-in{width:110px}
+  }
+
   nav.index{display:flex; gap:8px; overflow-x:auto; padding:2px 0 14px; -webkit-overflow-scrolling:touch}
   nav.index::-webkit-scrollbar{height:6px}
   nav.index::-webkit-scrollbar-thumb{background:var(--line-strong); border-radius:3px}
   .tab{flex:0 0 auto; display:inline-flex; align-items:center; gap:8px; padding:8px 13px; border:1px solid var(--line-strong);
     border-radius:999px; background:transparent; color:var(--ink-soft); cursor:pointer; font-size:13px; font-weight:600;
     white-space:nowrap; transition:.15s; min-height:38px; font-family:inherit}
-  .tab .cnt{font-family:"Space Mono",monospace; font-size:11px; color:var(--muted)}
-  .tab .newdot{font-family:"Space Mono",monospace; font-size:10px; font-weight:700; color:#fff; background:var(--amber); border-radius:999px; padding:1px 6px}
+  .tab .cnt{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:11px; color:var(--muted)}
+  .tab .newdot{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:10px; font-weight:700; color:#fff; background:var(--amber); border-radius:999px; padding:1px 6px}
   .tab:hover{border-color:var(--ink); color:var(--ink)}
   .tab[aria-selected="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink)}
-  .tab[aria-selected="true"] .cnt{color:rgba(239,233,219,.7)}
+  .tab[aria-selected="true"] .cnt{color:rgba(255,255,255,.65)}
   .tab:focus-visible{outline:3px solid var(--amber); outline-offset:2px}
 
-  .resultbar{font-family:"Space Mono",monospace; font-size:12px; color:var(--muted); padding:4px 0 14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+  .resultbar{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12px; color:var(--muted); padding:4px 0 14px; display:flex; align-items:center; gap:12px; flex-wrap:wrap}
   .resultbar .reset{border:none; background:transparent; color:var(--teal); font:inherit; cursor:pointer; text-decoration:underline; padding:0}
 
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(258px,1fr)); gap:18px; padding-bottom:calc(48px + var(--safe))}
   .card{display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line);
-    border-radius:12px; overflow:hidden; text-decoration:none; box-shadow:var(--shadow);
+    border-radius:14px; overflow:hidden; text-decoration:none; box-shadow:var(--shadow);
     transition:transform .18s, box-shadow .18s, border-color .18s}
-  @media (hover:hover){ .card:hover{transform:translateY(-3px); border-color:var(--line-strong); box-shadow:0 18px 34px -20px rgba(22,48,46,.5)} }
+  @media (hover:hover){ .card:hover{transform:translateY(-2px); border-color:var(--line-strong); box-shadow:0 16px 34px -16px rgba(16,24,40,.26)} }
   .card:active{transform:translateY(-1px)}
   .card:focus-visible{outline:3px solid var(--amber); outline-offset:2px}
   .thumb{position:relative; aspect-ratio:4/3; background:var(--paper-2); overflow:hidden}
   .thumb img{width:100%; height:100%; object-fit:cover; display:block}
   .noimg{width:100%; height:100%; display:flex; align-items:center; justify-content:center; color:var(--muted);
-    font-family:"Space Mono",monospace; font-size:12px; letter-spacing:.08em;
-    background-image:repeating-linear-gradient(45deg, rgba(22,48,46,.05) 0 8px, transparent 8px 16px)}
-  .stamp{position:absolute; top:10px; left:10px; transform:rotate(-7deg); font-family:"Saira Condensed",sans-serif;
-    font-weight:800; letter-spacing:.06em; font-size:13px; color:var(--amber); text-transform:uppercase;
-    border:2px solid var(--amber); border-radius:4px; padding:2px 7px; background:rgba(251,248,241,.85); box-shadow:0 1px 0 rgba(168,72,26,.25)}
+    font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12px; letter-spacing:.08em}
+  .stamp{position:absolute; top:10px; left:10px; font-family:"JetBrains Mono",ui-monospace,monospace;
+    font-weight:700; letter-spacing:.05em; font-size:11px; color:#fff; text-transform:uppercase;
+    border:none; border-radius:999px; padding:4px 10px; background:var(--amber);
+    box-shadow:0 2px 8px rgba(242,92,5,.35)}
   .body{padding:12px 13px 13px; display:flex; flex-direction:column; gap:7px; flex:1}
   .ttl{font-weight:600; font-size:14.5px; color:var(--ink); line-height:1.32;
     display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
-  .price{font-family:"Space Mono",monospace; font-weight:700; font-size:15px; color:var(--amber-dark)}
+  .price{font-family:"JetBrains Mono",ui-monospace,monospace; font-weight:700; font-size:15px; color:var(--ink); font-variant-numeric:tabular-nums}
   .foot{margin-top:auto; display:flex; align-items:center; justify-content:space-between; gap:8px; padding-top:4px}
-  .chip{font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
-    color:var(--teal); border:1px solid var(--teal); border-radius:5px; padding:2px 6px; flex:0 0 auto}
+  .chip{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
+    color:var(--ink-soft); border:none; background:var(--paper-2); border-radius:6px; padding:3px 8px; flex:0 0 auto}
   .loc{font-size:12.5px; color:var(--ink-soft); display:flex; align-items:center; gap:4px; min-width:0}
   .loc span{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
-  .meta{font-family:"Space Mono",monospace; font-size:11px; color:var(--muted); display:flex; flex-direction:column; gap:2px}
+  .meta{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:11px; color:var(--muted); display:flex; flex-direction:column; gap:2px}
+
+  .warnbar{margin:0 0 14px; padding:10px 12px; border:1px solid #ffd0b0; border-radius:12px;
+    background:#fff4ec; color:var(--amber-dark); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12px; line-height:1.6}
+  .stamp.drop{background:var(--teal); box-shadow:0 2px 8px rgba(15,157,118,.35); top:auto; bottom:10px}
+  .price .old{font-family:"JetBrains Mono",ui-monospace,monospace; font-weight:400; font-size:12px; color:var(--muted);
+    text-decoration:line-through; margin-right:7px}
+  .price .pct{font-size:11px; color:var(--teal); font-weight:700; margin-left:6px}
+  .card.stale{opacity:.78}
+  .card.stale .thumb::after{content:"non verificato oggi"; position:absolute; left:0; right:0; bottom:0;
+    background:rgba(22,24,29,.75); color:#fff; font-family:"JetBrains Mono",ui-monospace,monospace; font-size:10px;
+    letter-spacing:.06em; text-transform:uppercase; text-align:center; padding:3px 0}
+
+  .card.gone{opacity:.82}
+  .card.gone .thumb::after{content:"non più in elenco"; position:absolute; left:0; right:0; bottom:0;
+    background:rgba(201,75,2,.85); color:#fff; font-family:"JetBrains Mono",ui-monospace,monospace; font-size:10px;
+    letter-spacing:.06em; text-transform:uppercase; text-align:center; padding:3px 0}
+  .favbtn{position:absolute; top:8px; right:8px; z-index:2; width:36px; height:36px; border-radius:50%;
+    border:1px solid var(--line-strong); background:rgba(255,255,255,.94); color:var(--muted);
+    font-size:18px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    transition:.15s; padding:0}
+  .favbtn:hover{color:var(--amber-dark); border-color:var(--amber)}
+  .favbtn.on{color:#fff; background:var(--amber); border-color:var(--amber-dark)}
+  .bottombar{display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:center;
+    border-top:1px dashed var(--line-strong); margin:8px 0 0; padding:16px 0 8px}
+  .chipbtn{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12px; border:1px solid var(--line-strong);
+    background:var(--card); color:var(--ink-soft); border-radius:999px; padding:8px 13px; cursor:pointer; min-height:38px}
+  .chipbtn:hover{border-color:var(--ink); color:var(--ink)}
+  .chipbtn.on{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+  #selmode{cursor:pointer; font-family:"JetBrains Mono",ui-monospace,monospace}
+  .card.sel{outline:3px solid var(--teal); outline-offset:2px}
+  .card.sel .thumb::before{content:"✓"; position:absolute; top:8px; left:8px; z-index:3; width:26px; height:26px;
+    border-radius:50%; background:var(--teal); color:#fff; font-weight:700; font-size:15px;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 2px 6px rgba(0,0,0,.25)}
+  .card.sel .stamp{display:none}
+  .selbar{position:fixed; left:50%; transform:translateX(-50%); bottom:calc(14px + var(--safe)); z-index:40;
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:center;
+    background:var(--ink); color:var(--paper); border-radius:12px; padding:10px 14px; max-width:94vw;
+    box-shadow:0 14px 34px -12px rgba(0,0,0,.55); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:12px}
+  .selbar button{font-family:inherit; font-size:12px; border-radius:9px; border:1px solid rgba(255,255,255,.28);
+    background:transparent; color:#fff; padding:8px 11px; cursor:pointer; min-height:36px}
+  .selbar button:hover{background:rgba(255,255,255,.12)}
+  .selbar .primary{background:var(--amber); border-color:var(--amber-dark); font-weight:700}
+  .toast{position:fixed; bottom:calc(70px + var(--safe)); left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--ink); color:var(--paper); font-family:"JetBrains Mono",ui-monospace,monospace; font-size:13px;
+    padding:11px 16px; border-radius:9px; box-shadow:0 12px 30px -12px rgba(0,0,0,.5); opacity:0;
+    transition:.25s; pointer-events:none; z-index:50; max-width:90vw; text-align:center}
+  .toast.show{opacity:1; transform:translateX(-50%) translateY(0)}
+  #fab{position:fixed; right:14px; bottom:calc(18px + var(--safe)); z-index:35; width:46px; height:46px;
+    border-radius:50%; border:1px solid var(--line-strong); background:var(--card); color:var(--ink);
+    font-size:19px; cursor:pointer; box-shadow:0 10px 24px -12px rgba(16,24,40,.35);
+    opacity:0; transform:translateY(8px); pointer-events:none; transition:.2s}
+  #fab.show{opacity:1; transform:translateY(0); pointer-events:auto}
+  #fab:hover{border-color:var(--amber); color:var(--amber-dark)}
+  @media (prefers-reduced-motion:reduce){ #fab{transition:none} }
 
   .empty{grid-column:1/-1; text-align:center; padding:56px 20px; color:var(--ink-soft)}
-  .empty h3{font-family:"Saira Condensed",sans-serif; text-transform:uppercase; letter-spacing:.02em; font-size:22px; margin:0 0 6px}
+  .empty h3{font-family:Archivo,Inter,sans-serif; text-transform:uppercase; letter-spacing:.02em; font-size:22px; margin:0 0 6px}
 
-  footer{border-top:1px solid var(--line-strong); padding:16px 0 calc(40px + var(--safe)); color:var(--muted);
-    font-size:12px; font-family:"Space Mono",monospace; display:flex; flex-wrap:wrap; gap:6px 16px; justify-content:space-between}
+  footer{border-top:1px solid var(--line); padding:16px 0 calc(40px + var(--safe)); color:var(--muted);
+    font-size:12px; font-family:"JetBrains Mono",ui-monospace,monospace; display:flex; flex-wrap:wrap; gap:6px 16px; justify-content:space-between}
 
   @media (max-width:560px){ .grid{grid-template-columns:1fr 1fr; gap:12px} .ttl{font-size:13.5px} .stamp{font-size:12px} }
   @media (max-width:390px){ .grid{grid-template-columns:1fr} }
@@ -132,38 +221,75 @@
           <input id="q" type="search" placeholder="Cerca per titolo o luogo…" autocomplete="off" aria-label="Cerca">
           <button class="clear" id="clear" aria-label="Cancella ricerca">✕</button>
         </label>
+        <button id="ftoggle" class="ctrl" type="button" aria-expanded="false" aria-controls="tools">Filtri ▾</button>
         <label class="toggle ctrl"><input id="onlynew" type="checkbox"><span class="sw"></span> Solo nuovi</label>
+        <label class="toggle ctrl"><input id="onlyfav" type="checkbox"><span class="sw"></span> ★ Preferiti</label>
+        <span class="pricerange">
+          <input id="pmin" class="ctrl price-in" type="number" inputmode="numeric" min="0" step="50" placeholder="€ min" aria-label="Prezzo minimo">
+          <span class="dash">–</span>
+          <input id="pmax" class="ctrl price-in" type="number" inputmode="numeric" min="0" step="100" placeholder="€ max" aria-label="Prezzo massimo">
+        </span>
         <select id="sort" class="ctrl" aria-label="Ordina">
           <option value="recenti">Più recenti</option>
+          <option value="ribassi">Ribassi prima</option>
           <option value="prezzo">Prezzo crescente</option>
+          <option value="prezzo-desc">Prezzo decrescente</option>
+          <option value="giorni">In vendita da più tempo</option>
           <option value="az">Titolo A–Z</option>
         </select>
+        <button id="selmode" class="ctrl" type="button">Seleziona</button>
       </div>
       <nav class="index" id="tabs" role="tablist" aria-label="Categorie"></nav>
+      <div class="viewseg" id="viewseg" role="group" aria-label="Vista">
+        <button data-view="all" class="on" type="button">Tutti</button>
+        <button data-view="new" type="button">Nuovi</button>
+        <button data-view="fav" type="button">★ Preferiti</button>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
+    <div class="warnbar" id="warnbar" hidden></div>
     <div class="resultbar" id="resultbar"></div>
     <section class="grid" id="grid" aria-live="polite"></section>
+    <div class="bottombar" id="bottombar" aria-label="Comandi rapidi">
+      <button class="chipbtn" data-sort="prezzo">Meno caro</button>
+      <button class="chipbtn" data-sort="prezzo-desc">Più caro</button>
+      <button class="chipbtn hide-sm" data-sort="recenti">Più recenti</button>
+      <button class="chipbtn hide-sm" data-sort="ribassi">Ribassi</button>
+      <button class="chipbtn hide-sm" id="bfav">★ Preferiti</button>
+      <button class="chipbtn" id="bsel">Seleziona</button>
+      <button class="chipbtn" id="btop">↑ Torna ai filtri</button>
+    </div>
   </main>
+
+  <div class="selbar" id="selbar" hidden>
+    <span id="selcount">0 selezionati</span>
+    <button id="selall">Tutti</button>
+    <button id="selfav" class="primary">★ Preferiti</button>
+    <button id="selshare">Condividi</button>
+    <button id="selhide">Elimina</button>
+    <button id="selcancel">Annulla</button>
+  </div>
+  <button id="fab" aria-label="Torna in cima">↑</button>
+  <div class="toast" id="toast"></div>
 
   <footer class="wrap">
     <span id="foot-left"></span>
-    <span>Generato automaticamente · dati da Subito ed eBay</span>
+    <span id="foot-right">Generato automaticamente</span>
   </footer>
 
-  <script id="moto-data" type="application/json">{"generated_at": "2026-07-10T10:32:57", "title": "Officina — Monitor annunci", "subtitle": "Annunci aggregati di moto d'epoca e ricambi", "total_current": 0, "total_new": 0, "watches": [{"name": "KTM 125 Sachs 1970–72 (parafanghi in metallo)", "current": 0, "new": 0, "items": []}, {"name": "KTM 175 Sachs 1970–72 (parafanghi in metallo)", "current": 0, "new": 0, "items": []}, {"name": "Portachiavi Kawasaki", "current": 0, "new": 0, "items": []}, {"name": "Borsa/kit attrezzi Kawasaki 350 S2", "current": 0, "new": 0, "items": []}]}</script>
+  <script id="moto-data" type="application/json">{"generated_at": "2026-07-11T08:05:36", "title": "Officina — Monitor annunci", "subtitle": "Annunci aggregati di moto d'epoca e ricambi", "total_current": 213, "total_new": 0, "total_drops": 0, "portal_issues": [{"label": "Mobile.de", "level": "down", "detail": "HTTP 403"}, {"label": "eBay", "level": "down", "detail": "HTTP 403"}, {"label": "eBay.de", "level": "down", "detail": "HTTP 403"}], "watches": [{"name": "KTM 125 Sachs 1970–72 (parafanghi in metallo)", "current": 8, "new": 0, "items": [{"title": "1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro", "price": "EUR 760,51", "location": "", "url": "https://www.ebay.it/itm/277951421651", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg", "first_seen": "2026-07-06T18:14:07", "is_new": false, "via": "sachs · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-10T07:21:14"}, {"title": "Cilindro 125cc per KTM LC2 / Derbi GPR / Sachs XTC ZX ZZ", "price": "EUR 591,83", "location": "", "url": "https://www.ebay.it/itm/324356954864", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/mTMAAeSwF8RoxiDa/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "gs sachs · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Ktm 125 gs - 1972", "price": "n.d.", "location": "Meldola", "url": "https://www.subito.it/moto-e-scooter/ktm-125-gs-1972-forli-cesena-626984346.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/7a/7a0cdaad-d30f-40f6-9a71-17e85b04c564", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "sachs · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "KTM 125 GS - 1974 - sachs - restauro completo", "price": "n.d.", "location": "Modena", "url": "https://www.subito.it/moto-e-scooter/ktm-125-gs-1974-sachs-restauro-completo-modena-453533888.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/5d/5d71c2df-f2d2-4090-896c-3a892edf406d", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "sachs · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "Ktm 125 gs 1972", "price": "n.d.", "location": "Tolentino", "url": "https://www.subito.it/moto-e-scooter/ktm-125-gs-1972-macerata-650250161.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/b1/b1748d6b-d8c3-4ca8-b121-fcb39f1f89da", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "anno 1972 · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "Ktm 125 sachs 6 marce", "price": "n.d.", "location": "Cavezzo", "url": "https://www.subito.it/moto-e-scooter/ktm-125-sachs-6-marce-modena-646465997.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8d/8d4ea830-ab16-4500-b603-365092f52c19", "first_seen": "2026-07-06T12:57:26", "is_new": false, "via": "sachs · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "KTM GS 125 SACHS 1974 - 1975 - SCARICO RACING - RACING EXHAUST - SITO", "price": "EUR 638,00", "location": "", "url": "https://www.ebay.it/itm/265105898416", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "gs sachs · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Moto regolarità KTM 125 GS 1976", "price": "n.d.", "location": "Pontirolo Nuovo", "url": "https://www.subito.it/moto-e-scooter/moto-regolarita-ktm-125-gs-1976-bergamo-653328585.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d0/d09c8ec6-eb9a-4377-b380-0831300b14f4", "first_seen": "2026-07-08T08:44:08", "is_new": false, "via": "regolarità · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}]}, {"name": "KTM 175 Sachs 1970–72 (parafanghi in metallo)", "current": 4, "new": 0, "items": [{"title": "Ktm 175 GS - 1972", "price": "n.d.", "location": "Reggio nell'Emilia", "url": "https://www.subito.it/moto-e-scooter/ktm-175-gs-1972-reggio-emilia-626086616.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/8b/8b11ae72-7ee4-4596-b431-8a52882be314", "first_seen": "2026-07-06T18:14:07", "is_new": false, "via": "anno 1972 · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "Ktm 175 gs d'epoca", "price": "n.d.", "location": "Tolmezzo", "url": "https://www.subito.it/moto-e-scooter/ktm-175-gs-d-epoca-udine-637316568.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/a3/a38d8460-e436-4fea-ac02-b88ebc08aa13", "first_seen": "2026-07-06T18:14:07", "is_new": false, "via": "epoca · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "Ktm 175 GS Regolarità", "price": "n.d.", "location": "Sarnico", "url": "https://www.subito.it/moto-e-scooter/ktm-175-gs-regolarita-bergamo-644351453.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/1f/1f0e5735-bcba-4902-a92d-122d7a5f3292", "first_seen": "2026-07-06T18:14:07", "is_new": false, "via": "regolarità · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "KTM GS 175 1972", "price": "n.d.", "location": "Vicenza", "url": "https://www.subito.it/moto-e-scooter/ktm-gs-175-1972-vicenza-637774338.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/4e/4ed367f1-fb32-44a5-b5f1-2c01875398e8", "first_seen": "2026-07-06T18:14:07", "is_new": false, "via": "anno 1972 · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}]}, {"name": "Portachiavi Kawasaki", "current": 129, "new": 0, "items": [{"title": "1 Paio Tappo Coperchio Stelo Valvola Pneumatici Moto + Portachiavi per Kawasaki Z1000SX", "price": "EUR 15,70", "location": "", "url": "https://www.ebay.it/itm/800291468064", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/vE4AAeSwQc1qSije/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "1 Paio Tappo Coperchio Stelo Valvola Pneumatici Moto + Portachiavi per Kawasaki ZX-10R ZX10R", "price": "EUR 15,70", "location": "", "url": "https://www.ebay.it/itm/800291424652", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/N5MAAeSwejpqSiaY/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "15460-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZXR 400", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/188587765380", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/CQMAAeSwQ2tqRcLD/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "2026 per Kawasaki Z 400 NINJA 400 copri portachiavi moto nuovo", "price": "EUR 15,70", "location": "", "url": "https://www.ebay.it/itm/358734877251", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/IwwAAeSwe1Np8GQb/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "21055-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZXR 750", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/206387651430", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/~ugAAeSwkUFqRcLD/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "21264-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZZR 600", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/178274232026", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/5RIAAeSwoYxqRcL9/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "28496-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZZR 1400", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/178274232027", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/HqsAAeSwHBRqRcLE/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "2860-portachiavi di merchandising KAWASAKI compatibile con SUZUKI DRZ 110", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/206387651425", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/3b0AAeSwzI5qRcLC/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "41361-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZZR 250", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/178274232028", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/KqcAAeSwmddqRcKJ/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "41540-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZX-9R 900", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/206387651432", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ON4AAeSwutxqRcKK/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "46276-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZZR 400", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/188587765378", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/JH4AAeSw3chqRcLD/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "48905-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZZR 1200", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/206387651431", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/AzYAAeSwGgZqRcLC/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "49273-portachiavi di merchandising KAWASAKI compatibile con KAWASAKI ZZR 1100", "price": "EUR 21,77", "location": "", "url": "https://www.ebay.it/itm/188587765379", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/JVIAAeSwxcJqRcM2/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Accessori Portachiavi in pelle per KAWASAKI Z900RS Z900 Z900ABS nuovo", "price": "EUR 9,35", "location": "", "url": "https://www.ebay.it/itm/318552330124", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/f3IAAeSw9JRpS6Xe/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Attack on Titan Levi Kawasui Portachiavi Acrilico 2.7in Kawasaki Aquarium Sta...", "price": "EUR 58,65", "location": "", "url": "https://www.ebay.it/itm/800286842339", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/4XcAAeSwrFRqSN3a/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Coppa liquido olio serbatoio frizione freno CNC + portachiavi intrecciato per KAWASAKI ZX-12R", "price": "EUR 18,55", "location": "", "url": "https://www.ebay.it/itm/287440997808", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/4YAAAeSw82lqR2Pe/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Coppa liquido olio serbatoio frizione freno CNC + portachiavi intrecciato per KAWASAKI ZX-12R", "price": "EUR 18,55", "location": "", "url": "https://www.ebay.it/itm/178277885980", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/4YAAAeSw82lqR2Pe/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Cordino KAWASAKI verde  Laccetto Portachiavi da Collo   50cm Sgancio Rapido.", "price": "EUR 11,80", "location": "", "url": "https://www.ebay.it/itm/267618874897", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/bUYAAOSwZmNirekO/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "CORDINO PORTAPASS PORTACHIAVI KAWASAKI RACING TEAM", "price": "EUR 16,90", "location": "", "url": "https://www.ebay.it/itm/264727444281", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/rn0AAOSwkU5jSRrJ/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "KAWASAKI ER5 PORTACHIAVI CON ANELLO MOTO MOTOCICLETTA MOTOCICLO", "price": "EUR 4,90", "location": "", "url": "https://www.ebay.it/itm/285970191016", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/PsUAAOSwoIdmm7Qt/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "KAWASAKI PORTACHIAVI  NEOPRENE ZIP  TELECOMANDO MOTO AUTO", "price": "EUR 15,00", "location": "", "url": "https://www.ebay.it/itm/405471663894", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/gNkAAOSw-tJngqB5/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Kawasaki portachiavi antigraffio artigianale in legno", "price": "EUR 3,49", "location": "", "url": "https://www.ebay.it/itm/395609931874", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/CjgAAOSwzgtmxg~I/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Kawasaki Portachiavi Metallo Veicolo Ferroviario Targa Interno Collezione 2019", "price": "EUR 72,93", "location": "", "url": "https://www.ebay.it/itm/158058187097", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/qekAAeSwFQVqSsrL/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "KAWASAKI Portachiavi Moto KAWASAKI Filettatura Nera", "price": "EUR 12,00", "location": "", "url": "https://www.ebay.it/itm/366516047324", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/PY8AAeSw3ehqRSkt/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "KAWASAKI Portachiavi Moto KAWASAKI Portachiavi + Confezione Regalo", "price": "EUR 14,99", "location": "", "url": "https://www.ebay.it/itm/366516032114", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/EbwAAeSwaPdqRSGe/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "KAWASAKI Portachiavi Moto KAWASAKI Portachiavi KAWASAKI", "price": "EUR 12,00", "location": "", "url": "https://www.ebay.it/itm/366516042668", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/AaMAAeSw6rdqRSin/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Kawasaki Portachiavi Ninja Bianco Nuovo", "price": "EUR 11,22", "location": "", "url": "https://www.ebay.it/itm/135452314349", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/JwIAAOSwMONnYunZ/s-l500.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T07:42:47"}, {"title": "Kirby & Cook Kawasaki Gourmet portachiavi in gomma mascotte 10 cm BANDAI SPIRIT", "price": "EUR 31,04", "location": "", "url": "https://www.ebay.it/itm/287432549468", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/upEAAeSw0iNqRdqS/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Kirby Cafe Mascotte Cuoco Kawasaki Peluche Portachiavi Charm Kirby...", "price": "EUR 50,75", "location": "", "url": "https://www.ebay.it/itm/358755592884", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/KxUAAeSwCNRqSTLB/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "NUOVO ORIGINALE KAWASAKI Ninja Portachiavi 107SPM0025 Regalo Compleanno", "price": "EUR 9,80", "location": "", "url": "https://www.ebay.it/itm/192927194199", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/EoIAAOSw~7RieiVU/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Original OEM KAWASAKI Portachiavi ninja 107SPM0025 KEY RING Fan Articolo Merchan", "price": "EUR 9,80", "location": "", "url": "https://www.ebay.it/itm/192927191156", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ICMAAOSw8Tpc5-9o/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki NINJA 650 NINJA650 Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo", "price": "EUR 5,70", "location": "", "url": "https://www.ebay.it/itm/800301948882", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/zrUAAeSwYclqTLvK/s-l500.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z1000SX 1000SX Tappo Coperchio Stelo Valvola Pneumatici Moto +Portachiavi -2pz", "price": "EUR 15,70", "location": "", "url": "https://www.ebay.it/itm/158056739972", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/kEMAAeSwwgpqSijj/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z400 Z 400 CNC Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo", "price": "EUR 5,70", "location": "", "url": "https://www.ebay.it/itm/800276814728", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/OT4AAeSwjKBqRjW6/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z650 Z 650 CNC Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo", "price": "EUR 5,70", "location": "", "url": "https://www.ebay.it/itm/178286764762", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/M5gAAeSwJAVqRjOP/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z650 Z 650 CNC Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo", "price": "EUR 5,70", "location": "", "url": "https://www.ebay.it/itm/800276773993", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/M5gAAeSwJAVqRjOP/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z650 Z 650 Moto Pelle Portachiavi Tappo Valvola Pneumatici Nuovo", "price": "EUR 20,73", "location": "", "url": "https://www.ebay.it/itm/800281316043", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/RrYAAeSwejpqR2uS/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z800 Z 800 CNC Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo", "price": "EUR 5,70", "location": "", "url": "https://www.ebay.it/itm/178281683268", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/~BUAAeSw6rdqRjd8/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z800 Z 800 CNC Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo", "price": "EUR 5,70", "location": "", "url": "https://www.ebay.it/itm/800276834376", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/~BUAAeSw6rdqRjd8/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki Z900RS Z 900RS CNC Portachiavi Moto Pelle Fibbia Ferro di Cavallo Nuovo", "price": "EUR 5,70", "location": "", "url": "https://www.ebay.it/itm/178274612513", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/oE0AAeSwzqVqPPAr/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Per Kawasaki ZX-10R ZX10R Tappo Coperchio Stelo Valvola Pneumatici Moto + Portachiavi -2pz", "price": "EUR 15,70", "location": "", "url": "https://www.ebay.it/itm/158056740211", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/N5MAAeSwejpqSiaY/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "polsino  kawasaki   + portachiavi", "price": "EUR 18,60", "location": "", "url": "https://www.ebay.it/itm/265851658354", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/n6YAAOSwpj9mwBEV/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "polsino  kawasaki   + portachiavi", "price": "EUR 18,60", "location": "", "url": "https://www.ebay.it/itm/265078106159", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/8sgAAOSwkd9gQqgB/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "polsino  kawasaki   + portachiavi", "price": "EUR 18,60", "location": "", "url": "https://www.ebay.it/itm/265851657452", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/XWwAAOSw1PBjCOb7/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "polsino  kawasaki  ninja nero   + portachiavi", "price": "EUR 18,60", "location": "", "url": "https://www.ebay.it/itm/265262612173", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/n1AAAOSwdVFhEyuJ/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "polsino  kawasaki  ninja verde  + portachiavi", "price": "EUR 18,60", "location": "", "url": "https://www.ebay.it/itm/266815941476", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/x-oAAOSwcFhhEys-/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T07:42:47"}, {"title": "polsino  kawasaki  verde  + portachiavi", "price": "EUR 18,60", "location": "", "url": "https://www.ebay.it/itm/265262610742", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/1AAAAOSwQjphEyrl/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "POLSINO SERBATOIO OLIO  FRENI E FRIZIONE  KAWASAKI   + PORTACHIAVI  IN  TESSUTO", "price": "EUR 28,60", "location": "", "url": "https://www.ebay.it/itm/267467977052", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/CU4AAeSwD6JpE~2o/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki   + polsini  kawasaki      + portachiavi", "price": "EUR 38,60", "location": "", "url": "https://www.ebay.it/itm/267467951606", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/PIQAAeSwW8BpE~h5/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki   + polsino kawasaki   nero   + portachiavi", "price": "EUR 30,60", "location": "", "url": "https://www.ebay.it/itm/265520900854", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/s9EAAOSw9uphEymA/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki   + polsino kawasaki   nero  + portachiavi", "price": "EUR 29,60", "location": "", "url": "https://www.ebay.it/itm/265851661707", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/NiAAAOSwanVjCOiD/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki   + polsino kawasaki   verde   + portachiavi", "price": "EUR 29,60", "location": "", "url": "https://www.ebay.it/itm/265851663475", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/-H4AAOSw5ERjCOgx/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki   + polsino kawasaki   verde   + portachiavi", "price": "EUR 29,60", "location": "", "url": "https://www.ebay.it/itm/266953178968", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/xqcAAOSwTNBmwBPX/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki   + polsino kawasaki  ninja  nero  + portachiavi", "price": "EUR 30,60", "location": "", "url": "https://www.ebay.it/itm/266082634838", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ZB4AAOSweZJhEylL/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki + portachiavi  in gomma", "price": "EUR 20,60", "location": "", "url": "https://www.ebay.it/itm/266953180109", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/i5oAAOSw5AlmwBQm/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki + portachiavi  in gomma", "price": "EUR 20,60", "location": "", "url": "https://www.ebay.it/itm/266633494026", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/zXkAAOSwqOZgQqg4/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "porta documenti kawasaki + portachiavi  in gomma .", "price": "EUR 20,60", "location": "", "url": "https://www.ebay.it/itm/265695147495", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/wsIAAOSwcFhhEygi/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "portachiavi  kawasaki", "price": "EUR 8,80", "location": "", "url": "https://www.ebay.it/itm/265078146319", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/IRcAAOSwjs1gQrQO/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI  KAWASAKI", "price": "EUR 7,80", "location": "", "url": "https://www.ebay.it/itm/266953176440", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/E14AAOSwGKBmwBIA/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI  KAWASAKI   IN GOMMA  MORBIDA", "price": "EUR 7,80", "location": "", "url": "https://www.ebay.it/itm/195462012210", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/1foAAOSwiX1hEe-3/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi  Kawasaki River in gomma siliconica auto  -", "price": "EUR 14,99", "location": "", "url": "https://www.ebay.it/itm/127852137921", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/j6QAAeSw0rNp~M3k/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "portachiavi  monster  / kawasaki", "price": "EUR 8,80", "location": "", "url": "https://www.ebay.it/itm/195779060162", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/t1UAAOSwHM9fI35c/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Acrilico Fascia Ragazze Cry Shin-Kawasaki Ackey Tutti e 6 i Tipi Completo", "price": "EUR 116,77", "location": "", "url": "https://www.ebay.it/itm/158051130790", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/Pu4AAeSw0adqR7ld/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi acrilico Kizu \"Phoenix Flame Tour\" Kawasaki Venue Limited", "price": "EUR 75,22", "location": "", "url": "https://www.ebay.it/itm/800289145725", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/SCkAAeSw5BVqSZ7U/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi acrilico Nogizaka46 Kawasaki Sakura Manatsu no Zenkoku Tour 2026", "price": "EUR 59,36", "location": "", "url": "https://www.ebay.it/itm/336666277975", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/-68AAeSwltBqRXNJ/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T07:42:47"}, {"title": "Portachiavi acrilico Nogizaka46 Sakura Kawasaki Summer National Tour 2024", "price": "EUR 44,00", "location": "", "url": "https://www.ebay.it/itm/147421081472", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/8NMAAeSwAnNqTDTp/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Attack on Titan Levi Ackerman supporto acrilico edizione acquario Kawasaki", "price": "EUR 44,14", "location": "", "url": "https://www.ebay.it/itm/358755029104", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/s94AAeSw1~1qSP3A/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI EFFETTO CAMOSCIO NERO IN METALLO PER KAWASAKI Z 800 PORTA CHIAVE", "price": "EUR 9,99", "location": "", "url": "https://www.ebay.it/itm/176675819334", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/Y3YAAOSwAIxnDp6P/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi emblema Kawasaki KH400 - con licenza ufficiale Kawasaki", "price": "EUR 139,69", "location": "", "url": "https://www.ebay.it/itm/407049648496", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ABkAAeSwqTJqSizd/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi emblema Kawasaki ZX-10 ZZR Turbo", "price": "EUR 51,17", "location": "", "url": "https://www.ebay.it/itm/147414358920", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/3e4AAeSwIRpqSAjh/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi in gomma Kawasaki Brave Thunders Lega B basket mai usato", "price": "EUR 88,50", "location": "", "url": "https://www.ebay.it/itm/287442837077", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/FtEAAeSwsMJqTEDb/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi in metallo dorato emblema serbatoio Kawasaki", "price": "EUR 33,06", "location": "", "url": "https://www.ebay.it/itm/318519741571", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/-HYAAeSwuOVqTFjC/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI IN TESSUTO KAWASAKI KAWASEXY ACCESSORI MOTO BIKER MOTOCICLISTA", "price": "EUR 4,99", "location": "", "url": "https://www.ebay.it/itm/256872650414", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/87EAAeSwWbln5URf/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi insegna nome stazione stazione JR East Kawasaki", "price": "EUR 53,47", "location": "", "url": "https://www.ebay.it/itm/127957483283", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/EAwAAeSwI2NqSZ7W/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki", "price": "EUR 3,00", "location": "", "url": "https://www.ebay.it/itm/377323827388", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/st8AAeSww4BqTCu6/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki", "price": "EUR 40,00", "location": "", "url": "https://www.ebay.it/itm/157849592096", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/IlwAAOSw~tJd-fzn/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki - Kawasaki - Portachiavi Moto - Verde", "price": "EUR 12,00", "location": "", "url": "https://www.ebay.it/itm/366516050765", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/Z84AAeSwVu9qRSwg/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi KAWASAKI FOGLIA Gomma Ninja Z750 Z900 Antigraffio Moto Gadget Biker", "price": "EUR 19,99", "location": "", "url": "https://www.ebay.it/itm/125941329258", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/1RcAAeSwHnZqIppg/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Frontale Coppa dell'Imperatore Vittoria Pennant Calcio Memorabilia", "price": "EUR 72,93", "location": "", "url": "https://www.ebay.it/itm/158039335144", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/aaEAAeSwyeRqQwAU/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Frontale Deca Acrilico Blu Lucchetto J.League 30° Usato", "price": "EUR 34,99", "location": "", "url": "https://www.ebay.it/itm/398148101628", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/5bIAAeSwMiBqTHLx/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki GPZ900R Ninja Emblema - Licenza Ufficiale Kawasaki", "price": "EUR 139,69", "location": "", "url": "https://www.ebay.it/itm/407049648548", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/GVkAAeSwSgNqSi0Y/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi KAWASAKI LOGO ESCLUSIVO filo nero + confezione regalo", "price": "EUR 14,99", "location": "", "url": "https://www.ebay.it/itm/366516047830", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/c4YAAeSwPtpqRSmA/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi KAWASAKI LOGO ESCLUSIVO filo verde + confezione regalo", "price": "EUR 14,99", "location": "", "url": "https://www.ebay.it/itm/366516047780", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/QRMAAeSwg9dqRSlw/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1", "price": "EUR 10,99", "location": "", "url": "https://www.ebay.it/itm/116438811953", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/mD0AAOSwKB9ne9cB/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ninja Ricamato in ecopelle Nera", "price": "EUR 9,00", "location": "", "url": "https://www.ebay.it/itm/306810157274", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/t1kAAeSww-VprXcl/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "portachiavi Kawasaki Ninja, GPZ ZX KZ ZR EX, 250 300 400 650 500 600", "price": "EUR 11,50", "location": "", "url": "https://www.ebay.it/itm/326969101102", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/0pMAAeSw6sppytvm/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki ORIGINALE nero con logo nuovo", "price": "EUR 5,50", "location": "", "url": "https://www.ebay.it/itm/397528093146", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/K5oAAeSwejdpc6xY/s-l500.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX", "price": "n.d.", "location": "Roma", "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/06/0685c5f1-abfe-4686-848b-9bd941782cc1", "first_seen": "2026-07-06T18:14:07", "is_new": false, "via": "originale · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX-10R Z900 Z400 Z H2 SE VERSYS", "price": "EUR 19,99", "location": "", "url": "https://www.ebay.it/itm/116023141625", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/rdUAAOSw96NljcPJ/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "portachiavi Kawasaki ricamato 3 x 13 cm con anello portachiavi moto", "price": "EUR 7,00", "location": "", "url": "https://www.ebay.it/itm/226905220299", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/NLQAAeSwcPhokk3N/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ricamato in ecopelle", "price": "EUR 9,00", "location": "", "url": "https://www.ebay.it/itm/306683151282", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/evAAAeSwr4lpUr1Q/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ricamato in ecopelle verde", "price": "EUR 8,50", "location": "", "url": "https://www.ebay.it/itm/306683204398", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/4TMAAeSw-Y5pUsi-/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ricamato in ecopelle verde", "price": "EUR 8,00", "location": "", "url": "https://www.ebay.it/itm/306683182478", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/rQkAAeSwqGRpUsfP/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ricamato in ecopelle verde", "price": "EUR 8,50", "location": "", "url": "https://www.ebay.it/itm/306683203306", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/tSYAAeSwx6NpUsg~/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ricamato in ecopelle verde", "price": "EUR 9,00", "location": "", "url": "https://www.ebay.it/itm/306683159546", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/k7gAAeSw9JlpUsDx/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ricamato in ecopelle verde", "price": "EUR 9,00", "location": "", "url": "https://www.ebay.it/itm/306683160945", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/lpkAAeSwxWlpUsGU/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Ricamato in ecopelle verde", "price": "EUR 9,00", "location": "", "url": "https://www.ebay.it/itm/306683162248", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/vVQAAeSwu5RpUsJV/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi KAWASAKI SBK Racing Team gomma morbida verde bianca", "price": "EUR 4,99", "location": "", "url": "https://www.ebay.it/itm/364917647786", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/Gc8AAOSwy9hmVrpm/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kawasaki Tessuto Nero 2  - Regalo Passione Auto Moto Estetica", "price": "EUR 3,20", "location": "", "url": "https://www.ebay.it/itm/134990098483", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/fkEAAOSwy-5l~tMx/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI KAWASAKI Z ZXR NINJA VERSYS VULCAN KLE KXF CORDINO PORTA CHIAVI MOTO", "price": "EUR 6,80", "location": "", "url": "https://www.ebay.it/itm/126353589652", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/9NkAAOSw3ctl38w4/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Kirby Air Rider Power Up acrilico Kawasaki & Hopster Takara Tomy Arts", "price": "EUR 32,98", "location": "", "url": "https://www.ebay.it/itm/287432549718", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/8I8AAeSwyeRqRdob/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Logo Kawasaki Personalizzato con Nome Interamente Stampato in 3D", "price": "EUR 4,99", "location": "", "url": "https://www.ebay.it/itm/394974054658", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/bekAAOSwVHJlQ2vi/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi MOTO  - Kawasaki  Logo River  in gomma siliconica", "price": "EUR 13,99", "location": "", "url": "https://www.ebay.it/itm/117121284509", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/o-IAAeSwdj5pzil1/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Moto Cordino Portachiavi da Collo Verde Kawasaki z x Sgancio Rapido", "price": "EUR 12,70", "location": "", "url": "https://www.ebay.it/itm/127611950493", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/XT4AAeSwMsFpX-VX/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi moto KAWASAKI KAWASAKI NINJA", "price": "EUR 12,00", "location": "", "url": "https://www.ebay.it/itm/366516046789", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/P8oAAeSwbg9qRSke/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi MOTO PERSONALIZZATO - KAWASAKI in gomma siliconica  Moto Mod 2", "price": "EUR 12,99", "location": "", "url": "https://www.ebay.it/itm/117109572464", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/q4MAAeSwgGNpxTO4/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi MOTO PERSONALIZZATO - KAWASAKI in gomma siliconica auto MOTO", "price": "EUR 12,99", "location": "", "url": "https://www.ebay.it/itm/117108100102", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/y70AAeSw6HJpxCnZ/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Orginale Kawasaki a forma di pneumatico con tag removibile", "price": "EUR 24,90", "location": "", "url": "https://www.ebay.it/itm/185681755335", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/vygAAOSw4ixjieff/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi originale KAWASAKI", "price": "n.d.", "location": "Caserta", "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm", "portal": "Subito", "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/92/924d5b91-9828-48bc-a7fe-2b3ccb31a1f5", "first_seen": "2026-07-06T18:14:07", "is_new": false, "via": "originale · Subito", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": false, "last_seen": ""}, {"title": "Portachiavi originale Kawasaki Z1 Meter con etichetta di cautela Z900 Kz900...", "price": "EUR 491,44", "location": "", "url": "https://www.ebay.it/itm/168385350789", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/T3EAAeSwwilqC9o0/s-l500.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Peluche Nero Gatto Izumi Sale Kawasaki CLASKA Peluche Borsa Charm", "price": "EUR 64,99", "location": "", "url": "https://www.ebay.it/itm/188603191457", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/BtQAAeSw50hqSmPe/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "PORTACHIAVI PORTACHIAVE NEOPRENE KAWASAKI ZIP PORTA MONETE TELECOMANDO MOTO AUTO", "price": "EUR 15,00", "location": "", "url": "https://www.ebay.it/itm/404653014910", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/Pr0AAOSwhMFlaGQP/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi portachiavi logo auto texture fibra di carbonio nero moto Kawasaki", "price": "EUR 16,00", "location": "", "url": "https://www.ebay.it/itm/168517350593", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/NX4AAeSw5w9qS1UP/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Ragazze Fascia Cry Inosera Nina Domino Kawasaki Limited", "price": "EUR 46,14", "location": "", "url": "https://www.ebay.it/itm/158057507197", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/u74AAeSwzI5qSoi0/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Rin Itoshi Kawasaki Frontale Lega BLUELOCK da collezione", "price": "EUR 50,61", "location": "", "url": "https://www.ebay.it/itm/398121443207", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/muoAAeSwezVqQwaJ/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi stemma logo auto texture fibra di carbonio nero moto Kawasaki", "price": "EUR 16,00", "location": "", "url": "https://www.ebay.it/itm/168517350276", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/9d8AAeSw0iNqS1VO/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi stemma logo auto texture fibra di carbonio nero moto Kawasaki", "price": "EUR 16,00", "location": "", "url": "https://www.ebay.it/itm/168520317073", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/dl0AAeSwwdtqTPtY/s-l500.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi supporto acrilico acquario Attack on Titan Levi Kawasui Kawasaki", "price": "EUR 60,53", "location": "", "url": "https://www.ebay.it/itm/188588221172", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/MIkAAeSwfd5qReT2/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi supporto acrilico acquario Attack on Titan Levi Kawasui Kawasaki", "price": "EUR 59,57", "location": "", "url": "https://www.ebay.it/itm/358739697524", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/UD0AAeSwXR5qRCE1/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "schlüsselanhänger (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi supporto acrilico per acquario Attack on Titan Levi Kawasui Kawasaki", "price": "EUR 74,25", "location": "", "url": "https://www.ebay.it/itm/318535406943", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/KWMAAeSwtTNqRu33/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi Tag Nero Verde Anello Chiave Accessori Kawasaki Universale", "price": "EUR 36,81", "location": "", "url": "https://www.ebay.it/itm/168295827107", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/rV4AAeSwb7Bp1nUT/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Portachiavi targhetta interno ferrovia metallo Kawasaki 1996 mai usato", "price": "EUR 72,93", "location": "", "url": "https://www.ebay.it/itm/158058187102", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/2mUAAeSwPAdqSssK/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "portachiavi vintage epoca non originale Kawasaki", "price": "EUR 29,00", "location": "", "url": "https://www.ebay.it/itm/236155031608", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/v3EAAOSwE-1oUZSd/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Rarissimo portachiavi acrilico KanColle Kobe Kawasaki collezione cantieristica navale 4", "price": "EUR 112,37", "location": "", "url": "https://www.ebay.it/itm/236912210681", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/GTEAAeSwJuVqRm~V/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Set portachiavi acrilico Nogi Fes Kawasaki Sakura lima trasparente lattina distintivo", "price": "EUR 152,19", "location": "", "url": "https://www.ebay.it/itm/336668234354", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/JQkAAeSw2IFqRsUY/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Set portachiavi Kawasaki GTR modello GT-R GPZ 900 R Ninja Kawasaki 980 KH", "price": "EUR 96,54", "location": "", "url": "https://www.ebay.it/itm/358760277836", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/jEwAAeSwoolqSv-B/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "diretta · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "🔥portachiavi In Pelle Per Moto Kawasaki Vari Colori", "price": "EUR 15,90", "location": "", "url": "https://www.ebay.it/itm/127119492601", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/NwgAAeSwvzdoKaX3/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "🔥PORTACHIAVI KAWASAKI NUOVO IN PELLE SCAMOSCIATO VARI COLORI", "price": "EUR 19,90", "location": "", "url": "https://www.ebay.it/itm/127430702580", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/DPMAAeSw6wpo7f8t/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "🔥PORTACHIAVI KAWASAKI Z900-Z650-Z500-Z400 COLOR PELLE CARBONIO", "price": "EUR 19,90", "location": "", "url": "https://www.ebay.it/itm/127430696144", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/exMAAeSwKCNo7f3x/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "originale · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}]}, {"name": "Borsa/kit attrezzi Kawasaki 350 S2", "current": 72, "new": 0, "items": [{"title": "1999 - 2004 Kawasaki KDX200 KDX220R Rear Storage Bag Cargo Luggage 56008-1073-MW", "price": "EUR 74,82", "location": "", "url": "https://www.ebay.it/itm/198465562422", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/2r4AAeSwzOlqRBKA/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "2021 Kawasaki KLX300 OEM Rear Tool Bag 56008-0580", "price": "EUR 53,45", "location": "", "url": "https://www.ebay.it/itm/147391806252", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/EYkAAeSwlnZqNZe-/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "21-25 Kawasaki KLX300E Rear Tool Bag 56008-0580", "price": "EUR 79,88", "location": "", "url": "https://www.ebay.it/itm/168364516817", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/vS4AAeSwXSNp~46E/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "4 FORI!  KAWASAKI KLX300SM KLX300 21-2024 BORSA, STRUMENTO, NERO 56008-0037-MA fuoristrada", "price": "EUR 132,82", "location": "", "url": "https://www.ebay.it/itm/204693464619", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/10EAAOSwUBJl8UO4/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "4 FORI! KAWASAKI KLX250 KLX250S 11-20 BORSA,UTENSILE,NERO 56008-0037-MA para moto", "price": "EUR 132,82", "location": "", "url": "https://www.ebay.it/itm/193298221527", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/10EAAOSwUBJl8UO4/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "4 HOLES!  KAWASAKI KLX300SM KLX300 21-2024 BAG,TOOL,BLACK 56008-0037-MA offroad", "price": "EUR 133,79", "location": "", "url": "https://www.ebay.it/itm/358115969748", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/10EAAOSwUBJl8UO4/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Bordwerkzeug Tasche Set Utensili Chiave A Pappagallo Kawasaki ZR 7S ZR750F 99-04", "price": "EUR 51,98", "location": "", "url": "https://www.ebay.it/itm/168389462506", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/HqEAAeSw~F1qCYZq/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "bordwerkzeug (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Bordwerkzeug Werkzeug Toolkit Kawasaki ZX-6 R ZX636E 13-17 (Lager12-25)", "price": "EUR 14,00", "location": "", "url": "https://www.ebay.it/itm/397571649107", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/MNYAAeSw6RVpg9UH/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "bordwerkzeug (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T07:42:47"}, {"title": "BORSA KAWASAKI KLE500 2026 56008-0038", "price": "EUR 8,57", "location": "", "url": "https://www.ebay.it/itm/206231438762", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/1YUAAeSw8fBp7DCp/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki 56008-1077 BORSA,STRUMENTO NOS NUOVO originale xn10644", "price": "EUR 14,90", "location": "", "url": "https://www.ebay.it/itm/133679634669", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/VRcAAOSwglJgPQWn/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI Genuine 56008-006 OWNER TOOLS BAG VOYAGER VULCAN NINJA ZX GPZ Z1 A/B", "price": "EUR 13,17", "location": "", "url": "https://www.ebay.it/itm/198210450085", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/KuUAAeSwPOhpvfYW/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag NOS Pouch 56008-006", "price": "EUR 17,68", "location": "", "url": "https://www.ebay.it/itm/297476957134", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ntQAAOSw8F9oXg~3/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch 56008-006 NOS", "price": "EUR 26,81", "location": "", "url": "https://www.ebay.it/itm/306400937000", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ntQAAOSw8F9oXg~3/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006", "price": "EUR 18,80", "location": "", "url": "https://www.ebay.it/itm/166957730357", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/DVMAAOSw2T9nCIjv/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI Genuine KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 new", "price": "EUR 17,89", "location": "", "url": "https://www.ebay.it/itm/147216824003", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/HLcAAeSwrDZpv0F8/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki Genuine Tool Bag Onboard Tool Case 56008-006 New Unused", "price": "EUR 182,26", "location": "", "url": "https://www.ebay.it/itm/198134663744", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/9lsAAeSwpVdpns9u/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS 56008-006 Genuine", "price": "EUR 18,80", "location": "", "url": "https://www.ebay.it/itm/389900213563", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/hUQAAeSw-dNp4bdn/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI KDX Ninja Vulcan ZRX ZZR Black Tool Bag Pouch NOS Genuine 56008-006", "price": "EUR 28,31", "location": "", "url": "https://www.ebay.it/itm/365973575142", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/IV0AAeSwtFRpEEE6/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI KLX230 DF ABS 2026 BORSA 56008-0591", "price": "EUR 8,57", "location": "", "url": "https://www.ebay.it/itm/206263148016", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/nusAAeSwo41p-RSh/s-l500.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI KLX300SM KLX300 2021-2023 BAG,TOOL 56008-0580 MOUNT WITH X2 HOLES", "price": "EUR 176,06", "location": "", "url": "https://www.ebay.it/itm/358196020797", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/M8MAAOSwOIFjwovo/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI KLX300SM KLX300 2021-2023 BORSA,STRUMENTO 56008-0580 ATTACCO CON FORI X2", "price": "EUR 172,81", "location": "", "url": "https://www.ebay.it/itm/195403326078", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/M8MAAOSwOIFjwovo/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI NINJA 300 ABS 2026 BORSA, STRUMENTO 56008-0575", "price": "EUR 14,28", "location": "", "url": "https://www.ebay.it/itm/198322371817", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/8KMAAeSwa5xp9CuX/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI NINJA 400 2018 EX400G BORSA ATTREZZI PROPRIETARIO,UTENSILE 56008-0036", "price": "EUR 10,00", "location": "", "url": "https://www.ebay.it/itm/193028891088", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/BdQAAOSwTGVbuXeL/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI NINJA 500 ABS 2026 BORSA, STRUMENTO 56008-0036", "price": "EUR 11,43", "location": "", "url": "https://www.ebay.it/itm/206243758804", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/R30AAeSw4G1p9Avs/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI NINJA ZX-10R 2026 BORSA, STRUMENTO 56008-0577", "price": "EUR 11,43", "location": "", "url": "https://www.ebay.it/itm/198322113059", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/V9AAAeSwKzJp8WA6/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki NOS Universal Tool Bag Pouch Black OEM Part #56008-006", "price": "EUR 26,67", "location": "", "url": "https://www.ebay.it/itm/377092885162", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/rAsAAeSw5dRpjj4O/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0001 BagTool", "price": "EUR 28,27", "location": "", "url": "https://www.ebay.it/itm/167915280318", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/l30AAeSwMYZpEEoR/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T07:42:47"}, {"title": "Kawasaki OEM 56008-0001 BagTool", "price": "EUR 28,34", "location": "", "url": "https://www.ebay.it/itm/168519776043", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/TOUAAeSwTM9qTLG3/s-l140.jpg", "first_seen": "2026-07-07T16:52:31", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0024 BagTool", "price": "EUR 21,74", "location": "", "url": "https://www.ebay.it/itm/168283724655", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/1poAAeSwSYZpz5y9/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0037-MA BagToolBlack", "price": "EUR 211,81", "location": "", "url": "https://www.ebay.it/itm/168012488118", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/O6QAAeSw7ltpQ8e7/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0038 Bag", "price": "EUR 14,14", "location": "", "url": "https://www.ebay.it/itm/168283795920", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/C1kAAeSwArlpz6PA/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0045 Bag", "price": "EUR 20,80", "location": "", "url": "https://www.ebay.it/itm/168283723692", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/h2oAAeSwsaxpz5wB/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0046 BagTool", "price": "EUR 20,80", "location": "", "url": "https://www.ebay.it/itm/168283725855", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/3UQAAeSwtDdpz5yh/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0050 BagTool", "price": "EUR 23,86", "location": "", "url": "https://www.ebay.it/itm/168283725037", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/GTEAAeSwEZ1pz5yF/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-006 BagTool", "price": "EUR 26,55", "location": "", "url": "https://www.ebay.it/itm/168347446867", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/RIIAAeSwzp1p9bGk/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-006 BagTool From Japan", "price": "EUR 64,09", "location": "", "url": "https://www.ebay.it/itm/205905308619", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/WREAAeSwpKVpMOgm/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0563 BagTool", "price": "EUR 20,50", "location": "", "url": "https://www.ebay.it/itm/168283712771", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/mAoAAeSwJWtpz5qC/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0580 BagTool", "price": "EUR 211,81", "location": "", "url": "https://www.ebay.it/itm/168283797053", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ywMAAeSwsaxpz6Lc/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-0580 BagTool", "price": "EUR 158,96", "location": "", "url": "https://www.ebay.it/itm/226347218960", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/tzQAAOSw6OlmJG4R/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM 56008-1007 BagTool", "price": "EUR 14,34", "location": "", "url": "https://www.ebay.it/itm/168000464706", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/NIoAAeSwcxppPUCB/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI OEM KDX Ninja Vulcan ZRX ZZR Black Tool Bag 56008-006 Pouch NOS", "price": "EUR 26,62", "location": "", "url": "https://www.ebay.it/itm/357223200096", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ntQAAOSw8F9oXg~3/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM Part New 56008-0036", "price": "EUR 23,95", "location": "", "url": "https://www.ebay.it/itm/226161133514", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/2~oAAOSwHRVm8lsI/s-l140.jpg", "first_seen": "2026-07-08T08:44:08", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM Parte Nuovo 56008-0036", "price": "EUR 25,34", "location": "", "url": "https://www.ebay.it/itm/226306659753", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/2~oAAOSwHRVm8lsI/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kawasaki OEM Tool Bag 56008-1075", "price": "EUR 19,15", "location": "", "url": "https://www.ebay.it/itm/168069542871", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/HW8AAeSwlJxpYLSp/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI TOOL KIT PLIERS KZ1000 Z1000 TOOL KIT Z1 R  Z1-R 900 KZ900 H2 H1 S3 S2", "price": "EUR 10,65", "location": "", "url": "https://www.ebay.it/itm/167758721568", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/HGUAAOSwyNJigEkV/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "KAWASAKI TOOL KIT TOOLS H1 500 H2 750 S1 S2 A1SS KZ Z1 900 KE F9 125 250 350 100", "price": "EUR 159,94", "location": "", "url": "https://www.ebay.it/itm/358395915426", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/5FQAAeSwBlVpaZoS/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "KAWASAKI VERSYS 650 LT 2026 BORSA,UTENSILE 56008-0564", "price": "EUR 8,57", "location": "", "url": "https://www.ebay.it/itm/198309306276", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/oDkAAeSw6SNp5Jts/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI W175 LTD ABS 2026 BORSA, STRUMENTO 56008-0585", "price": "EUR 2,86", "location": "", "url": "https://www.ebay.it/itm/197929495323", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/2VAAAeSwr-VpNNIw/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI Z1100 SE ABS 2026 BORSA, STRUMENTO 56008-0570", "price": "EUR 12,85", "location": "", "url": "https://www.ebay.it/itm/205883203470", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/6-wAAeSw7Z9pIU9p/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "KAWASAKI ZX-10R 2019 BORSA ATTREZZI PROPRIETARIO,UTENSILE 56008-1075", "price": "EUR 10,00", "location": "", "url": "https://www.ebay.it/itm/193083913421", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/0dkAAOSw5RJdb4P6/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Kit attrezzi base sottosella 5pz per Kawasaki S2 350 Mach", "price": "EUR 25,35", "location": "", "url": "https://www.ebay.it/itm/395978581531", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/1MMAAOSwaANnVFCu/s-l500.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Kit Utensili Bordwerkzeug Kawasaki ER 6 N ER650E Anno 12-16 (Lager 2-26)", "price": "EUR 16,10", "location": "", "url": "https://www.ebay.it/itm/327175163166", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/Lq0AAeSw7pFp6XNy/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "bordwerkzeug (DE) · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Leather Tool Kit Bag Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1", "price": "EUR 15,94", "location": "", "url": "https://www.ebay.it/itm/198183583609", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/0JIAAeSwFSBqMctS/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Motorcycle Tool Kit Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1", "price": "EUR 21,27", "location": "", "url": "https://www.ebay.it/itm/168165595222", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/FqkAAeSw7thpk8nH/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "NUOVA BORSA ATTREZZI ORIGINALE KAWASAKI GTR ZZR ZRX KLR ZX7 ZX12 ZX10 GPZ (solo) 56008-006", "price": "EUR 19,55", "location": "", "url": "https://www.ebay.it/itm/286008013556", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/IEEAAOSwLnlmummM/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Per KAWASAKI 900 Z1 Z1000 - Set Di Utensili - #56008-006", "price": "EUR 31,92", "location": "", "url": "https://www.ebay.it/itm/257495994242", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/tlwAAOSwoWpnVemM/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Pour KAWASAKI 900 Z1 Z1000 - Pochette de trousse à outil - #56008-006", "price": "EUR 29,90", "location": "", "url": "https://www.ebay.it/itm/286205374713", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/tlwAAOSwoWpnVemM/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Ricambio originale Kawasaki BAG DUST# 56008-W001", "price": "EUR 96,35", "location": "", "url": "https://www.ebay.it/itm/282345137433", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/BmsAAeSwHJ5qPWUU/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "codice 56008 · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-08T08:44:08"}, {"title": "Roll Up Tool Kit Bag Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1", "price": "EUR 18,07", "location": "", "url": "https://www.ebay.it/itm/198468010645", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/ysMAAOSwhS5m143C/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Roll Up Tool Kit Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1 Bag", "price": "EUR 58,57", "location": "", "url": "https://www.ebay.it/itm/198468146020", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/cIsAAOSwCPlm2Hs5/s-l500.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250", "price": "EUR 34,07", "location": "", "url": "https://www.ebay.it/itm/168491983498", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/36UAAeSwt1ZqOvT4/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250", "price": "EUR 37,27", "location": "", "url": "https://www.ebay.it/itm/168491728186", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/Yz0AAeSw-ghqM0rn/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250", "price": "EUR 37,27", "location": "", "url": "https://www.ebay.it/itm/198437671946", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/O-gAAeSwK8pqNFlE/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250", "price": "EUR 34,06", "location": "", "url": "https://www.ebay.it/itm/198268709592", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/xzAAAeSwFd5p1~8a/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250", "price": "EUR 31,94", "location": "", "url": "https://www.ebay.it/itm/198252339488", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/rZ4AAeSwQZpqMbBX/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250", "price": "EUR 37,24", "location": "", "url": "https://www.ebay.it/itm/168221351780", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/YbgAAeSwA71pE6A5/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "borsa attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools", "price": "EUR 31,89", "location": "", "url": "https://www.ebay.it/itm/168506860984", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/1-UAAOSwLJNno7Sv/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools", "price": "EUR 21,27", "location": "", "url": "https://www.ebay.it/itm/198429031635", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/yboAAeSwG-Jpk8PW/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools", "price": "EUR 26,60", "location": "", "url": "https://www.ebay.it/itm/336550506639", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/dEYAAeSwqDtpzXf3/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools", "price": "EUR 13,80", "location": "", "url": "https://www.ebay.it/itm/236734206627", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/5-8AAeSwNtJpzsOv/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools", "price": "EUR 18,07", "location": "", "url": "https://www.ebay.it/itm/168284380210", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/j3EAAeSwEcFpzqkF/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}, {"title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools", "price": "EUR 37,23", "location": "", "url": "https://www.ebay.it/itm/198209440867", "portal": "eBay", "image": "https://i.ebayimg.com/images/g/jN0AAeSwI2Ro-TQj/s-l140.jpg", "first_seen": "2026-07-07T07:42:47", "is_new": false, "via": "kit attrezzi · eBay", "price_drop_old": "", "price_drop_pct": null, "stale": false, "carried": true, "last_seen": "2026-07-07T16:52:31"}]}]}</script>
   <script>
   (function(){
     var SAMPLE = {
       generated_at:new Date().toISOString(), title:"Officina — Monitor annunci",
       subtitle:"Annunci aggregati di moto d'epoca e ricambi (dati di esempio)",
-      total_current:3, total_new:2,
+      total_current:3, total_new:2, total_drops:1, portal_issues:[],
       watches:[
         {name:"Kawasaki 350 S2", current:2, new:1, items:[
           {title:"Kawasaki 350 S2 del 1972, conservata e targhata", price:"9.500 €", location:"Verona", url:"#", portal:"Subito", image:"", first_seen:new Date().toISOString(), is_new:true, via:"diretta · Subito"},
-          {title:"Kawasaki S2 350 progetto restauro, motore completo", price:"4.200 €", location:"Bologna", url:"#", portal:"Subito", image:"", first_seen:new Date(Date.now()-5*864e5).toISOString(), is_new:false, via:"invertita · Subito"}
+          {title:"Kawasaki S2 350 progetto restauro, motore completo", price:"4.200 €", location:"Bologna", url:"#", portal:"Subito", image:"", first_seen:new Date(Date.now()-5*864e5).toISOString(), is_new:false, via:"invertita · Subito", price_drop_old:"4.800 €", price_drop_pct:12}
         ]},
         {name:"KTM 175 GS", current:1, new:1, items:[
           {title:"KTM 175 GS motore nero, conservata originale", price:"3.900 €", location:"Ragusa", url:"#", portal:"Subito", image:"", first_seen:new Date().toISOString(), is_new:true, via:"diretta · Subito"}
@@ -179,14 +305,109 @@
     function pad(n){ return (n<10?'0':'')+n; }
     function fmtDate(iso){ var d=new Date(iso); return isNaN(d)?'':pad(d.getDate())+'/'+pad(d.getMonth()+1)+'/'+d.getFullYear(); }
     function fmtDateTime(iso){ var d=new Date(iso); return isNaN(d)?'':fmtDate(iso)+' '+pad(d.getHours())+':'+pad(d.getMinutes()); }
-    function numPrice(p){ var s=String(p||'').replace(/\D/g,''); return s?parseInt(s,10):Number.MAX_SAFE_INTEGER; }
+    // Parser prezzi europeo: "9.500 €"->9500, "120,00 EUR"->120, "45 €"->45.
+    // Restituisce null se il prezzo non è leggibile.
+    function numPrice(p){
+      var s = String(p==null?'':p).replace(/[^\d.,]/g,'');
+      if(!s) return null;
+      if(s.indexOf('.')>-1 && s.indexOf(',')>-1){ s = s.replace(/\./g,'').replace(',', '.'); }
+      else if(s.indexOf(',')>-1){ s = s.replace(/,/g, '.'); }
+      else if(/\.\d{3}(\.\d{3})*$/.test(s)){ s = s.replace(/\./g,''); }
+      var v = parseFloat(s);
+      return isNaN(v) ? null : v;
+    }
+    function sortPrice(it, missing){ var v=numPrice(it.price); return v==null?missing:v; }
 
     document.getElementById('title').innerHTML = esc(DATA.title||'Officina — Monitor annunci').replace('—','<span class="amp">—</span>');
     document.getElementById('subtitle').textContent = DATA.subtitle||'';
-    document.getElementById('summary').innerHTML = '<b>'+DATA.total_current+'</b> attivi · <b>'+DATA.total_new+'</b> nuovi<br>agg. '+fmtDateTime(DATA.generated_at);
+    document.getElementById('summary').innerHTML = '<b>'+DATA.total_current+'</b> attivi · <b>'+DATA.total_new+'</b> nuovi'+(DATA.total_drops?' · <b>'+DATA.total_drops+'</b> ribassi':'')+'<br>agg. '+fmtDateTime(DATA.generated_at);
     document.getElementById('foot-left').textContent = DATA.total_current+' annunci attivi · '+DATA.total_new+' nuovi';
+    (function(){
+      var ports = {};
+      (DATA.watches||[]).forEach(function(w){ (w.items||[]).forEach(function(it){ if(it.portal) ports[it.portal]=1; }); });
+      var names = Object.keys(ports).sort();
+      if(names.length) document.getElementById('foot-right').textContent = 'Generato automaticamente · dati da '+names.join(', ');
+    })();
 
-    var state = { tab:"__all__", q:"", onlynew:false, sort:"recenti" };
+    // Avviso salute portali: distingue "nessun annuncio" da "portale non raggiunto"
+    (function(){
+      var issues = DATA.portal_issues || [];
+      if(!issues.length) return;
+      var down = issues.filter(function(i){return i.level==='down'}).map(function(i){return i.label});
+      var partial = issues.filter(function(i){return i.level!=='down'}).map(function(i){return i.label});
+      var parts = [];
+      if(down.length) parts.push('senza risposta: <b>'+down.map(esc).join(', ')+'</b>');
+      if(partial.length) parts.push('risposte parziali: <b>'+partial.map(esc).join(', ')+'</b>');
+      var el = document.getElementById('warnbar');
+      el.innerHTML = '⚠ Oggi ' + parts.join(' · ') + ' — l\'elenco potrebbe essere incompleto.';
+      el.hidden = false;
+    })();
+
+    var state = { tab:"__all__", q:"", onlynew:false, onlyfav:false, sort:"recenti", pmin:"", pmax:"", selecting:false };
+    var sel = {};
+
+    // Filtri e ordinamento ricordati tra una visita e l'altra (per dispositivo)
+    var STATEKEY = 'motoMonitorFiltri';
+    (function(){
+      var saved;
+      try { saved = JSON.parse(localStorage.getItem(STATEKEY)||'null'); } catch(e){ saved = null; }
+      if(!saved) return;
+      ['q','onlynew','onlyfav','sort','pmin','pmax','tab'].forEach(function(k){
+        if(saved[k] !== undefined) state[k] = saved[k];
+      });
+      var names = DATA.watches.map(function(w){ return w.name; });
+      if(state.tab !== '__all__' && names.indexOf(state.tab) === -1) state.tab = '__all__';
+      var sorts = ['recenti','ribassi','prezzo','prezzo-desc','giorni','az'];
+      if(sorts.indexOf(state.sort) === -1) state.sort = 'recenti';
+    })();
+    function saveFilters(){
+      try {
+        localStorage.setItem(STATEKEY, JSON.stringify({
+          q:state.q, onlynew:state.onlynew, onlyfav:state.onlyfav,
+          sort:state.sort, pmin:state.pmin, pmax:state.pmax, tab:state.tab
+        }));
+      } catch(e){}
+    }
+
+    // Preferiti: stelline salvate nel browser (localStorage), per dispositivo.
+    var FAVKEY = 'motoMonitorPreferiti';
+    function loadFavs(){ try { return JSON.parse(localStorage.getItem(FAVKEY)||'{}') || {}; } catch(e){ return {}; } }
+    function saveFavs(f){ try { localStorage.setItem(FAVKEY, JSON.stringify(f)); } catch(e){} }
+    var favs = loadFavs();
+    function favId(it){ return it.url || it.title || ''; }
+    // La stella salva una copia dell'annuncio: cosi' i preferiti restano
+    // visibili anche quando l'annuncio esce dall'elenco del giorno.
+    function favSnapshot(id){
+      var it = BYID[id];
+      if(!it) return 1;
+      return { title:it.title||'', price:it.price||'', location:it.location||'', url:it.url||id,
+               portal:it.portal||'', image:it.image||'', first_seen:it.first_seen||'',
+               saved:new Date().toISOString() };
+    }
+
+    // Annunci eliminati: nascosti subito su questo dispositivo e, se la pagina
+    // è servita dal server locale, aggiunti alla blacklist del monitor.
+    var HIDEKEY = 'motoMonitorNascosti';
+    function loadHidden(){ try { return JSON.parse(localStorage.getItem(HIDEKEY)||'{}') || {}; } catch(e){ return {}; } }
+    function saveHidden(h){ try { localStorage.setItem(HIDEKEY, JSON.stringify(h)); } catch(e){} }
+    var hidden = loadHidden();
+    var serverBl = {};
+    try {
+      fetch('/api/blacklist').then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
+        if(j && j.items){ j.items.forEach(function(e){ var u = e && e.url ? e.url : e; if(u) serverBl[u]=1; }); render(); }
+      }).catch(function(){});
+    } catch(e){}
+
+    var BYID = {};
+    DATA.watches.forEach(function(w){ (w.items||[]).forEach(function(it){ BYID[favId(it)] = it; }); });
+
+    var toastTimer = null;
+    function toast(msg){
+      var t = document.getElementById('toast');
+      t.textContent = msg; t.className = 'toast show';
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function(){ t.className = 'toast'; }, 3600);
+    }
 
     var tabsEl = document.getElementById('tabs');
     var allNew = DATA.watches.reduce(function(s,w){return s+(w.new||0)},0);
@@ -207,29 +428,233 @@
     var qEl=document.getElementById('q'), clearEl=document.getElementById('clear');
     qEl.addEventListener('input', function(){ state.q=qEl.value; clearEl.style.display=qEl.value?'block':'none'; render(); });
     clearEl.addEventListener('click', function(){ qEl.value=''; state.q=''; clearEl.style.display='none'; render(); qEl.focus(); });
-    document.getElementById('onlynew').addEventListener('change', function(e){ state.onlynew=e.target.checked; render(); });
-    document.getElementById('sort').addEventListener('change', function(e){ state.sort=e.target.value; render(); });
+    document.getElementById('onlynew').addEventListener('change', function(e){ state.onlynew=e.target.checked; syncViewSeg(); render(); });
+    document.getElementById('sort').addEventListener('change', function(e){ state.sort=e.target.value; syncSortUi(); render(); });
+    var pminEl=document.getElementById('pmin'), pmaxEl=document.getElementById('pmax');
+    pminEl.addEventListener('input', function(){ state.pmin=pminEl.value; render(); });
+    pmaxEl.addEventListener('input', function(){ state.pmax=pmaxEl.value; render(); });
+
+    // Ripristina i controlli dai filtri salvati
+    qEl.value = state.q; clearEl.style.display = state.q ? 'block' : 'none';
+    document.getElementById('onlynew').checked = state.onlynew;
+    pminEl.value = state.pmin; pmaxEl.value = state.pmax;
+
+    // ---- Preferiti e barra comandi in fondo alla pagina ----
+    function syncSortUi(){
+      document.getElementById('sort').value = state.sort;
+      [].forEach.call(document.querySelectorAll('#bottombar .chipbtn[data-sort]'), function(b){
+        b.classList.toggle('on', b.getAttribute('data-sort')===state.sort);
+      });
+    }
+    function syncFavUi(){
+      document.getElementById('onlyfav').checked = state.onlyfav;
+      document.getElementById('bfav').classList.toggle('on', state.onlyfav);
+      syncViewSeg();
+    }
+    // Selettore Tutti/Nuovi/Preferiti (mobile): specchia i due interruttori
+    function syncViewSeg(){
+      var v = state.onlyfav ? 'fav' : (state.onlynew ? 'new' : 'all');
+      [].forEach.call(document.querySelectorAll('#viewseg button'), function(b){
+        b.classList.toggle('on', b.getAttribute('data-view') === v);
+      });
+    }
+    [].forEach.call(document.querySelectorAll('#viewseg button'), function(b){
+      b.addEventListener('click', function(){
+        var v = b.getAttribute('data-view');
+        state.onlyfav = (v === 'fav');
+        state.onlynew = (v === 'new');
+        document.getElementById('onlynew').checked = state.onlynew;
+        document.getElementById('onlyfav').checked = state.onlyfav;
+        document.getElementById('bfav').classList.toggle('on', state.onlyfav);
+        syncViewSeg(); render();
+      });
+    });
+    // Su mobile la barra filtri parte compressa: il pulsante "Filtri" la apre,
+    // e si accende quando c'è un filtro attivo anche se è chiusa.
+    var ftoggle = document.getElementById('ftoggle');
+    ftoggle.addEventListener('click', function(){
+      var tb = document.querySelector('.toolbar');
+      var open = tb.classList.toggle('open');
+      ftoggle.textContent = open ? 'Filtri ▴' : 'Filtri ▾';
+      ftoggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    function updateFtoggle(){
+      var active = state.onlynew || state.onlyfav || state.pmin!=='' || state.pmax!=='' || state.sort!=='recenti';
+      ftoggle.classList.toggle('has', !!active);
+    }
+    // Tastiera (desktop): "/" va alla ricerca, Esc esce dalla selezione
+    document.addEventListener('keydown', function(e){
+      var tag = (e.target && e.target.tagName) || '';
+      if(e.key === '/' && !/INPUT|SELECT|TEXTAREA/.test(tag)){ e.preventDefault(); qEl.focus(); }
+      if(e.key === 'Escape' && state.selecting){ setSelecting(false); }
+    });
+    document.getElementById('onlyfav').addEventListener('change', function(e){ state.onlyfav=e.target.checked; syncFavUi(); render(); });
+    [].forEach.call(document.querySelectorAll('#bottombar .chipbtn[data-sort]'), function(b){
+      b.addEventListener('click', function(){
+        state.sort=b.getAttribute('data-sort'); syncSortUi(); render();
+        window.scrollTo({top:0, behavior:'smooth'});
+      });
+    });
+    document.getElementById('bfav').addEventListener('click', function(){
+      state.onlyfav=!state.onlyfav; syncFavUi(); render();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+    document.getElementById('btop').addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+    // Freccia flottante "torna su": compare dopo un po' di scorrimento
+    var fabEl = document.getElementById('fab');
+    fabEl.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+    var fabTick = false;
+    function updateFab(){
+      fabEl.classList.toggle('show', window.scrollY > 600 && !state.selecting);
+      fabTick = false;
+    }
+    window.addEventListener('scroll', function(){
+      if(!fabTick){ fabTick = true; requestAnimationFrame(updateFab); }
+    }, {passive:true});
+
+    // ---- Multi-selezione: bulk preferiti / elimina (blacklist) ----
+    function updateSelbar(){
+      var n = Object.keys(sel).length;
+      document.getElementById('selcount').textContent = n + (n===1 ? ' selezionato' : ' selezionati');
+    }
+    function setSelecting(on){
+      state.selecting = on;
+      if(!on) sel = {};
+      document.getElementById('selbar').hidden = !on;
+      document.getElementById('selmode').textContent = on ? 'Fine selezione' : 'Seleziona';
+      document.getElementById('bsel').classList.toggle('on', on);
+      if(on) fabEl.classList.remove('show');
+      updateSelbar(); render();
+    }
+    document.getElementById('selmode').addEventListener('click', function(){ setSelecting(!state.selecting); });
+    document.getElementById('bsel').addEventListener('click', function(){ setSelecting(!state.selecting); window.scrollTo({top:0, behavior:'smooth'}); });
+    document.getElementById('selcancel').addEventListener('click', function(){ setSelecting(false); });
+    document.getElementById('selall').addEventListener('click', function(){
+      sel = {};
+      collect().forEach(function(it){ sel[favId(it)] = 1; });
+      updateSelbar(); render();
+    });
+    document.getElementById('selshare').addEventListener('click', function(){
+      var ids = Object.keys(sel);
+      if(!ids.length){ toast('Nessun annuncio selezionato'); return; }
+      var text = ids.map(function(k){
+        var it = BYID[k] || {};
+        return '• ' + (it.title||'Annuncio') + (it.price ? ' — ' + it.price : '') + '\n' + (it.url||k);
+      }).join('\n\n');
+      if(navigator.share){
+        navigator.share({ text: text }).catch(function(){});
+      } else if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){
+          toast('Copiati '+ids.length+' annunci negli appunti');
+        }).catch(function(){ toast('Copia non riuscita'); });
+      } else {
+        toast('Condivisione non disponibile su questo browser');
+      }
+    });
+    document.getElementById('selfav').addEventListener('click', function(){
+      var n = 0;
+      for(var k in sel){ if(!favs[k]){ favs[k]=favSnapshot(k); n++; } }
+      saveFavs(favs);
+      toast(n ? ('Aggiunti '+n+' annunci ai preferiti') : 'Erano già tutti nei preferiti');
+      setSelecting(false);
+    });
+    document.getElementById('selhide').addEventListener('click', function(){
+      var urls = Object.keys(sel);
+      if(!urls.length){ toast('Nessun annuncio selezionato'); return; }
+      urls.forEach(function(u){ hidden[u] = 1; });
+      saveHidden(hidden);
+      var payload = urls.map(function(u){ var it = BYID[u] || {}; return { url:u, title:it.title||'', portal:it.portal||'' }; });
+      setSelecting(false);
+      try {
+        fetch('/api/blacklist', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({items:payload}) })
+          .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
+          .then(function(j){ toast('Eliminati '+urls.length+' annunci: in blacklist, il monitor non li riproporrà ('+j.total+' totali)'); })
+          .catch(function(){ toast('Nascosti '+urls.length+' annunci su questo dispositivo. Per la blacklist definitiva usa la vista dal server locale.'); });
+      } catch(e){ toast('Nascosti '+urls.length+' annunci su questo dispositivo.'); }
+    });
+
+    // Clic sulle schede: in selezione scelgo, altrimenti gestisco la stellina
+    document.getElementById('grid').addEventListener('click', function(ev){
+      if(state.selecting){
+        var card = ev.target && ev.target.closest ? ev.target.closest('a.card') : null;
+        if(card){
+          ev.preventDefault(); ev.stopPropagation();
+          var fid = card.getAttribute('data-fid') || '';
+          if(sel[fid]) delete sel[fid]; else sel[fid] = 1;
+          card.classList.toggle('sel', !!sel[fid]);
+          updateSelbar();
+        }
+        return;
+      }
+      var b = ev.target && ev.target.closest ? ev.target.closest('.favbtn') : null;
+      if(!b) return;
+      ev.preventDefault(); ev.stopPropagation();
+      var id = b.getAttribute('data-fid') || '';
+      if(favs[id]) delete favs[id]; else favs[id]=favSnapshot(id);
+      saveFavs(favs);
+      b.classList.toggle('on', !!favs[id]);
+      b.setAttribute('aria-pressed', favs[id] ? 'true' : 'false');
+      if(state.onlyfav) render();
+    });
 
     function collect(){
       var list=[];
       DATA.watches.forEach(function(w){ if(state.tab==="__all__"||state.tab===w.name){ w.items.forEach(function(it){ list.push(it); }); } });
+      list=list.filter(function(it){ var k=favId(it); return !hidden[k] && !serverBl[k]; });
       if(state.onlynew) list=list.filter(function(it){return it.is_new});
+      if(state.onlyfav){
+        list=list.filter(function(it){return favs[favId(it)]});
+        // Aggiungi i preferiti salvati che non sono piu' nell'elenco del giorno
+        for(var fk in favs){
+          if(BYID[fk] || hidden[fk] || serverBl[fk]) continue;
+          var f = favs[fk];
+          var snap = (f && typeof f === 'object') ? f : {};
+          list.push({ title:snap.title||fk, price:snap.price||'', location:snap.location||'',
+            url:snap.url||fk, portal:snap.portal||'', image:snap.image||'',
+            first_seen:snap.first_seen||'', is_new:false, via:'', gone:true });
+        }
+      }
       var n=state.q.trim().toLowerCase();
       if(n) list=list.filter(function(it){ return (it.title||'').toLowerCase().indexOf(n)>-1 || (it.location||'').toLowerCase().indexOf(n)>-1; });
+      // Fascia di prezzo: con un limite attivo gli annunci senza prezzo leggibile sono esclusi
+      var pmin = state.pmin!=='' && state.pmin!=null ? parseFloat(state.pmin) : null;
+      var pmax = state.pmax!=='' && state.pmax!=null ? parseFloat(state.pmax) : null;
+      if(pmin!=null || pmax!=null){
+        list=list.filter(function(it){
+          var v=numPrice(it.price);
+          if(v==null) return false;
+          if(pmin!=null && v<pmin) return false;
+          if(pmax!=null && v>pmax) return false;
+          return true;
+        });
+      }
       list.sort(function(a,b){
-        if(state.sort==="prezzo") return numPrice(a.price)-numPrice(b.price);
+        if(state.sort==="prezzo") return sortPrice(a, Number.MAX_SAFE_INTEGER)-sortPrice(b, Number.MAX_SAFE_INTEGER);
+        if(state.sort==="prezzo-desc") return sortPrice(b, -1)-sortPrice(a, -1);
         if(state.sort==="az") return (a.title||'').localeCompare(b.title||'','it');
+        if(state.sort==="giorni") return (a.first_seen||'9999').localeCompare(b.first_seen||'9999');
+        if(state.sort==="ribassi"){
+          var d=(b.price_drop_old?1:0)-(a.price_drop_old?1:0);
+          if(d) return d;
+        }
         return (b.first_seen||'').localeCompare(a.first_seen||'');
       });
       return list;
     }
 
     function render(){
+      updateFtoggle();
+      saveFilters();
       var items=collect(), grid=document.getElementById('grid');
-      var filtered = state.q.trim()||state.onlynew||state.tab!=="__all__";
+      var filtered = state.q.trim()||state.onlynew||state.onlyfav||state.tab!=="__all__"||state.pmin!==''||state.pmax!=='';
+      var rangeTxt = (state.pmin!==''||state.pmax!=='')
+        ? ' · prezzo '+(state.pmin!==''?state.pmin:'0')+'–'+(state.pmax!==''?state.pmax:'∞')+' €' : '';
+      var hc = Object.keys(hidden).length;
       document.getElementById('resultbar').innerHTML =
-        '<span>'+items.length+(items.length===1?' annuncio':' annunci')+(state.onlynew?' · solo nuovi':'')+(state.q.trim()?' · «'+esc(state.q.trim())+'»':'')+'</span>'+
-        (filtered?'<button class="reset" id="reset">azzera filtri</button>':'');
+        '<span>'+items.length+(items.length===1?' annuncio':' annunci')+(state.onlynew?' · solo nuovi':'')+(state.onlyfav?' · preferiti':'')+rangeTxt+(state.q.trim()?' · «'+esc(state.q.trim())+'»':'')+'</span>'+
+        (filtered?'<button class="reset" id="reset">azzera filtri</button>':'')+
+        (hc?'<button class="reset" id="unhide">ripristina '+hc+' nascosti</button>':'');
       grid.innerHTML='';
 
       if(!items.length){
@@ -242,20 +667,35 @@
         items.forEach(function(it,i){
           var a=document.createElement('a');
           a.className='card enter'; a.href=it.url||'#';
+          a.setAttribute('data-fid', favId(it));
+          if(state.selecting && sel[favId(it)]) a.className+=' sel';
           if(it.url && it.url!=='#'){ a.target='_blank'; a.rel='noopener'; }
           a.style.animationDelay=Math.min(i*26,340)+'ms';
           var thumb = it.image
-            ? '<img class="thumb-img" loading="lazy" src="'+esc(it.image)+'" alt="'+esc(it.title)+'">'
+            ? '<img class="thumb-img" loading="lazy" decoding="async" src="'+esc(it.image)+'" alt="'+esc(it.title)+'">'
             : '<div class="noimg">senza foto</div>';
-          var stamp = it.is_new?'<div class="stamp">Nuovo</div>':'';
+          var stamp = (it.is_new?'<div class="stamp">Nuovo</div>':'')+(it.price_drop_old?'<div class="stamp drop">Prezzo ↓</div>':'');
           var loc = it.location
             ? '<span class="loc"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.2-7-11a7 7 0 1 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><span>'+esc(it.location)+'</span></span>'
             : '<span></span>';
-          a.innerHTML='<div class="thumb">'+thumb+stamp+'</div><div class="body">'+
+          var priceHtml = (it.price_drop_old?'<span class="old">'+esc(it.price_drop_old)+'</span>':'')
+            + esc(it.price||'n.d.')
+            + (it.price_drop_pct?'<span class="pct">−'+esc(it.price_drop_pct)+'%</span>':'');
+          var days = null;
+          if(it.first_seen){ var fd=new Date(it.first_seen); if(!isNaN(fd)) days=Math.max(0, Math.floor((Date.now()-fd.getTime())/864e5)); }
+          var seenTxt = it.first_seen ? 'primo avvistamento '+fmtDate(it.first_seen)+(days===0?' · oggi':(days!=null?' · da '+days+' g':'')) : '';
+          if(it.carried && it.last_seen) seenTxt = (seenTxt? seenTxt+' · ':'') + 'controllato il '+fmtDate(it.last_seen);
+          if(it.stale) seenTxt = (seenTxt? seenTxt+' · ':'') + 'non verificato oggi';
+          if(it.stale) a.className += ' stale';
+          if(it.gone) a.className += ' gone';
+          var favOn = !!favs[favId(it)];
+          var favB = '<button class="favbtn'+(favOn?' on':'')+'" data-fid="'+esc(favId(it))+'"'+
+            ' aria-pressed="'+(favOn?'true':'false')+'" title="Aggiungi o togli dai preferiti">★</button>';
+          a.innerHTML='<div class="thumb">'+thumb+stamp+favB+'</div><div class="body">'+
             '<div class="ttl">'+esc(it.title)+'</div>'+
-            '<div class="price">'+esc(it.price||'n.d.')+'</div>'+
+            '<div class="price">'+priceHtml+'</div>'+
             '<div class="foot">'+loc+'<span class="chip">'+esc(it.portal)+'</span></div>'+
-            '<div class="meta">'+(it.first_seen?'<span>primo avvistamento '+fmtDate(it.first_seen)+'</span>':'')+(it.via?'<span>trovato con '+esc(it.via)+'</span>':'')+'</div>'+
+            '<div class="meta">'+(seenTxt?'<span>'+seenTxt+'</span>':'')+(it.via?'<span>trovato con '+esc(it.via)+'</span>':'')+'</div>'+
             '</div>';
           frag.appendChild(a);
         });
@@ -266,13 +706,21 @@
       }
       var reset=document.getElementById('reset');
       if(reset) reset.addEventListener('click', function(){
-        state.tab="__all__"; state.q=""; state.onlynew=false;
+        state.tab="__all__"; state.q=""; state.onlynew=false; state.onlyfav=false; state.pmin=""; state.pmax="";
+        pminEl.value=''; pmaxEl.value=''; syncFavUi();
         qEl.value=''; clearEl.style.display='none'; document.getElementById('onlynew').checked=false;
         [].forEach.call(tabsEl.children,function(c,idx){ c.setAttribute('aria-selected', idx===0?'true':'false'); });
         render();
       });
+      var unhide=document.getElementById('unhide');
+      if(unhide) unhide.addEventListener('click', function(){
+        hidden={}; saveHidden(hidden); render();
+        toast('Nascosti ripristinati su questo dispositivo (la blacklist del monitor non cambia)');
+      });
     }
 
+    syncSortUi();
+    syncFavUi();
     render();
   })();
   </script>
