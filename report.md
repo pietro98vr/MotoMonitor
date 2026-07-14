@@ -1,4 +1,4 @@
-# Riepilogo annunci moto — 13/07/2026
+# Riepilogo annunci moto — 14/07/2026
 
 *Nessun nuovo annuncio oggi.*
 
