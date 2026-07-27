@@ -106,19 +106,19 @@ if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
     Write-Log "ERRORE: Git non trovato nel PATH."; exit 1
 }
 
-# Recupera le modifiche fatte su GitHub (es. searches.json editato dal sito),
-# solo se incorporabili in modo pulito (fast-forward): mai riscritture a sorpresa.
+# Allinea con GitHub PRIMA del giro: incorpora i commit remoti (ricerche
+# modificate dal sito, aggiornamenti quotidiani della Action) ribasando gli
+# eventuali commit locali. In caso di conflitto sui file generati (stato,
+# report, pagina) vince la versione locale ('-X theirs' durante un rebase):
+# tanto tra un attimo vengono rigenerati dal giro del monitor.
 git fetch origin 2>&1 | Out-Null
 if ($LASTEXITCODE -eq 0) {
-    $behind = 0; $ahead = 0
-    try { $behind = [int](git rev-list --count "HEAD..origin/main" 2>$null) } catch { }
-    try { $ahead  = [int](git rev-list --count "origin/main..HEAD" 2>$null) } catch { }
-    if ($behind -gt 0 -and $ahead -eq 0) {
-        git merge --ff-only origin/main 2>&1 | ForEach-Object { Add-Content -Path $Log -Value $_ }
-        if ($LASTEXITCODE -eq 0) { Write-Log "Incorporati $behind commit da GitHub (es. ricerche modificate dal sito)." }
-        else { Write-Log "AVVISO: merge da GitHub non riuscito; continuo con la versione locale." }
-    } elseif ($behind -gt 0) {
-        Write-Log "AVVISO: storia locale e remota divergenti; continuo con la versione locale (serve un push/pull manuale)."
+    git pull --rebase --autostash -X theirs origin main 2>&1 | ForEach-Object { Add-Content -Path $Log -Value $_ }
+    if ($LASTEXITCODE -ne 0) {
+        git rebase --abort 2>&1 | Out-Null
+        Write-Log "AVVISO: riallineamento con GitHub non riuscito; continuo con la versione locale."
+    } else {
+        Write-Log "Allineato con GitHub (pull --rebase)."
     }
 } else {
     Write-Log "AVVISO: fetch da GitHub non riuscito (offline?); continuo con la versione locale."
@@ -148,8 +148,16 @@ $msg = "Aggiornamento pagina {0}" -f (Get-Date -Format "yyyy-MM-dd HH:mm")
 git commit -m $msg 2>&1 | ForEach-Object { Add-Content -Path $Log -Value $_ }
 git push 2>&1 | ForEach-Object { Add-Content -Path $Log -Value $_ }
 if ($LASTEXITCODE -ne 0) {
-    Write-Log "ERRORE nel push. Esegui un 'git push' manuale una volta per memorizzare le credenziali."
-    exit 1
+    # Push rifiutato: tipicamente la Action ha pubblicato nel frattempo.
+    # Riallinea (i commit locali restano in cima) e riprova una volta.
+    Write-Log "Push rifiutato: riallineo con GitHub e riprovo..."
+    git pull --rebase --autostash -X theirs origin main 2>&1 | ForEach-Object { Add-Content -Path $Log -Value $_ }
+    if ($LASTEXITCODE -ne 0) { git rebase --abort 2>&1 | Out-Null }
+    git push 2>&1 | ForEach-Object { Add-Content -Path $Log -Value $_ }
+    if ($LASTEXITCODE -ne 0) {
+        Write-Log "ERRORE nel push anche dopo il riallineamento. Se e' la prima volta, esegui un 'git push' manuale per memorizzare le credenziali."
+        exit 1
+    }
 }
 
 Write-Log "Pagina aggiornata e pubblicata su GitHub Pages."

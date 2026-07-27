@@ -42,5 +42,13 @@ jobs:
           git config user.name "moto-monitor-bot"
           git config user.email "bot@users.noreply.github.com"
           git add state.json report.md report.html docs/index.html searches.json || true
-          git commit -m "Aggiornamento $(date -u +%F)" || echo "Nessuna modifica da salvare"
-          git push || echo "Push non necessario"
+          if ! git commit -m "Aggiornamento $(date -u +%F)"; then
+            echo "Nessuna modifica da salvare"; exit 0
+          fi
+          # Se nel frattempo il PC di casa ha pubblicato, riallinea e riprova.
+          for i in 1 2 3; do
+            if git push; then exit 0; fi
+            git pull --rebase --autostash -X theirs origin main || git rebase --abort || true
+            sleep 5
+          done
+          echo "Push non riuscito dopo 3 tentativi" && exit 1

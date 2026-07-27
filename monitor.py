@@ -387,34 +387,9 @@ def _dig_image(node: dict) -> str:
     return ""
 
 
-def fetch_subito(query: str, category: str = "moto-e-scooter", region: str = "") -> list[dict]:
-    """Adapter Subito.it — sito Next.js: si estrae il blob __NEXT_DATA__ dalla
-    pagina dei risultati e se ne ricavano gli annunci. Nessun endpoint privato,
-    solo la pagina pubblica di ricerca.
-    """
-    area = region if region else "italia"
-    url = f"https://www.subito.it/annunci-{area}/vendita/{category}/"
-    r = _http_get(url, params={"q": query})
-    if r is None:
-        return []
-
-    soup = BeautifulSoup(r.text, "html.parser")
-    tag = soup.find("script", id="__NEXT_DATA__")
-    if not tag or not tag.string:
-        log.warning("    [subito] __NEXT_DATA__ non trovato (pagina di verifica o struttura cambiata)")
-        _note_parse_fail("__NEXT_DATA__ assente (possibile pagina di verifica)")
-        return []
-
-    try:
-        data = json.loads(tag.string)
-    except json.JSONDecodeError:
-        log.warning("    [subito] JSON non valido")
-        _note_parse_fail("JSON __NEXT_DATA__ non valido")
-        return []
-
-    raw: list[dict] = []
-    _walk_json(data, raw)
-
+def _subito_items_from_nodes(raw: list[dict]) -> list[dict]:
+    """Converte i nodi-annuncio del JSON di Subito nel formato interno.
+    Percorso unico per entrambe le fonti (endpoint JSON e __NEXT_DATA__)."""
     results: list[dict] = []
     seen_ids: set[str] = set()
     for ad in raw:
@@ -438,6 +413,91 @@ def fetch_subito(query: str, category: str = "moto-e-scooter", region: str = "")
             }
         )
     return results
+
+
+# Endpoint JSON pubblico usato dal sito stesso di Subito: piu' leggero e stabile
+# del parsing HTML. Se non risponde o cambia forma, si ripiega in automatico
+# sulla pagina dei risultati. Id di categoria noti; categoria assente = HTML.
+SUBITO_API_URL = "https://hades.subito.it/v1/search/items"
+SUBITO_CATEGORY_IDS = {"moto-e-scooter": "36", "accessori-moto": "42"}
+_SUBITO_API_STATE = {"fails": 0}  # circuit breaker: dopo 2 errori stop per il giro
+
+
+def _fetch_subito_api(query: str, category: str) -> list[dict] | None:
+    """Interroga l'endpoint JSON di Subito. Ritorna None quando il percorso API
+    non e' utilizzabile (categoria ignota, errori, risposta anomala): il
+    chiamante ripiega sull'HTML. Uno "zero risultati" dell'API viene comunque
+    ricontrollato sull'HTML per prudenza (es. id categoria cambiato)."""
+    cat = SUBITO_CATEGORY_IDS.get(category)
+    if cat is None or _SUBITO_API_STATE["fails"] >= 2:
+        return None
+    params = {"q": query, "c": cat, "lim": "30", "sort": "datedesc"}
+    headers = {"User-Agent": UA, "Accept": "application/json"}
+    try:
+        if chrome_requests is not None:
+            r = chrome_requests.get(
+                SUBITO_API_URL, params=params, headers=headers, timeout=25, impersonate="chrome"
+            )
+        else:
+            r = requests.get(SUBITO_API_URL, params=params, headers=headers, timeout=25)
+    except Exception as exc:  # noqa: BLE001 — curl_cffi ha eccezioni proprie
+        log.info("    [subito-api] non raggiungibile (%s): uso la pagina HTML", exc.__class__.__name__)
+        _SUBITO_API_STATE["fails"] += 1
+        return None
+    if r.status_code != 200:
+        log.info("    [subito-api] HTTP %s: uso la pagina HTML", r.status_code)
+        _SUBITO_API_STATE["fails"] += 1
+        return None
+    try:
+        ads = r.json().get("ads")
+    except Exception:  # noqa: BLE001
+        _SUBITO_API_STATE["fails"] += 1
+        return None
+    if not isinstance(ads, list):
+        _SUBITO_API_STATE["fails"] += 1
+        return None
+    _SUBITO_API_STATE["fails"] = 0
+    raw: list[dict] = []
+    _walk_json(ads, raw)
+    return raw
+
+
+def fetch_subito(query: str, category: str = "moto-e-scooter", region: str = "") -> list[dict]:
+    """Adapter Subito.it. Prova prima l'endpoint JSON del sito (niente HTML da
+    interpretare, meno esposto alle pagine di verifica); se non e' utilizzabile
+    estrae il blob __NEXT_DATA__ dalla pagina pubblica dei risultati.
+    """
+    if not region:
+        raw = _fetch_subito_api(query, category)
+        if raw:
+            results = _subito_items_from_nodes(raw)
+            if results:
+                _note_fetch_ok()
+                return results
+
+    area = region if region else "italia"
+    url = f"https://www.subito.it/annunci-{area}/vendita/{category}/"
+    r = _http_get(url, params={"q": query})
+    if r is None:
+        return []
+
+    soup = BeautifulSoup(r.text, "html.parser")
+    tag = soup.find("script", id="__NEXT_DATA__")
+    if not tag or not tag.string:
+        log.warning("    [subito] __NEXT_DATA__ non trovato (pagina di verifica o struttura cambiata)")
+        _note_parse_fail("__NEXT_DATA__ assente (possibile pagina di verifica)")
+        return []
+
+    try:
+        data = json.loads(tag.string)
+    except json.JSONDecodeError:
+        log.warning("    [subito] JSON non valido")
+        _note_parse_fail("JSON __NEXT_DATA__ non valido")
+        return []
+
+    raw = []
+    _walk_json(data, raw)
+    return _subito_items_from_nodes(raw)
 
 
 # ---- eBay via API ufficiale (Browse API) --------------------------------- #
@@ -932,6 +992,11 @@ def run_searches(config: dict, state: dict, searches: list[dict]) -> list[dict]:
         # (cosi' rinominare una ricerca non fa ripartire tutto da "nuovo").
         if skey not in seen and name in seen:
             seen[skey] = seen.pop(name)
+        # Residuo della versione precedente (stato indicizzato per nome accanto
+        # a quello per id, creato dai giri col codice vecchio): se il bucket per
+        # nome e' vuoto va semplicemente eliminato.
+        if name != skey and not seen.get(name):
+            seen.pop(name, None)
         known = seen.setdefault(skey, {})
         # Archivio dei rimossi: niente viene mai cancellato davvero. Se un
         # annuncio "rimosso" ricompare (es. era solo finito in seconda pagina),
@@ -1066,13 +1131,25 @@ def run_searches(config: dict, state: dict, searches: list[dict]) -> list[dict]:
         cutoff = dt.datetime.now() - dt.timedelta(days=keep_days)
         removed: list[dict] = []
         carried: list[dict] = []
+
+        def _verifiable_today(pid: str) -> bool:
+            """Vero solo se oggi il portale e' stato interrogato per questa
+            ricerca e ha risposto almeno una volta: solo allora l'assenza di un
+            annuncio e' un segnale. Un portale bloccato (403), irraggiungibile o
+            disattivato non puo' "smentire" nulla: i suoi annunci non maturano
+            anzianita' verso la scadenza e vengono contrassegnati 'stale'."""
+            if pid not in portals:
+                return False
+            return (FETCH_STATS.get(pid) or {}).get("ok", 0) > 0
+
         for iid, entry in list(known.items()):
             if iid in collected:
                 continue
             pid = _portal_id_of(iid)
+            verifiable = _verifiable_today(pid) if pid else False
             last = entry.get("last_seen") or entry.get("first_seen") or now_iso
             too_old = False
-            if do_expire:
+            if do_expire and verifiable:
                 try:
                     too_old = dt.datetime.fromisoformat(last) < cutoff
                 except ValueError:
@@ -1106,6 +1183,7 @@ def run_searches(config: dict, state: dict, searches: list[dict]) -> list[dict]:
                     "last_seen": entry.get("last_seen", ""),
                     "is_new": False,
                     "carried": True,
+                    "stale": not verifiable,
                 }
             )
         current = current + carried
@@ -1381,12 +1459,30 @@ def write_webapp(blocks: list[dict], config: dict, portal_issues: list[dict] | N
         ],
     }
 
-    payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
-    html_out = template_path.read_text(encoding="utf-8").replace("__MOTO_DATA__", payload)
-
     out_dir = ROOT / "docs"
     out_dir.mkdir(exist_ok=True)
-    (out_dir / "index.html").write_text(html_out, encoding="utf-8")
+    out_path = out_dir / "index.html"
+
+    # Guardia anti-svuotamento: se il giro di oggi non ha prodotto alcun
+    # annuncio MA la pagina precedente ne aveva e almeno un portale ha avuto
+    # problemi, quasi certamente e' stato un giro "cieco" (blocchi anti-bot,
+    # rete assente, stato azzerato). Meglio lasciare online la pagina di ieri
+    # che pubblicarne una vuota.
+    if data["total_current"] == 0 and data["portal_issues"] and out_path.exists():
+        try:
+            m = re.search(r'"total_current":\s*(\d+)', out_path.read_text(encoding="utf-8"))
+            if m and int(m.group(1)) > 0:
+                log.warning(
+                    "[webapp] 0 annunci oggi e portali in errore: mantengo la pagina precedente (%s annunci).",
+                    m.group(1),
+                )
+                return
+        except (OSError, ValueError):
+            pass
+
+    payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
+    html_out = template_path.read_text(encoding="utf-8").replace("__MOTO_DATA__", payload)
+    _atomic_write(out_path, html_out)
     log.info("[webapp] docs/index.html aggiornato (%d annunci)", data["total_current"])
 
 
