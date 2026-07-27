@@ -8,30 +8,75 @@ quelli attualmente attivi.
 
 ## Come funziona
 
-1. Le *ricerche* (già precompilate con Kawasaki 350 S2, KTM 125 GS, KTM 175 GS e
-   i ricambi Kawasaki: borsa attrezzi, parafango posteriore, portachiavi) si
+1. Le *ricerche* (attualmente: KTM 125 Sachs e KTM 175 Sachs 1970–72,
+   portachiavi Kawasaki, borsa/kit attrezzi della Kawasaki 350 S2) si
    gestiscono dall'**interfaccia web** o nel file `searches.json`. Ogni ricerca ha
    più stringhe etichettate e i portali su cui cercarla.
 2. Per ogni ricerca il programma **genera da solo le varianti** delle parole
    chiave (inversione marca/modello/cilindrata, sinonimi di contesto come
    "conservata" o "restauro") e interroga i portali attivi.
-3. Confronta i risultati con lo stato precedente (`state.json`) e a ogni giro
-   produce tre cose: il riepilogo per l'**e-mail** (con foto), i file
-   `report.md`/`report.html` e la **web app** `docs/index.html`.
+3. L'elenco è **additivo**: i nuovi di ogni giorno si sommano a quelli già
+   trovati, che restano in elenco anche se oggi non sono ricomparsi nella prima
+   pagina dei risultati (sulle schede compare «controllato il gg/mm»). Un
+   annuncio esce solo dopo `keep_days` giorni senza essere più stato rivisto
+   (30 di default, sezione «Usciti dall'elenco») o se lo elimini tu dalla
+   pagina. Oltre ai **nuovi** vengono riconosciuti i **ribassi di prezzo**,
+   con storico delle variazioni.
+4. A ogni giro produce tre cose: il riepilogo per l'**e-mail** (con foto), i
+   file `report.md`/`report.html` e la **web app** `docs/index.html`. Se un
+   portale non risponde (blocco IP, pagina di verifica), lo segnala in tutti e
+   tre — e gli annunci già noti di quel portale non spariscono: restano
+   visibili come «non verificato oggi» e non vengono contati come rimossi.
 
 ## Due modi di consultare gli stessi dati
 
-- **E-mail giornaliera** — riepilogo con sezione *Nuovi* ed elenco generale di
-  tutti gli annunci attivi, **foto incluse**. Va bene per te che segui il flusso.
+- **E-mail giornaliera** — riepilogo con le sezioni *Nuovi*, *Prezzi calati*
+  (vecchio prezzo barrato, nuovo prezzo e percentuale di sconto), *Usciti
+  dall'elenco* e l'elenco generale, **foto incluse** (fino a `email_max_items`
+  annunci per ricerca: il catalogo completo è nella web app). L'oggetto
+  riassume le novità («3 nuovi, 1 ribasso»); un riquadro in testa avvisa se un
+  portale oggi non ha risposto.
 - **Web app** (`docs/index.html`) — pagina unica con la vista aggregata a schede,
-  foto, filtro per categoria, ricerca, "solo nuovi" e ordinamento. È il link da
-  passare alla persona per cui fai da intermediario: apre la pagina e sfoglia gli
-  annunci con le immagini, senza dover leggere l'e-mail. È un'app React (senza
-  build, come l'editor), curata per l'uso da telefono.
+  foto, filtro per categoria, ricerca, «solo nuovi», **fascia di prezzo min–max**
+  e ordinamenti: più recenti, ribassi prima, prezzo crescente e decrescente,
+  in vendita da più tempo, titolo A–Z. Ogni scheda mostra i timbri *Nuovo* e *Prezzo ↓*, il vecchio
+  prezzo barrato e da quanti giorni l'annuncio è in vendita; un avviso in testa
+  segnala i portali senza risposta. È il link da passare alla persona per cui
+  fai da intermediario: apre la pagina e sfoglia gli annunci con le immagini,
+  senza dover leggere l'e-mail. È un'app React (senza build, come l'editor),
+  curata per l'uso da telefono.
 
 La web app non ha bisogno di alcun server: è un singolo file che il servizio
 Python rigenera a ogni esecuzione. Puoi aprirlo con un doppio clic **oppure**
 pubblicarlo come sito (vedi sotto) per avere un indirizzo condivisibile.
+
+### Preferiti, selezione multipla ed eliminazione
+
+Ogni scheda ha una **stellina** per segnarla come preferita (salvata nel
+browser, per dispositivo) e in alto c'è l'interruttore «★ Preferiti» per vedere
+solo quelle. La stella salva una copia dell'annuncio (titolo, prezzo, foto,
+link): i preferiti restano quindi visibili **anche se l'annuncio esce
+dall'elenco del giorno** — compaiono marcati «non più in elenco», col link
+ancora funzionante — e non spariscono cambiando o eliminando le ricerche. Col pulsante **Seleziona** si passa alla selezione multipla: si
+toccano le schede da scegliere e dalla barra che compare in basso si fanno le
+azioni in blocco — **★ Preferiti** per aggiungerle tutte, **Elimina** per
+toglierle di mezzo. Gli annunci eliminati finiscono in `blacklist.json`: il
+monitor **non li ripropone mai più**, né in pagina né via e-mail. L'aggiunta
+alla blacklist funziona quando la pagina è servita dal server locale
+(`/view`); dalla pagina pubblicata su GitHub Pages l'eliminazione vale solo
+per quel dispositivo (e si può annullare con «ripristina nascosti»). Per
+togliere annunci dalla blacklist c'è il contatore con «svuota» nell'editor
+locale (oppure si edita `blacklist.json`). In fondo alla pagina una barra
+ripete i comandi rapidi (meno caro, più caro, più recenti, ribassi, preferiti,
+seleziona) senza dover risalire, e una freccia flottante riporta in cima.
+
+Dalla selezione si può anche **condividere in blocco**: «Condividi» apre il
+menù di condivisione del telefono (o copia negli appunti su desktop) con
+titoli, prezzi e link degli annunci scelti — comodo per girarli su WhatsApp.
+«Tutti» seleziona in un colpo ciò che è a schermo dopo i filtri. Filtri,
+fascia di prezzo, ordinamento e scheda attiva vengono **ricordati tra una
+visita e l'altra** su ciascun dispositivo; «azzera filtri» riparte pulito.
+Nell'editor ogni ricerca ha il pulsante **Duplica** per clonarla e variarla.
 
 
 ## Perché serve farlo girare "da qualche parte"
@@ -114,6 +159,33 @@ nulla, di norma è perché non ci sono novità (nessun commit vuoto) o perché d
 domestico un portale non ha restituito risultati.
 
 
+## Regolazioni utili (config.yaml)
+
+Il recupero pagine usa `curl-cffi`, che si presenta ai portali come un vero
+Chrome anche a livello TLS: i portali bloccano con 403 l'impronta della
+libreria Python standard perfino da IP domestico (verificato nei log). Se
+`curl-cffi` non è installato il programma ripiega su `requests` e te lo dice
+nel log. Dopo un aggiornamento ricorda `pip install -r requirements.txt`.
+
+Le soglie dei comportamenti nuovi si regolano in `config.yaml`, tutte con
+valori predefiniti sensati: `http_retries` (tentativi extra con pausa crescente
+su errori di rete, 429 e 5xx — su 403 non insiste), `keep_days` (per quanti
+giorni un annuncio resta in elenco senza essere più stato rivisto prima di
+uscire), `email_max_items` (tetto di annunci per ricerca nell'e-mail) e
+`price_drop_min_pct` (ribasso minimo in percentuale per segnalare un calo di
+prezzo). Lo stato è salvato con scrittura atomica: niente `state.json` corrotti
+se il PC si spegne a metà giro; un file corrotto viene comunque messo da parte
+come `state.json.bad` invece di perdere lo storico in silenzio.
+
+**Niente viene sovrascritto tra un giro e l'altro.** Lo stato è cumulativo, i
+report pubblicati restano nella storia git (un commit per giro), e gli annunci
+dichiarati rimossi non vengono cancellati ma spostati in un **archivio** dentro
+`state.json` (fino a 400 voci per ricerca): se un annuncio ricompare — capita
+quando scivola oltre la prima pagina dei risultati e poi risale — viene
+ripescato dall'archivio con primo avvistamento e storico prezzi intatti, e se
+torna a un prezzo più basso il ribasso viene rilevato rispetto al prezzo che
+aveva prima di sparire.
+
 ## Notifiche
 
 Imposta i recapiti come **secrets** (GitHub: *Settings → Secrets and variables →
@@ -159,6 +231,11 @@ Poi apri **http://127.0.0.1:8000**. Da lì puoi:
   stringa base, che puoi tenere o scartare;
 - «Esegui ora» lancia subito un giro (con o senza invio e-mail) e aggiorna la
   vista annunci.
+
+Ogni ricerca ha anche un **prezzo minimo e massimo**: il minimo serve a
+escludere in partenza ricambi e gadget da pochi euro quando cerchi la moto
+intera (le ricerche moto partono con minimo 500 €); gli annunci senza
+prezzo leggibile non vengono mai esclusi.
 
 Tutto viene salvato in **searches.json**, che è la fonte unica: il servizio
 giornaliero (`monitor.py`) e la web app leggono sempre da lì. Il blocco `watches`
@@ -234,12 +311,20 @@ blocco) hai due opzioni gratuite:
 
 ## Modificare le ricerche via file (alternativa)
 
-Puoi anche editare direttamente `searches.json`. Struttura di una ricerca:
+Puoi anche editare direttamente `searches.json` — in locale **oppure dal sito
+GitHub**: apri il file nel repository, premi la matita, modifichi e fai *Commit
+changes* su `main`. Al giro successivo `aggiorna_pages.ps1` recupera da solo le
+modifiche dal repository (solo se incorporabili in modo pulito) e le usa per le
+ricerche. Ricorda che lo scraping parte comunque dal tuo PC: la modifica fatta
+dal sito ha effetto quando il tuo computer esegue il giro seguente.
+
+Struttura di una ricerca:
 
 ```json
 {
   "name": "Kawasaki 350 S2",
   "portals": ["subito", "ebay"],
+  "price_min": 500,
   "price_max": 20000,
   "subito_category": "moto-e-scooter",
   "relevance_filter": true,
@@ -258,6 +343,16 @@ Puoi anche editare direttamente `searches.json`. Struttura di una ricerca:
 - **eBay.it** — utile per i ricambi italiani.
 - **eBay.de** — ricambi dal mercato tedesco, spesso il più fornito per la
   Kawasaki S2 (borsa attrezzi, parafango, minuteria).
+
+  **eBay senza blocchi (consigliato):** con le chiavi developer gratuite di
+  eBay entrambi i domini passano dall'**API ufficiale** (Browse API) invece
+  dello scraping: niente più 403, risultati stabili con foto e prezzi. Su
+  [developer.ebay.com](https://developer.ebay.com) crea un account, poi in
+  *Application Keys* prendi dal keyset di **Produzione** l'App ID (Client ID)
+  e il Cert ID (Client Secret) e impostali come variabili d'ambiente
+  `EBAY_CLIENT_ID` e `EBAY_CLIENT_SECRET` (o come secrets su GitHub Actions).
+  Senza chiavi il programma continua col vecchio metodo best-effort. Gli id
+  degli annunci coincidono tra API e scraping: lo storico non si duplica.
 - **Mobile.de** (Germania) — grande bacino di usato d'epoca. *Best-effort*: legge
   i dati strutturati (JSON-LD) e ripiega sui link annuncio. È il portale con la
   protezione anti-bot più aggressiva: da un IP di datacenter viene quasi sempre
@@ -288,5 +383,8 @@ browser reale. Indicami quale ti serve e lo scrivo.
 Gli adapter leggono la struttura attuale dei siti; i portali cambiano nel tempo e
 un adapter può richiedere un ritocco. Subito è gestito leggendo il blocco dati
 `__NEXT_DATA__` della pagina di ricerca; Mobile.de i dati JSON-LD; eBay e
-Kleinanzeigen la lista annunci HTML. Se un giorno un portale smette di restituire
-risultati, segnalamelo: di norma è una piccola correzione al relativo adapter.
+Kleinanzeigen la lista annunci HTML. Il programma distingue da solo «oggi non
+c'è nessun annuncio» da «il portale non ha risposto»: nel secondo caso lo vedi
+scritto nell'e-mail, nella web app e nel log, e nessun annuncio viene dato per
+rimosso. Se un portale resta muto per giorni anche da rete domestica,
+segnalamelo: di norma è una piccola correzione al relativo adapter.

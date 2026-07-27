@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+run_hidden.vbs
+pages_update.log
+*.json.bad
+*.tmp

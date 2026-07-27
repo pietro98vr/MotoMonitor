@@ -18,6 +18,8 @@ in rete, imposta la variabile d'ambiente ADMIN_TOKEN e passala come header
 
 from __future__ import annotations
 
+import datetime as dt
+import json
 import os
 import threading
 
@@ -119,6 +121,7 @@ def api_put_searches():
                 "name": name,
                 "portals": [p for p in s.get("portals", []) if p in monitor.ADAPTERS],
                 "price_max": s.get("price_max") if isinstance(s.get("price_max"), (int, float)) else None,
+                "price_min": s.get("price_min") if isinstance(s.get("price_min"), (int, float)) else None,
                 "subito_category": (s.get("subito_category") or "moto-e-scooter").strip(),
                 "relevance_filter": bool(s.get("relevance_filter", True)),
                 "queries": queries,
@@ -126,6 +129,85 @@ def api_put_searches():
         )
     monitor.save_searches({"searches": cleaned})
     return jsonify({"ok": True, "count": len(cleaned)})
+
+
+@app.get("/api/blacklist")
+def api_get_blacklist():
+    """Annunci eliminati dall'utente: il monitor non li ripropone mai piu'."""
+    p = monitor.BLACKLIST_PATH
+    if not p.exists():
+        return jsonify({"items": []})
+    try:
+        return jsonify(json.loads(p.read_text(encoding="utf-8")))
+    except json.JSONDecodeError:
+        return jsonify({"items": []})
+
+
+@app.post("/api/blacklist")
+def api_add_blacklist():
+    if not _authorized():
+        return jsonify({"error": "non autorizzato"}), 403
+    data = request.get_json(silent=True) or {}
+    new_items = data.get("items")
+    if not isinstance(new_items, list):
+        return jsonify({"error": "formato non valido: manca 'items'"}), 400
+
+    p = monitor.BLACKLIST_PATH
+    current: dict = {"items": []}
+    if p.exists():
+        try:
+            current = json.loads(p.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            current = {"items": []}
+    current.setdefault("items", [])
+    seen_urls = {e.get("url") if isinstance(e, dict) else e for e in current["items"]}
+
+    added = 0
+    for e in new_items:
+        if not isinstance(e, dict) or not e.get("url"):
+            continue
+        url = str(e["url"])[:500]
+        if url in seen_urls:
+            continue
+        current["items"].append(
+            {
+                "url": url,
+                "title": str(e.get("title", ""))[:200],
+                "portal": str(e.get("portal", ""))[:40],
+                "added": dt.datetime.now().isoformat(timespec="seconds"),
+            }
+        )
+        seen_urls.add(url)
+        added += 1
+    monitor.save_blacklist(current)
+    return jsonify({"ok": True, "added": added, "total": len(current["items"])})
+
+
+@app.delete("/api/blacklist")
+def api_del_blacklist():
+    """Rimuove voci dalla blacklist: {"all": true} la svuota, {"urls": [...]}
+    toglie solo quelle indicate."""
+    if not _authorized():
+        return jsonify({"error": "non autorizzato"}), 403
+    data = request.get_json(silent=True) or {}
+    p = monitor.BLACKLIST_PATH
+    current: dict = {"items": []}
+    if p.exists():
+        try:
+            current = json.loads(p.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            current = {"items": []}
+    current.setdefault("items", [])
+    if data.get("all"):
+        current["items"] = []
+    else:
+        urls = {str(u) for u in (data.get("urls") or [])}
+        current["items"] = [
+            e for e in current["items"]
+            if (e.get("url") if isinstance(e, dict) else e) not in urls
+        ]
+    monitor.save_blacklist(current)
+    return jsonify({"ok": True, "total": len(current["items"])})
 
 
 @app.get("/api/status")

@@ -18,6 +18,10 @@ ebay_domain: "www.ebay.it"
 
 # ---- Comportamento ----
 request_delay_seconds: 3       # pausa tra una richiesta e l'altra (buona educazione verso i portali)
+http_retries: 2                # tentativi extra su errori di rete / 429 / 5xx (con pausa crescente)
+keep_days: 30                  # l'elenco e' ADDITIVO: un annuncio resta finche' non passa questo numero di giorni senza essere stato rivisto
+email_max_items: 60            # massimo annunci elencati per ricerca nell'e-mail (la web app li ha tutti)
+price_drop_min_pct: 1          # ribasso minimo (in %) per segnalare "prezzo calato"
 notify_email: true             # invia il riepilogo via e-mail
 notify_telegram: false         # in alternativa/aggiunta, invia su Telegram
 notify_when_empty: false       # true = ricevi il messaggio anche se non ci sono novita'
@@ -64,6 +68,12 @@ watches:
       - "portachiavi kawasaki originale"
     subito_category: "accessori-moto"
     relevance_filter: true
+
+# ---- Chiavi API eBay (developer.ebay.com, gratuite) ----
+# Con le chiavi presenti eBay.it/eBay.de usano l'API ufficiale: niente 403.
+# Meglio come variabili d'ambiente EBAY_CLIENT_ID / EBAY_CLIENT_SECRET.
+ebay_client_id: ""        # App ID (Client ID) del keyset di PRODUZIONE
+ebay_client_secret: ""    # Cert ID (Client Secret) — NON committarlo in chiaro
 
 # ---- Recapiti (meglio impostarli come "secrets", NON qui in chiaro) ----
 # I valori qui sotto sono usati solo se le variabili d'ambiente non esistono.
