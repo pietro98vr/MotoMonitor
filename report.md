@@ -1,10 +1,10 @@
-# Riepilogo annunci moto — 29/07/2026
+# Riepilogo annunci moto — 30/07/2026
 
 *Nessuna novità oggi.*
 
+> ⚠ Mobile.de: nessuna risposta (HTTP 403) — l'elenco potrebbe essere incompleto.
 > ⚠ eBay: nessuna risposta (HTTP 403) — l'elenco potrebbe essere incompleto.
 > ⚠ eBay.de: nessuna risposta (HTTP 403) — l'elenco potrebbe essere incompleto.
-> ⚠ Mobile.de: risposte parziali (HTTP 403) — l'elenco potrebbe essere incompleto.
 
 ## KTM 125 Sachs 1970–72 (parafanghi in metallo)
 ### Tutti gli annunci in elenco (8)
