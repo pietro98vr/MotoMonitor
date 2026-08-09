@@ -1,4 +1,4 @@
-# Riepilogo annunci moto — 08/08/2026
+# Riepilogo annunci moto — 09/08/2026
 
 *Nessuna novità oggi.*
 
