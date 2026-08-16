@@ -1490,14 +1490,22 @@ def write_webapp(blocks: list[dict], config: dict, portal_issues: list[dict] | N
 # Notifiche
 # --------------------------------------------------------------------------- #
 def send_email(subject: str, html_body: str, cfg: dict) -> None:
-    host = os.environ.get("SMTP_HOST", cfg.get("smtp_host", ""))
-    user = os.environ.get("SMTP_USER", cfg.get("smtp_user", ""))
+    # "or" e non default di .get(): un secret vuoto su GitHub Actions produce
+    # comunque la variabile d'ambiente (stringa vuota), che non deve
+    # oscurare il valore di config.yaml.
+    host = os.environ.get("SMTP_HOST") or cfg.get("smtp_host", "")
+    user = os.environ.get("SMTP_USER") or cfg.get("smtp_user", "")
     pwd = os.environ.get("SMTP_PASS", "")
-    to = os.environ.get("MAIL_TO", cfg.get("mail_to", ""))
-    port = int(os.environ.get("SMTP_PORT", cfg.get("smtp_port", 587)))
+    to = os.environ.get("MAIL_TO") or cfg.get("mail_to", "")
     if not (host and user and pwd and to):
         log.warning("[email] configurazione incompleta, invio saltato.")
         return
+    # int("") da secret vuoto faceva crashare l'intero giro: ripiega su 587.
+    try:
+        port = int(os.environ.get("SMTP_PORT") or cfg.get("smtp_port") or 587)
+    except (TypeError, ValueError):
+        log.warning("[email] SMTP_PORT non valido, uso 587.")
+        port = 587
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject

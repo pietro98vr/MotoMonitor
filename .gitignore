@@ -4,3 +4,7 @@ run_hidden.vbs
 pages_update.log
 *.json.bad
 *.tmp
+
+# Report generati a ogni giro: restano locali, la pagina pubblica e' docs/index.html
+report.md
+report.html

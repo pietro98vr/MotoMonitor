@@ -133,7 +133,7 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 # Metti in stage solo i file esistenti che ci interessano
-foreach ($f in @("docs/index.html", "state.json", "report.md", "report.html", "searches.json")) {
+foreach ($f in @("docs/index.html", "state.json", "searches.json")) {
     if (Test-Path $f) { git add -- $f 2>&1 | Out-Null }
 }
 
