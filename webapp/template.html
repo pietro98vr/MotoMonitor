@@ -134,6 +134,8 @@
     color:var(--ink-soft); border:none; background:var(--paper-2); border-radius:6px; padding:3px 8px; flex:0 0 auto}
   .loc{font-size:12.5px; color:var(--ink-soft); display:flex; align-items:center; gap:4px; min-width:0}
   .loc span{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .foot .grp{display:flex; gap:6px; align-items:center}
+  .chip.when{color:var(--teal)}
   .meta{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:11px; color:var(--muted); display:flex; flex-direction:column; gap:2px}
 
   .warnbar{margin:0 0 14px; padding:10px 12px; border:1px solid #ffd0b0; border-radius:12px;
@@ -553,11 +555,23 @@
       }
     });
     document.getElementById('selfav').addEventListener('click', function(){
-      var n = 0;
-      for(var k in sel){ if(!favs[k]){ favs[k]=favSnapshot(k); n++; } }
-      saveFavs(favs);
-      toast(n ? ('Aggiunti '+n+' annunci ai preferiti') : 'Erano già tutti nei preferiti');
+      // Se i selezionati sono gia' tutti preferiti, il pulsante li toglie:
+      // prima si poteva solo aggiungere, e uno "seleziona tutto + stella"
+      // accidentale restava senza rimedio.
+      var keys = Object.keys(sel);
+      var allFav = keys.length>0 && keys.every(function(k){ return !!favs[k]; });
+      if(allFav){
+        keys.forEach(function(k){ delete favs[k]; });
+        saveFavs(favs);
+        toast('Tolti '+keys.length+' annunci dai preferiti');
+      } else {
+        var n = 0;
+        for(var k in sel){ if(!favs[k]){ favs[k]=favSnapshot(k); n++; } }
+        saveFavs(favs);
+        toast('Aggiunti '+n+' annunci ai preferiti');
+      }
       setSelecting(false);
+      if(state.onlyfav) render();
     });
     document.getElementById('selhide').addEventListener('click', function(){
       var urls = Object.keys(sel);
@@ -654,7 +668,8 @@
       document.getElementById('resultbar').innerHTML =
         '<span>'+items.length+(items.length===1?' annuncio':' annunci')+(state.onlynew?' · solo nuovi':'')+(state.onlyfav?' · preferiti':'')+rangeTxt+(state.q.trim()?' · «'+esc(state.q.trim())+'»':'')+'</span>'+
         (filtered?'<button class="reset" id="reset">azzera filtri</button>':'')+
-        (hc?'<button class="reset" id="unhide">ripristina '+hc+' nascosti</button>':'');
+        (hc?'<button class="reset" id="unhide">ripristina '+hc+' nascosti</button>':'')+
+        (state.onlyfav&&Object.keys(favs).length?'<button class="reset" id="clearfav">svuota preferiti ('+Object.keys(favs).length+')</button>':'');
       grid.innerHTML='';
 
       if(!items.length){
@@ -694,7 +709,9 @@
           a.innerHTML='<div class="thumb">'+thumb+stamp+favB+'</div><div class="body">'+
             '<div class="ttl">'+esc(it.title)+'</div>'+
             '<div class="price">'+priceHtml+'</div>'+
-            '<div class="foot">'+loc+'<span class="chip">'+esc(it.portal)+'</span></div>'+
+            '<div class="foot">'+loc+'<span class="grp">'+
+              (it.first_seen&&!isNaN(new Date(it.first_seen))?'<span class="chip when" title="primo avvistamento '+fmtDate(it.first_seen)+'">dal '+fmtDate(it.first_seen).slice(0,5)+'</span>':'')+
+              '<span class="chip">'+esc(it.portal)+'</span></span></div>'+
             '<div class="meta">'+(seenTxt?'<span>'+seenTxt+'</span>':'')+(it.via?'<span>trovato con '+esc(it.via)+'</span>':'')+'</div>'+
             '</div>';
           frag.appendChild(a);
@@ -716,6 +733,13 @@
       if(unhide) unhide.addEventListener('click', function(){
         hidden={}; saveHidden(hidden); render();
         toast('Nascosti ripristinati su questo dispositivo (la blacklist del monitor non cambia)');
+      });
+      var clearfav=document.getElementById('clearfav');
+      if(clearfav) clearfav.addEventListener('click', function(){
+        var n=Object.keys(favs).length;
+        if(!confirm('Togliere tutti i '+n+' annunci dai preferiti su questo dispositivo?')) return;
+        favs={}; saveFavs(favs); render();
+        toast('Preferiti svuotati ('+n+' tolti)');
       });
     }
 
