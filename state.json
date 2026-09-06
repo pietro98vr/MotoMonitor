@@ -4,7 +4,7 @@
       "ebay:277951421651": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-04T23:16:38",
+        "last_seen": "2026-09-06T18:50:14",
         "price_history": [
           {
             "date": "2026-07-06T18:14:07",
@@ -23,6 +23,25 @@
         "location": "",
         "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg",
         "via": "sachs · eBay"
+      },
+      "ebay:265105898416": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-06T18:50:14",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 638,00"
+          }
+        ],
+        "price_num": 638.0,
+        "price": "EUR 638,00",
+        "title": "KTM GS 125 SACHS 1974 - 1975 - SCARICO RACING - RACING EXHAUST - SITO",
+        "url": "https://www.ebay.it/itm/265105898416",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
+        "via": "gs sachs · eBay"
       }
     },
     "ktm-175-sachs": {},
@@ -30,7 +49,7 @@
       "subito:id:ad:ad8b4056-6eea-4c82-9680-e800e3e47609:list:643030285": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-06T11:35:25",
+        "last_seen": "2026-09-06T18:50:14",
         "price": "n.d.",
         "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX",
         "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm",
@@ -42,7 +61,7 @@
       "subito:id:ad:f8668095-13be-47b6-91a5-acf74343ba00:list:627845328": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-06T11:35:25",
+        "last_seen": "2026-09-06T18:50:14",
         "price": "n.d.",
         "title": "Portachiavi originale KAWASAKI",
         "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm",
@@ -54,7 +73,7 @@
       "subito:id:ad:8a8a6dba-05dc-4d28-aa06-20111d060d84:list:657839588": {
         "first_seen": "2026-08-21T16:52:41",
         "misses": 0,
-        "last_seen": "2026-09-06T11:35:25",
+        "last_seen": "2026-09-06T18:50:14",
         "price": "n.d.",
         "title": "kawasaki z900 portatarga portachiavi",
         "url": "https://www.subito.it/accessori-moto/kawasaki-z900-portatarga-portachiavi-genova-657839588.htm",
@@ -1774,9 +1793,124 @@
         "via": "diretta · eBay.de"
       }
     },
-    "attrezzi-kawasaki-350-s2": {}
+    "attrezzi-kawasaki-350-s2": {
+      "ebayde:395978581531": {
+        "first_seen": "2026-09-06T18:50:14",
+        "misses": 0,
+        "last_seen": "2026-09-06T18:50:14",
+        "price_history": [
+          {
+            "date": "2026-09-06T18:50:14",
+            "price": "EUR 25,21"
+          }
+        ],
+        "price_num": 25.21,
+        "price": "EUR 25,21",
+        "title": "Untersitz 5tlg Basic Tool Kit für Kawasaki S2 350 Mach Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/395978581531",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/1MMAAOSwaANnVFCu/s-l500.jpg",
+        "via": "tool kit (EN) · eBay.de"
+      },
+      "ebayde:358836474995": {
+        "first_seen": "2026-09-06T18:50:14",
+        "misses": 0,
+        "last_seen": "2026-09-06T18:50:14",
+        "price_history": [
+          {
+            "date": "2026-09-06T18:50:14",
+            "price": "EUR 117,64"
+          }
+        ],
+        "price_num": 117.64,
+        "price": "EUR 117,64",
+        "title": "KAWASAKI TOOL KIT TOOLS H1 500 H2 750 S1 S2 A1SS KZ Z1 900 KE F9 125 250 350 100 Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/358836474995",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/5FQAAeSwBlVpaZoS/s-l140.jpg",
+        "via": "tool kit (EN) · eBay.de"
+      },
+      "ebayde:197832845820": {
+        "first_seen": "2026-09-06T18:50:14",
+        "misses": 0,
+        "last_seen": "2026-09-06T18:50:14",
+        "price_history": [
+          {
+            "date": "2026-09-06T18:50:14",
+            "price": "EUR 15,86"
+          }
+        ],
+        "price_num": 15.86,
+        "price": "EUR 15,86",
+        "title": "Motorrad ATV Werkzeug Tool Kit Bordwerkzeug für Honda Kawasaki Suzuki Yamaha Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/197832845820",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/AKIAAeSw1AtoXNk5/s-l140.jpg",
+        "via": "tool kit (EN) · eBay.de"
+      },
+      "ebayde:158077832948": {
+        "first_seen": "2026-09-06T18:50:14",
+        "misses": 0,
+        "last_seen": "2026-09-06T18:50:14",
+        "price_history": [
+          {
+            "date": "2026-09-06T18:50:14",
+            "price": "EUR 43,89"
+          }
+        ],
+        "price_num": 43.89,
+        "price": "EUR 43,89",
+        "title": "MOTORRAD BORDWERKZEUG YAMAHA HONDA KAWASAKI SUZUKI OLDTIMER MOTORCYCLE TOOL KIT Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/158077832948",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/44QAAOSw5QdoXPy4/s-l140.jpg",
+        "via": "tool kit (EN) · eBay.de"
+      },
+      "ebayde:407158163801": {
+        "first_seen": "2026-09-06T18:50:14",
+        "misses": 0,
+        "last_seen": "2026-09-06T18:50:14",
+        "price_history": [
+          {
+            "date": "2026-09-06T18:50:14",
+            "price": "EUR 34,99"
+          }
+        ],
+        "price_num": 34.99,
+        "price": "EUR 34,99",
+        "title": "Bordwerkzeug Tool Kit Werkzeug 4 Teile Kawasaki H2 SX Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/407158163801",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/xo8AAeSwk7FqhtAA/s-l140.jpg",
+        "via": "tool kit (EN) · eBay.de"
+      },
+      "ebayde:375189146588": {
+        "first_seen": "2026-09-06T18:50:14",
+        "misses": 0,
+        "last_seen": "2026-09-06T18:50:14",
+        "price_history": [
+          {
+            "date": "2026-09-06T18:50:14",
+            "price": "EUR 39,98"
+          }
+        ],
+        "price_num": 39.98,
+        "price": "EUR 39,98",
+        "title": "KAWASAKI Z 550A2 Bordwerkzeug  toolkit Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/375189146588",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/EdoAAOSw9N9lew6e/s-l140.jpg",
+        "via": "tool kit (EN) · eBay.de"
+      }
+    }
   },
-  "last_run": "2026-09-06T11:39:01",
+  "last_run": "2026-09-06T18:57:24",
   "archive": {
     "ktm-125-sachs": {
       "subito:id:ad:efa5b5c7-6908-4a53-9c57-662fd541983b:list:646465997": {
@@ -1843,26 +1977,6 @@
         "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/d0/d09c8ec6-eb9a-4377-b380-0831300b14f4",
         "via": "regolarità · Subito",
         "archived_at": "2026-08-16T18:25:51"
-      },
-      "ebay:265105898416": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-07-07T16:52:31",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 638,00"
-          }
-        ],
-        "price_num": 638.0,
-        "price": "EUR 638,00",
-        "title": "KTM GS 125 SACHS 1974 - 1975 - SCARICO RACING - RACING EXHAUST - SITO",
-        "url": "https://www.ebay.it/itm/265105898416",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
-        "via": "gs sachs · eBay",
-        "archived_at": "2026-08-17T07:54:20"
       },
       "ebay:324356954864": {
         "first_seen": "2026-07-07T07:42:47",
