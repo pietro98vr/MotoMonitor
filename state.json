@@ -42,6 +42,44 @@
         "location": "",
         "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
         "via": "gs sachs · eBay"
+      },
+      "ebayde:175484788894": {
+        "first_seen": "2026-09-08T21:27:15",
+        "misses": 0,
+        "last_seen": "2026-09-08T21:27:15",
+        "price_history": [
+          {
+            "date": "2026-09-08T21:27:15",
+            "price": "EUR 2.249,50"
+          }
+        ],
+        "price_num": 2249.5,
+        "price": "EUR 2.249,50",
+        "title": "KTM , DKW, Hercules, simonnini, Perego \"sachs motor GS 125/6 Gang\" TOP Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/175484788894",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/KkIAAOSwe~BjbUo9/s-l140.jpg",
+        "via": "gs sachs · eBay.de"
+      },
+      "ebayde:265105898416": {
+        "first_seen": "2026-09-08T21:27:15",
+        "misses": 0,
+        "last_seen": "2026-09-08T21:27:15",
+        "price_history": [
+          {
+            "date": "2026-09-08T21:27:15",
+            "price": "EUR 618,92"
+          }
+        ],
+        "price_num": 618.92,
+        "price": "EUR 618,92",
+        "title": "KTM GS 125 SACHS 1974 - 1975 - RACING AUSPUFF - RACING EXHAUST - SITE Wird in neuem Fenster oder Tab geöffnet",
+        "url": "https://www.ebay.de/itm/265105898416",
+        "portal": "eBay.de",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
+        "via": "gs sachs · eBay.de"
       }
     },
     "ktm-175-sachs": {},
@@ -49,7 +87,7 @@
       "subito:id:ad:ad8b4056-6eea-4c82-9680-e800e3e47609:list:643030285": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-08T12:03:44",
+        "last_seen": "2026-09-08T21:27:15",
         "price": "n.d.",
         "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX",
         "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm",
@@ -61,7 +99,7 @@
       "subito:id:ad:f8668095-13be-47b6-91a5-acf74343ba00:list:627845328": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-08T12:03:44",
+        "last_seen": "2026-09-08T21:27:15",
         "price": "n.d.",
         "title": "Portachiavi originale KAWASAKI",
         "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm",
@@ -73,7 +111,7 @@
       "subito:id:ad:8a8a6dba-05dc-4d28-aa06-20111d060d84:list:657839588": {
         "first_seen": "2026-08-21T16:52:41",
         "misses": 0,
-        "last_seen": "2026-09-08T12:03:44",
+        "last_seen": "2026-09-08T21:27:15",
         "price": "n.d.",
         "title": "kawasaki z900 portatarga portachiavi",
         "url": "https://www.subito.it/accessori-moto/kawasaki-z900-portatarga-portachiavi-genova-657839588.htm",
@@ -2295,7 +2333,7 @@
       }
     }
   },
-  "last_run": "2026-09-08T12:07:18",
+  "last_run": "2026-09-08T21:33:16",
   "archive": {
     "ktm-125-sachs": {
       "subito:id:ad:efa5b5c7-6908-4a53-9c57-662fd541983b:list:646465997": {
