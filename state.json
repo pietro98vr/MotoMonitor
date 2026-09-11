@@ -27,7 +27,7 @@
       "ebay:265105898416": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T17:57:16",
+        "last_seen": "2026-09-11T08:10:54",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -87,7 +87,7 @@
       "subito:id:ad:ad8b4056-6eea-4c82-9680-e800e3e47609:list:643030285": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-10T17:57:16",
+        "last_seen": "2026-09-11T08:10:54",
         "price": "n.d.",
         "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX",
         "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm",
@@ -99,7 +99,7 @@
       "subito:id:ad:f8668095-13be-47b6-91a5-acf74343ba00:list:627845328": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-10T17:57:16",
+        "last_seen": "2026-09-11T08:10:54",
         "price": "n.d.",
         "title": "Portachiavi originale KAWASAKI",
         "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm",
@@ -111,7 +111,7 @@
       "subito:id:ad:8a8a6dba-05dc-4d28-aa06-20111d060d84:list:657839588": {
         "first_seen": "2026-08-21T16:52:41",
         "misses": 0,
-        "last_seen": "2026-09-10T17:57:16",
+        "last_seen": "2026-09-11T08:10:54",
         "price": "n.d.",
         "title": "kawasaki z900 portatarga portachiavi",
         "url": "https://www.subito.it/accessori-moto/kawasaki-z900-portatarga-portachiavi-genova-657839588.htm",
@@ -4833,15 +4833,19 @@
       "ebayde:395978581531": {
         "first_seen": "2026-09-06T18:50:14",
         "misses": 0,
-        "last_seen": "2026-09-06T18:50:14",
+        "last_seen": "2026-09-11T08:10:54",
         "price_history": [
           {
             "date": "2026-09-06T18:50:14",
             "price": "EUR 25,21"
+          },
+          {
+            "date": "2026-09-11T08:10:54",
+            "price": "EUR 25,20"
           }
         ],
-        "price_num": 25.21,
-        "price": "EUR 25,21",
+        "price_num": 25.2,
+        "price": "EUR 25,20",
         "title": "Untersitz 5tlg Basic Tool Kit für Kawasaki S2 350 Mach Wird in neuem Fenster oder Tab geöffnet",
         "url": "https://www.ebay.de/itm/395978581531",
         "portal": "eBay.de",
@@ -4852,26 +4856,30 @@
       "ebayde:358836474995": {
         "first_seen": "2026-09-06T18:50:14",
         "misses": 0,
-        "last_seen": "2026-09-06T18:50:14",
+        "last_seen": "2026-09-11T08:10:54",
         "price_history": [
           {
             "date": "2026-09-06T18:50:14",
             "price": "EUR 117,64"
+          },
+          {
+            "date": "2026-09-11T08:10:54",
+            "price": "EUR 117,66"
           }
         ],
-        "price_num": 117.64,
-        "price": "EUR 117,64",
+        "price_num": 117.66,
+        "price": "EUR 117,66",
         "title": "KAWASAKI TOOL KIT TOOLS H1 500 H2 750 S1 S2 A1SS KZ Z1 900 KE F9 125 250 350 100 Wird in neuem Fenster oder Tab geöffnet",
         "url": "https://www.ebay.de/itm/358836474995",
         "portal": "eBay.de",
         "location": "",
-        "image": "https://i.ebayimg.com/images/g/5FQAAeSwBlVpaZoS/s-l140.jpg",
+        "image": "https://i.ebayimg.com/images/g/5FQAAeSwBlVpaZoS/s-l500.jpg",
         "via": "tool kit (EN) · eBay.de"
       },
       "ebayde:197832845820": {
         "first_seen": "2026-09-06T18:50:14",
         "misses": 0,
-        "last_seen": "2026-09-06T18:50:14",
+        "last_seen": "2026-09-11T08:10:54",
         "price_history": [
           {
             "date": "2026-09-06T18:50:14",
@@ -4890,7 +4898,7 @@
       "ebayde:158077832948": {
         "first_seen": "2026-09-06T18:50:14",
         "misses": 0,
-        "last_seen": "2026-09-06T18:50:14",
+        "last_seen": "2026-09-11T08:10:54",
         "price_history": [
           {
             "date": "2026-09-06T18:50:14",
@@ -4909,7 +4917,7 @@
       "ebayde:407158163801": {
         "first_seen": "2026-09-06T18:50:14",
         "misses": 0,
-        "last_seen": "2026-09-06T18:50:14",
+        "last_seen": "2026-09-11T08:10:54",
         "price_history": [
           {
             "date": "2026-09-06T18:50:14",
@@ -4928,7 +4936,7 @@
       "ebayde:375189146588": {
         "first_seen": "2026-09-06T18:50:14",
         "misses": 0,
-        "last_seen": "2026-09-06T18:50:14",
+        "last_seen": "2026-09-11T08:10:54",
         "price_history": [
           {
             "date": "2026-09-06T18:50:14",
@@ -6873,7 +6881,7 @@
       }
     }
   },
-  "last_run": "2026-09-10T18:04:25",
+  "last_run": "2026-09-11T08:17:59",
   "archive": {
     "ktm-125-sachs": {
       "subito:id:ad:efa5b5c7-6908-4a53-9c57-662fd541983b:list:646465997": {
