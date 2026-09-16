@@ -4,7 +4,7 @@
       "ebay:277951421651": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-13T14:43:35",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-06T18:14:07",
@@ -27,7 +27,7 @@
       "ebay:265105898416": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-13T14:43:35",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -87,7 +87,7 @@
       "subito:id:ad:ad8b4056-6eea-4c82-9680-e800e3e47609:list:643030285": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-16T12:30:58",
+        "last_seen": "2026-09-16T22:28:33",
         "price": "n.d.",
         "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX",
         "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm",
@@ -99,7 +99,7 @@
       "subito:id:ad:f8668095-13be-47b6-91a5-acf74343ba00:list:627845328": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-16T12:30:58",
+        "last_seen": "2026-09-16T22:28:33",
         "price": "n.d.",
         "title": "Portachiavi originale KAWASAKI",
         "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm",
@@ -111,7 +111,7 @@
       "subito:id:ad:8a8a6dba-05dc-4d28-aa06-20111d060d84:list:657839588": {
         "first_seen": "2026-08-21T16:52:41",
         "misses": 0,
-        "last_seen": "2026-09-16T12:30:58",
+        "last_seen": "2026-09-16T22:28:33",
         "price": "n.d.",
         "title": "kawasaki z900 portatarga portachiavi",
         "url": "https://www.subito.it/accessori-moto/kawasaki-z900-portatarga-portachiavi-genova-657839588.htm",
@@ -1919,7 +1919,7 @@
       "ebay:318846959647": {
         "first_seen": "2026-09-09T21:58:59",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-09T21:58:59",
@@ -1928,10 +1928,14 @@
           {
             "date": "2026-09-10T07:22:13",
             "price": "EUR 57,67"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 58,12"
           }
         ],
-        "price_num": 57.67,
-        "price": "EUR 57,67",
+        "price_num": 58.12,
+        "price": "EUR 58,12",
         "title": "Harami chan Peluche Usami chan Portachiavi e Custodia Passaporto + Biglietto Kawasaki (Pilota",
         "url": "https://www.ebay.it/itm/318846959647",
         "portal": "eBay",
@@ -3573,15 +3577,19 @@
       "ebay:800588203885": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
             "price": "EUR 68,16"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 68,69"
           }
         ],
-        "price_num": 68.16,
-        "price": "EUR 68,16",
+        "price_num": 68.69,
+        "price": "EUR 68,69",
         "title": "Anello Kawasaki Plaza portachiavi originale non vendita resina/pelle nero argento",
         "url": "https://www.ebay.it/itm/800588203885",
         "portal": "eBay",
@@ -3592,15 +3600,19 @@
       "ebay:237028463697": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
             "price": "EUR 177,94"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 179,31"
           }
         ],
-        "price_num": 177.94,
-        "price": "EUR 177,94",
+        "price_num": 179.31,
+        "price": "EUR 179,31",
         "title": "Portachiavi originale Kawasaki Kawasaki GPX750R #5e86e5",
         "url": "https://www.ebay.it/itm/237028463697",
         "portal": "eBay",
@@ -3611,15 +3623,19 @@
       "ebay:206472858133": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
             "price": "EUR 6,28"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 6,33"
           }
         ],
-        "price_num": 6.28,
-        "price": "EUR 6,28",
+        "price_num": 6.33,
+        "price": "EUR 6,33",
         "title": "Portachiavi ATV moto fuoribordo marino chiave originale Kawasaki OEM vintage",
         "url": "https://www.ebay.it/itm/206472858133",
         "portal": "eBay",
@@ -3630,7 +3646,7 @@
       "ebay:397528093146": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3653,7 +3669,7 @@
       "ebay:236155031608": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3672,7 +3688,7 @@
       "ebay:116023141625": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3695,7 +3711,7 @@
       "ebay:192927194199": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3714,7 +3730,7 @@
       "ebay:192927191156": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3733,7 +3749,7 @@
       "ebay:134990098483": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3752,7 +3768,7 @@
       "ebay:306683151282": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3775,7 +3791,7 @@
       "ebay:306683204398": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3798,7 +3814,7 @@
       "ebay:185681755335": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3817,7 +3833,7 @@
       "ebay:306810157274": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3840,7 +3856,7 @@
       "ebay:226905220299": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3863,7 +3879,7 @@
       "ebay:377323827388": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3886,7 +3902,7 @@
       "ebay:127611950493": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3905,7 +3921,7 @@
       "ebay:395609931874": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3928,7 +3944,7 @@
       "ebay:326969101102": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3947,7 +3963,7 @@
       "ebay:168295827107": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3966,7 +3982,7 @@
       "ebay:127430702580": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -3989,7 +4005,7 @@
       "ebay:306683182478": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4012,7 +4028,7 @@
       "ebay:117376430102": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4031,7 +4047,7 @@
       "ebay:126353589652": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4050,7 +4066,7 @@
       "ebay:128043507273": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4069,7 +4085,7 @@
       "ebay:394974054658": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4111,7 +4127,7 @@
       "ebay:306683162248": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4134,7 +4150,7 @@
       "ebay:127430696144": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4157,7 +4173,7 @@
       "ebay:257665311879": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4176,7 +4192,7 @@
       "ebay:357719706281": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4195,7 +4211,7 @@
       "ebay:317370659921": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4214,7 +4230,7 @@
       "ebay:306683203306": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4237,7 +4253,7 @@
       "ebay:364917647786": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4260,7 +4276,7 @@
       "ebay:157849592096": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4269,11 +4285,15 @@
           {
             "date": "2026-09-10T07:22:13",
             "price": "EUR 38,80"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 20,00"
           }
         ],
-        "price_num": 38.8,
-        "price": "EUR 38,80",
-        "title": "Portachiavi Kawasaki",
+        "price_num": 20.0,
+        "price": "EUR 20,00",
+        "title": "Portachiavi Kawasaki vintage originale Bagnara made in Italy",
         "url": "https://www.ebay.it/itm/157849592096",
         "portal": "eBay",
         "location": "",
@@ -4283,7 +4303,7 @@
       "ebay:256872650414": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4325,7 +4345,7 @@
       "ebay:306683159546": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4348,7 +4368,7 @@
       "ebay:227252490624": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4367,7 +4387,7 @@
       "ebay:358460561603": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4386,7 +4406,7 @@
       "ebay:407204105918": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4405,7 +4425,7 @@
       "ebay:306683160945": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -4428,7 +4448,7 @@
       "ebay:126939599763": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4527,7 +4547,7 @@
       "ebay:236402883002": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4546,7 +4566,7 @@
       "ebay:298240327354": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4584,7 +4604,7 @@
       "ebay:196260200836": {
         "first_seen": "2026-09-10T07:22:13",
         "misses": 0,
-        "last_seen": "2026-09-10T07:22:13",
+        "last_seen": "2026-09-16T22:28:33",
         "price_history": [
           {
             "date": "2026-09-10T07:22:13",
@@ -4827,6 +4847,105 @@
         "location": "",
         "image": "https://i.ebayimg.com/images/g/SucAAeSwIDpqoAUF/s-l140.jpg",
         "via": "schlüsselanhänger (DE) · eBay"
+      },
+      "ebay:116438810691": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 11,86"
+          }
+        ],
+        "price_num": 11.86,
+        "price": "EUR 11,86",
+        "title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1",
+        "url": "https://www.ebay.it/itm/116438810691",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/r2wAAOSwYV5ne9YU/s-l140.jpg",
+        "via": "originale · eBay"
+      },
+      "ebay:307164423323": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 8,12"
+          }
+        ],
+        "price_num": 8.12,
+        "price": "EUR 8,12",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle 8x2,5 cm",
+        "url": "https://www.ebay.it/itm/307164423323",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/evAAAeSwr4lpUr1Q/s-l140.jpg",
+        "via": "originale · eBay"
+      },
+      "ebay:116438811953": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 10,99"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 11,86"
+          }
+        ],
+        "price_num": 11.86,
+        "price": "EUR 11,86",
+        "title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1",
+        "url": "https://www.ebay.it/itm/116438811953",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/mD0AAOSwKB9ne9cB/s-l140.jpg",
+        "via": "originale · eBay"
+      },
+      "ebay:196801406175": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 9,99"
+          }
+        ],
+        "price_num": 9.99,
+        "price": "EUR 9,99",
+        "title": "PORTACHIAVI EFFETTO CAMOSCIO NERO IN METALLO PER KAWASAKI Z 900 RS PORTA CHIAVE",
+        "url": "https://www.ebay.it/itm/196801406175",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/Y3YAAOSwAIxnDp6P/s-l140.jpg",
+        "via": "originale · eBay"
+      },
+      "ebay:165561757910": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 12,40"
+          }
+        ],
+        "price_num": 12.4,
+        "price": "EUR 12,40",
+        "title": "Portachiavi motogp pvc bikeit Kawasaki zx6r",
+        "url": "https://www.ebay.it/itm/165561757910",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/JLoAAeSwDFxpwpo0/s-l140.jpg",
+        "via": "originale · eBay"
       }
     },
     "attrezzi-kawasaki-350-s2": {
@@ -6881,7 +7000,7 @@
       }
     }
   },
-  "last_run": "2026-09-16T12:34:33",
+  "last_run": "2026-09-16T22:34:11",
   "archive": {
     "ktm-125-sachs": {
       "subito:id:ad:efa5b5c7-6908-4a53-9c57-662fd541983b:list:646465997": {
@@ -7202,26 +7321,6 @@
         "portal": "eBay",
         "location": "",
         "image": "https://i.ebayimg.com/images/g/j6QAAeSw0rNp~M3k/s-l140.jpg",
-        "via": "originale · eBay",
-        "archived_at": "2026-08-17T07:54:20"
-      },
-      "ebay:116438811953": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-07-07T16:52:31",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 10,99"
-          }
-        ],
-        "price_num": 10.99,
-        "price": "EUR 10,99",
-        "title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1",
-        "url": "https://www.ebay.it/itm/116438811953",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/mD0AAOSwKB9ne9cB/s-l140.jpg",
         "via": "originale · eBay",
         "archived_at": "2026-08-17T07:54:20"
       },
