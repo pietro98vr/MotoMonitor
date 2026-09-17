@@ -27,7 +27,7 @@
       "ebay:265105898416": {
         "first_seen": "2026-07-07T07:42:47",
         "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
+        "last_seen": "2026-09-17T20:04:21",
         "price_history": [
           {
             "date": "2026-07-07T07:42:47",
@@ -80,6 +80,25 @@
         "location": "",
         "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
         "via": "gs sachs · eBay.de"
+      },
+      "ebay:298682849505": {
+        "first_seen": "2026-09-17T20:04:21",
+        "misses": 0,
+        "last_seen": "2026-09-17T20:04:21",
+        "price_history": [
+          {
+            "date": "2026-09-17T20:04:21",
+            "price": "EUR 812,50"
+          }
+        ],
+        "price_num": 812.5,
+        "price": "EUR 812,50",
+        "title": "ktm dkw monark motore sachs 125 per parti di ricambio",
+        "url": "https://www.ebay.it/itm/298682849505",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/WnkAAeSwHWVqq-72/s-l140.jpg",
+        "via": "gs sachs · eBay"
       }
     },
     "ktm-175-sachs": {},
@@ -87,7 +106,7 @@
       "subito:id:ad:ad8b4056-6eea-4c82-9680-e800e3e47609:list:643030285": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-17T12:30:47",
+        "last_seen": "2026-09-17T20:04:21",
         "price": "n.d.",
         "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX",
         "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm",
@@ -99,7 +118,7 @@
       "subito:id:ad:f8668095-13be-47b6-91a5-acf74343ba00:list:627845328": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-09-17T12:30:47",
+        "last_seen": "2026-09-17T20:04:21",
         "price": "n.d.",
         "title": "Portachiavi originale KAWASAKI",
         "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm",
@@ -111,7 +130,7 @@
       "subito:id:ad:8a8a6dba-05dc-4d28-aa06-20111d060d84:list:657839588": {
         "first_seen": "2026-08-21T16:52:41",
         "misses": 0,
-        "last_seen": "2026-09-17T12:30:47",
+        "last_seen": "2026-09-17T20:04:21",
         "price": "n.d.",
         "title": "kawasaki z900 portatarga portachiavi",
         "url": "https://www.subito.it/accessori-moto/kawasaki-z900-portatarga-portachiavi-genova-657839588.htm",
@@ -7000,7 +7019,7 @@
       }
     }
   },
-  "last_run": "2026-09-17T12:34:14",
+  "last_run": "2026-09-17T20:09:57",
   "archive": {
     "ktm-125-sachs": {
       "subito:id:ad:efa5b5c7-6908-4a53-9c57-662fd541983b:list:646465997": {
