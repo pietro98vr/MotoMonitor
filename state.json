@@ -1,86 +1,6 @@
 {
   "seen": {
     "ktm-125-sachs": {
-      "ebay:277951421651": {
-        "first_seen": "2026-07-06T18:14:07",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-06T18:14:07",
-            "price": "EUR 760,51"
-          },
-          {
-            "date": "2026-08-24T23:15:03",
-            "price": "EUR 745,43"
-          }
-        ],
-        "price_num": 745.43,
-        "price": "EUR 745,43",
-        "title": "1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro",
-        "url": "https://www.ebay.it/itm/277951421651",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg",
-        "via": "sachs · eBay"
-      },
-      "ebay:265105898416": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-10-11T09:04:19",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 638,00"
-          }
-        ],
-        "price_num": 638.0,
-        "price": "EUR 638,00",
-        "title": "KTM GS 125 SACHS 1974 - 1975 - SCARICO RACING - RACING EXHAUST - SITO",
-        "url": "https://www.ebay.it/itm/265105898416",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
-        "via": "gs sachs · eBay"
-      },
-      "ebay:298682849505": {
-        "first_seen": "2026-09-17T20:04:21",
-        "misses": 0,
-        "last_seen": "2026-10-11T09:04:19",
-        "price_history": [
-          {
-            "date": "2026-09-17T20:04:21",
-            "price": "EUR 812,50"
-          }
-        ],
-        "price_num": 812.5,
-        "price": "EUR 812,50",
-        "title": "ktm dkw monark motore sachs 125 per parti di ricambio",
-        "url": "https://www.ebay.it/itm/298682849505",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/WnkAAeSwHWVqq-72/s-l140.jpg",
-        "via": "gs sachs · eBay"
-      },
-      "ebay:820172271438": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 764,78"
-          }
-        ],
-        "price_num": 764.78,
-        "price": "EUR 764,78",
-        "title": "1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro",
-        "url": "https://www.ebay.it/itm/820172271438",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg",
-        "via": "sachs · eBay"
-      },
       "ebayde:278437618418": {
         "first_seen": "2026-10-15T12:33:18",
         "misses": 0,
@@ -118,6 +38,63 @@
         "location": "",
         "image": "https://i.ebayimg.com/images/g/Ra8AAeSwXoRq2HZq/s-l140.jpg",
         "via": "sachs · eBay.de"
+      },
+      "ebay:336881583103": {
+        "first_seen": "2026-11-10T19:11:18",
+        "misses": 0,
+        "last_seen": "2026-11-10T19:11:18",
+        "price_history": [
+          {
+            "date": "2026-11-10T19:11:18",
+            "price": "EUR 686,23"
+          }
+        ],
+        "price_num": 686.23,
+        "price": "EUR 686,23",
+        "title": "Cilindro 125CC Per KTM LC2 / Derbi GPR / Sachs XTC ZX ZZ",
+        "url": "https://www.ebay.it/itm/336881583103",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/mTMAAeSwF8RoxiDa/s-l140.jpg",
+        "via": "sachs · eBay"
+      },
+      "ebay:940056290462": {
+        "first_seen": "2026-11-10T19:11:18",
+        "misses": 0,
+        "last_seen": "2026-11-10T19:11:18",
+        "price_history": [
+          {
+            "date": "2026-11-10T19:11:18",
+            "price": "EUR 780,58"
+          }
+        ],
+        "price_num": 780.58,
+        "price": "EUR 780,58",
+        "title": "1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro",
+        "url": "https://www.ebay.it/itm/940056290462",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg",
+        "via": "sachs · eBay"
+      },
+      "ebay:198733157672": {
+        "first_seen": "2026-11-10T19:11:18",
+        "misses": 0,
+        "last_seen": "2026-11-10T19:11:18",
+        "price_history": [
+          {
+            "date": "2026-11-10T19:11:18",
+            "price": "EUR 999,00"
+          }
+        ],
+        "price_num": 999.0,
+        "price": "EUR 999,00",
+        "title": "Sachs ZX125 ZZ125 KTM LC2 125 XTC125 DT125RE TDR125 TZR125 coperchio motore destro Ku",
+        "url": "https://www.ebay.it/itm/198733157672",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/Ra8AAeSwXoRq2HZq/s-l140.jpg",
+        "via": "sachs · eBay"
       }
     },
     "ktm-175-sachs": {},
@@ -125,7 +102,7 @@
       "subito:id:ad:ad8b4056-6eea-4c82-9680-e800e3e47609:list:643030285": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-11-10T15:29:09",
+        "last_seen": "2026-11-10T19:11:18",
         "price": "n.d.",
         "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX",
         "url": "https://www.subito.it/accessori-moto/portachiavi-kawasaki-originale-nuovo-z650-ninja-zx-roma-643030285.htm",
@@ -137,7 +114,7 @@
       "subito:id:ad:f8668095-13be-47b6-91a5-acf74343ba00:list:627845328": {
         "first_seen": "2026-07-06T18:14:07",
         "misses": 0,
-        "last_seen": "2026-11-10T15:29:09",
+        "last_seen": "2026-11-10T19:11:18",
         "price": "n.d.",
         "title": "Portachiavi originale KAWASAKI",
         "url": "https://www.subito.it/accessori-moto/portachiavi-originale-kawasaki-caserta-627845328.htm",
@@ -149,7 +126,7 @@
       "subito:id:ad:8a8a6dba-05dc-4d28-aa06-20111d060d84:list:657839588": {
         "first_seen": "2026-08-21T16:52:41",
         "misses": 0,
-        "last_seen": "2026-11-10T15:29:09",
+        "last_seen": "2026-11-10T19:11:18",
         "price": "n.d.",
         "title": "kawasaki z900 portatarga portachiavi",
         "url": "https://www.subito.it/accessori-moto/kawasaki-z900-portatarga-portachiavi-genova-657839588.htm",
@@ -157,1572 +134,11 @@
         "location": "Genova",
         "image": "https://images.sbito.it/api/v1/sbt-ads-images-pro/images/37/37955ade-abcc-4cb4-8bfa-c28673495670",
         "via": "diretta · Subito"
-      },
-      "ebay:318846959647": {
-        "first_seen": "2026-09-09T21:58:59",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 57,72"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 57,67"
-          },
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 58,12"
-          }
-        ],
-        "price_num": 58.12,
-        "price": "EUR 58,12",
-        "title": "Harami chan Peluche Usami chan Portachiavi e Custodia Passaporto + Biglietto Kawasaki (Pilota",
-        "url": "https://www.ebay.it/itm/318846959647",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/cfsAAeSwMxFqoP0W/s-l500.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:800588203885": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 68,16"
-          },
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 68,69"
-          }
-        ],
-        "price_num": 68.69,
-        "price": "EUR 68,69",
-        "title": "Anello Kawasaki Plaza portachiavi originale non vendita resina/pelle nero argento",
-        "url": "https://www.ebay.it/itm/800588203885",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/rxoAAeSwyTVqlLTl/s-l500.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:237028463697": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 177,94"
-          },
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 179,31"
-          }
-        ],
-        "price_num": 179.31,
-        "price": "EUR 179,31",
-        "title": "Portachiavi originale Kawasaki Kawasaki GPX750R #5e86e5",
-        "url": "https://www.ebay.it/itm/237028463697",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/GcQAAeSwicVqjRcT/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:206472858133": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 6,28"
-          },
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 6,33"
-          }
-        ],
-        "price_num": 6.33,
-        "price": "EUR 6,33",
-        "title": "Portachiavi ATV moto fuoribordo marino chiave originale Kawasaki OEM vintage",
-        "url": "https://www.ebay.it/itm/206472858133",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/bEoAAeSwMwFqdgmB/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:397528093146": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 5,50"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 5,98"
-          }
-        ],
-        "price_num": 5.98,
-        "price": "EUR 5,98",
-        "title": "Portachiavi Kawasaki ORIGINALE nero con logo nuovo",
-        "url": "https://www.ebay.it/itm/397528093146",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/K5oAAeSwejdpc6xY/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:236155031608": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 29,00"
-          }
-        ],
-        "price_num": 29.0,
-        "price": "EUR 29,00",
-        "title": "portachiavi vintage epoca non originale Kawasaki",
-        "url": "https://www.ebay.it/itm/236155031608",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/v3EAAOSwE-1oUZSd/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:116023141625": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 19,99"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 21,49"
-          }
-        ],
-        "price_num": 21.49,
-        "price": "EUR 21,49",
-        "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX-10R Z900 Z400 Z H2 SE VERSYS",
-        "url": "https://www.ebay.it/itm/116023141625",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/rdUAAOSw96NljcPJ/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:192927194199": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 9,80"
-          }
-        ],
-        "price_num": 9.8,
-        "price": "EUR 9,80",
-        "title": "NUOVO ORIGINALE KAWASAKI Ninja Portachiavi 107SPM0025 Regalo Compleanno",
-        "url": "https://www.ebay.it/itm/192927194199",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/EoIAAOSw~7RieiVU/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:192927191156": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 9,80"
-          }
-        ],
-        "price_num": 9.8,
-        "price": "EUR 9,80",
-        "title": "Original OEM KAWASAKI Portachiavi ninja 107SPM0025 KEY RING Fan Articolo Merchan",
-        "url": "https://www.ebay.it/itm/192927191156",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/ICMAAOSw8Tpc5-9o/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:134990098483": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 3,20"
-          }
-        ],
-        "price_num": 3.2,
-        "price": "EUR 3,20",
-        "title": "Portachiavi Kawasaki Tessuto Nero 2  - Regalo Passione Auto Moto Estetica",
-        "url": "https://www.ebay.it/itm/134990098483",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/fkEAAOSwy-5l~tMx/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306683151282": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 9,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 8,66"
-          }
-        ],
-        "price_num": 8.66,
-        "price": "EUR 8,66",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle",
-        "url": "https://www.ebay.it/itm/306683151282",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/evAAAeSwr4lpUr1Q/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306683204398": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 8,50"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 6,52"
-          }
-        ],
-        "price_num": 6.52,
-        "price": "EUR 6,52",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
-        "url": "https://www.ebay.it/itm/306683204398",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/4TMAAeSw-Y5pUsi-/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:185681755335": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 24,90"
-          }
-        ],
-        "price_num": 24.9,
-        "price": "EUR 24,90",
-        "title": "Portachiavi Orginale Kawasaki a forma di pneumatico con tag removibile",
-        "url": "https://www.ebay.it/itm/185681755335",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/vygAAOSw4ixjieff/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306810157274": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 9,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 9,73"
-          }
-        ],
-        "price_num": 9.73,
-        "price": "EUR 9,73",
-        "title": "Portachiavi Kawasaki Ninja Ricamato in ecopelle Nera",
-        "url": "https://www.ebay.it/itm/306810157274",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/t1kAAeSww-VprXcl/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:226905220299": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 7,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 7,59"
-          }
-        ],
-        "price_num": 7.59,
-        "price": "EUR 7,59",
-        "title": "portachiavi Kawasaki ricamato 3 x 13 cm con anello portachiavi moto",
-        "url": "https://www.ebay.it/itm/226905220299",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/NLQAAeSwcPhokk3N/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:377323827388": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 3,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 3,31"
-          }
-        ],
-        "price_num": 3.31,
-        "price": "EUR 3,31",
-        "title": "Portachiavi Kawasaki",
-        "url": "https://www.ebay.it/itm/377323827388",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/st8AAeSww4BqTCu6/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:127611950493": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 12,70"
-          }
-        ],
-        "price_num": 12.7,
-        "price": "EUR 12,70",
-        "title": "Portachiavi Moto Cordino Portachiavi da Collo Verde Kawasaki z x Sgancio Rapido",
-        "url": "https://www.ebay.it/itm/127611950493",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/XT4AAeSwMsFpX-VX/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:395609931874": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 3,49"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 3,83"
-          }
-        ],
-        "price_num": 3.83,
-        "price": "EUR 3,83",
-        "title": "Kawasaki portachiavi antigraffio artigianale in legno",
-        "url": "https://www.ebay.it/itm/395609931874",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/CjgAAOSwzgtmxg~I/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:326969101102": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 11,50"
-          }
-        ],
-        "price_num": 11.5,
-        "price": "EUR 11,50",
-        "title": "portachiavi Kawasaki Ninja, GPZ ZX KZ ZR EX, 250 300 400 650 500 600",
-        "url": "https://www.ebay.it/itm/326969101102",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/0pMAAeSw6sppytvm/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:168295827107": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 36,81"
-          }
-        ],
-        "price_num": 36.81,
-        "price": "EUR 36,81",
-        "title": "Portachiavi Tag Nero Verde Anello Chiave Accessori Kawasaki Universale",
-        "url": "https://www.ebay.it/itm/168295827107",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/rV4AAeSwb7Bp1nUT/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:127430702580": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 19,90"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 26,60"
-          }
-        ],
-        "price_num": 26.6,
-        "price": "EUR 26,60",
-        "title": "🔥PORTACHIAVI KAWASAKI NUOVO IN PELLE SCAMOSCIATO VARI COLORI",
-        "url": "https://www.ebay.it/itm/127430702580",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/DPMAAeSw6wpo7f8t/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306683182478": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 8,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 7,59"
-          }
-        ],
-        "price_num": 7.59,
-        "price": "EUR 7,59",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
-        "url": "https://www.ebay.it/itm/306683182478",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/rQkAAeSwqGRpUsfP/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:117376430102": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 13,99"
-          }
-        ],
-        "price_num": 13.99,
-        "price": "EUR 13,99",
-        "title": "Portachiavi MOTO PERSONALIZZATO compatibile    #Kawasaki",
-        "url": "https://www.ebay.it/itm/117376430102",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/AWkAAeSwOa9qjVy~/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:126353589652": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 6,80"
-          }
-        ],
-        "price_num": 6.8,
-        "price": "EUR 6,80",
-        "title": "PORTACHIAVI KAWASAKI Z ZXR NINJA VERSYS VULCAN KLE KXF CORDINO PORTA CHIAVI MOTO",
-        "url": "https://www.ebay.it/itm/126353589652",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/9NkAAOSw3ctl38w4/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:128043507273": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 13,99"
-          }
-        ],
-        "price_num": 13.99,
-        "price": "EUR 13,99",
-        "title": "Portachiavi MOTO PERSONALIZZATO compatibile    #Kawasaki",
-        "url": "https://www.ebay.it/itm/128043507273",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/8KUAAeSwJfhqjV~T/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:394974054658": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 4,99"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 5,44"
-          }
-        ],
-        "price_num": 5.44,
-        "price": "EUR 5,44",
-        "title": "Portachiavi Logo Kawasaki Personalizzato con Nome Interamente Stampato in 3D",
-        "url": "https://www.ebay.it/itm/394974054658",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/bekAAOSwVHJlQ2vi/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306683162248": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 9,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 9,73"
-          }
-        ],
-        "price_num": 9.73,
-        "price": "EUR 9,73",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
-        "url": "https://www.ebay.it/itm/306683162248",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/vVQAAeSwu5RpUsJV/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:127430696144": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 19,90"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 26,60"
-          }
-        ],
-        "price_num": 26.6,
-        "price": "EUR 26,60",
-        "title": "🔥PORTACHIAVI KAWASAKI Z900-Z650-Z500-Z400 COLOR PELLE CARBONIO",
-        "url": "https://www.ebay.it/itm/127430696144",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/exMAAeSwKCNo7f3x/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:257665311879": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 5,44"
-          }
-        ],
-        "price_num": 5.44,
-        "price": "EUR 5,44",
-        "title": "PORTACHIAVI MOTO KAWASAKI ACCESSORI MOTOCICLISTA BIKER COLLEZIONE GADGET",
-        "url": "https://www.ebay.it/itm/257665311879",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/ZPQAAeSwSJFqdHy-/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:357719706281": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 6,52"
-          }
-        ],
-        "price_num": 6.52,
-        "price": "EUR 6,52",
-        "title": "Portachiavi Ricamato Kawasaki Z 400",
-        "url": "https://www.ebay.it/itm/357719706281",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/VdgAAeSw8Cdo5qmv/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:317370659921": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 6,52"
-          }
-        ],
-        "price_num": 6.52,
-        "price": "EUR 6,52",
-        "title": "Portachiavi Kawasaki carbon look.",
-        "url": "https://www.ebay.it/itm/317370659921",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/Wt8AAeSwI29o4TV1/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306683203306": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 8,50"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 7,59"
-          }
-        ],
-        "price_num": 7.59,
-        "price": "EUR 7,59",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
-        "url": "https://www.ebay.it/itm/306683203306",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/tSYAAeSwx6NpUsg~/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:364917647786": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 4,99"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 5,44"
-          }
-        ],
-        "price_num": 5.44,
-        "price": "EUR 5,44",
-        "title": "Portachiavi KAWASAKI SBK Racing Team gomma morbida verde bianca",
-        "url": "https://www.ebay.it/itm/364917647786",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/Gc8AAOSwy9hmVrpm/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:157849592096": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 40,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 38,80"
-          },
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 20,00"
-          }
-        ],
-        "price_num": 20.0,
-        "price": "EUR 20,00",
-        "title": "Portachiavi Kawasaki vintage originale Bagnara made in Italy",
-        "url": "https://www.ebay.it/itm/157849592096",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/IlwAAOSw~tJd-fzn/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:256872650414": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 4,99"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 5,44"
-          }
-        ],
-        "price_num": 5.44,
-        "price": "EUR 5,44",
-        "title": "PORTACHIAVI IN TESSUTO KAWASAKI KAWASEXY ACCESSORI MOTO BIKER MOTOCICLISTA",
-        "url": "https://www.ebay.it/itm/256872650414",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/87EAAeSwWbln5URf/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306683159546": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 9,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 9,73"
-          }
-        ],
-        "price_num": 9.73,
-        "price": "EUR 9,73",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
-        "url": "https://www.ebay.it/itm/306683159546",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/k7gAAeSw9JlpUsDx/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:227252490624": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 19,00"
-          }
-        ],
-        "price_num": 19.0,
-        "price": "EUR 19,00",
-        "title": "PORTACHIAVI MOTO Z250 IN LEGA + PELLE COLOR CARBONIO KEYCHAIN Z 250 Kawasaki",
-        "url": "https://www.ebay.it/itm/227252490624",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/bh8AAeSwzz9oefz6/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:358460561603": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 10,67"
-          }
-        ],
-        "price_num": 10.67,
-        "price": "EUR 10,67",
-        "title": "Portachiavi Kawasaki Logo Moto Anello Chiavi Portachiave 3D Stampato Ring",
-        "url": "https://www.ebay.it/itm/358460561603",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/RKcAAeSwxahp-OAR/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:407204105918": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 7,99"
-          }
-        ],
-        "price_num": 7.99,
-        "price": "EUR 7,99",
-        "title": "Portachiavi / portachiavi Kawasaki di alta qualità",
-        "url": "https://www.ebay.it/itm/407204105918",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/0X4AAeSwO-NqoUnf/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:306683160945": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 9,00"
-          },
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 9,73"
-          }
-        ],
-        "price_num": 9.73,
-        "price": "EUR 9,73",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
-        "url": "https://www.ebay.it/itm/306683160945",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/lpkAAeSwxWlpUsGU/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:126939599763": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 7,70"
-          }
-        ],
-        "price_num": 7.7,
-        "price": "EUR 7,70",
-        "title": "PORTACHIAVI YOSHIMURA LOGO PER CHIAVE MOTO YAMAHA HONDA SUZUKI KAWASAKI  DUCATI",
-        "url": "https://www.ebay.it/itm/126939599763",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/pVQAAOSwcJ5nritE/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:236402883002": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 15,90"
-          }
-        ],
-        "price_num": 15.9,
-        "price": "EUR 15,90",
-        "title": "Portachiavi eco pelle Kawasaki Z650 anello metallo nero verde accessorio moto",
-        "url": "https://www.ebay.it/itm/236402883002",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/GjcAAeSwxINo9pgg/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:298240327354": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 9,73"
-          }
-        ],
-        "price_num": 9.73,
-        "price": "EUR 9,73",
-        "title": "Portachiavi Kawasaki in metallo",
-        "url": "https://www.ebay.it/itm/298240327354",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/j2AAAeSwZLVp2SN6/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:196260200836": {
-        "first_seen": "2026-09-10T07:22:13",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-10T07:22:13",
-            "price": "EUR 9,99"
-          }
-        ],
-        "price_num": 9.99,
-        "price": "EUR 9,99",
-        "title": "PORTACHIAVI EFFETTO CAMOSCIO NERO IN METALLO MOTO PER KAWASAKI PORTA CHIAVE",
-        "url": "https://www.ebay.it/itm/196260200836",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/Y3YAAOSwAIxnDp6P/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:116438810691": {
-        "first_seen": "2026-09-16T22:28:33",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 11,86"
-          }
-        ],
-        "price_num": 11.86,
-        "price": "EUR 11,86",
-        "title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1",
-        "url": "https://www.ebay.it/itm/116438810691",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/r2wAAOSwYV5ne9YU/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:307164423323": {
-        "first_seen": "2026-09-16T22:28:33",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 8,12"
-          }
-        ],
-        "price_num": 8.12,
-        "price": "EUR 8,12",
-        "title": "Portachiavi Kawasaki Ricamato in ecopelle 8x2,5 cm",
-        "url": "https://www.ebay.it/itm/307164423323",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/evAAAeSwr4lpUr1Q/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:116438811953": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 10,99"
-          },
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 11,86"
-          }
-        ],
-        "price_num": 11.86,
-        "price": "EUR 11,86",
-        "title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1",
-        "url": "https://www.ebay.it/itm/116438811953",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/mD0AAOSwKB9ne9cB/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:196801406175": {
-        "first_seen": "2026-09-16T22:28:33",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 9,99"
-          }
-        ],
-        "price_num": 9.99,
-        "price": "EUR 9,99",
-        "title": "PORTACHIAVI EFFETTO CAMOSCIO NERO IN METALLO PER KAWASAKI Z 900 RS PORTA CHIAVE",
-        "url": "https://www.ebay.it/itm/196801406175",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/Y3YAAOSwAIxnDp6P/s-l140.jpg",
-        "via": "originale · eBay"
-      },
-      "ebay:165561757910": {
-        "first_seen": "2026-09-16T22:28:33",
-        "misses": 0,
-        "last_seen": "2026-09-16T22:28:33",
-        "price_history": [
-          {
-            "date": "2026-09-16T22:28:33",
-            "price": "EUR 12,40"
-          }
-        ],
-        "price_num": 12.4,
-        "price": "EUR 12,40",
-        "title": "Portachiavi motogp pvc bikeit Kawasaki zx6r",
-        "url": "https://www.ebay.it/itm/165561757910",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/JLoAAeSwDFxpwpo0/s-l140.jpg",
-        "via": "originale · eBay"
       }
     },
-    "attrezzi-kawasaki-350-s2": {
-      "ebay:395978581531": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 25,35"
-          },
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 25,21"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 25,23"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 25,56"
-          }
-        ],
-        "price_num": 25.56,
-        "price": "EUR 25,56",
-        "title": "Kit attrezzi base sottosella 5pz per Kawasaki S2 350 Mach",
-        "url": "https://www.ebay.it/itm/395978581531",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/1MMAAOSwaANnVFCu/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168663798471": {
-        "first_seen": "2026-09-07T19:58:11",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 26,21"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 26,19"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 27,19"
-          }
-        ],
-        "price_num": 27.19,
-        "price": "EUR 27,19",
-        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
-        "url": "https://www.ebay.it/itm/168663798471",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/1mwAAeSwgQtqTqbk/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168661256958": {
-        "first_seen": "2026-09-07T19:58:11",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 33,55"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 33,53"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 34,80"
-          }
-        ],
-        "price_num": 34.8,
-        "price": "EUR 34,80",
-        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
-        "url": "https://www.ebay.it/itm/168661256958",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/xzAAAeSwFd5p1~8a/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:198610902306": {
-        "first_seen": "2026-09-07T19:58:11",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 9,40"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 9,75"
-          }
-        ],
-        "price_num": 9.75,
-        "price": "EUR 9,75",
-        "title": "Roll Up Tool Kit Bag Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1",
-        "url": "https://www.ebay.it/itm/198610902306",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/I0kAAeSwtH5qe4Mt/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168655933602": {
-        "first_seen": "2026-09-07T19:58:11",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 57,70"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 57,65"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 59,85"
-          }
-        ],
-        "price_num": 59.85,
-        "price": "EUR 59,85",
-        "title": "Roll Up Tool Kit Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1 Bag",
-        "url": "https://www.ebay.it/itm/168655933602",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/cIsAAOSwCPlm2Hs5/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:358836474995": {
-        "first_seen": "2026-09-07T19:58:11",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 117,64"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 117,54"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 122,02"
-          }
-        ],
-        "price_num": 122.02,
-        "price": "EUR 122,02",
-        "title": "KAWASAKI TOOL KIT TOOLS H1 500 H2 750 S1 S2 A1SS KZ Z1 900 KE F9 125 250 350 100",
-        "url": "https://www.ebay.it/itm/358836474995",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/5FQAAeSwBlVpaZoS/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168535755910": {
-        "first_seen": "2026-09-07T19:58:11",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 20,96"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 20,94"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 21,74"
-          }
-        ],
-        "price_num": 21.74,
-        "price": "EUR 21,74",
-        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
-        "url": "https://www.ebay.it/itm/168535755910",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/yboAAeSwG-Jpk8PW/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168506860984": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 31,89"
-          },
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 31,41"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 31,38"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 32,58"
-          }
-        ],
-        "price_num": 32.58,
-        "price": "EUR 32,58",
-        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
-        "url": "https://www.ebay.it/itm/168506860984",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/1-UAAOSwLJNno7Sv/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:336550506639": {
-        "first_seen": "2026-07-07T07:42:47",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-07-07T07:42:47",
-            "price": "EUR 26,60"
-          },
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 26,21"
-          },
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 26,19"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 27,19"
-          }
-        ],
-        "price_num": 27.19,
-        "price": "EUR 27,19",
-        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
-        "url": "https://www.ebay.it/itm/336550506639",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/dEYAAeSwqDtpzXf3/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168654331896": {
-        "first_seen": "2026-09-07T19:58:11",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-07T19:58:11",
-            "price": "EUR 10,50"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 10,89"
-          }
-        ],
-        "price_num": 10.89,
-        "price": "EUR 10,89",
-        "title": "KAWASAKI TOOL KIT PLIERS KZ1000 Z1000 TOOL KIT Z1 R  Z1-R 900 KZ900 H2 H1 S3 S2",
-        "url": "https://www.ebay.it/itm/168654331896",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/HGUAAOSwyNJigEkV/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:198630124816": {
-        "first_seen": "2026-09-09T21:58:59",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-09-09T21:58:59",
-            "price": "EUR 15,69"
-          },
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 16,29"
-          }
-        ],
-        "price_num": 16.29,
-        "price": "EUR 16,29",
-        "title": "Leather Tool Kit Bag Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1",
-        "url": "https://www.ebay.it/itm/198630124816",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/0JIAAeSwFSBqMctS/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:407080411756": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 24,45"
-          }
-        ],
-        "price_num": 24.45,
-        "price": "EUR 24,45",
-        "title": "Kit attrezzi sotto sedile 6-On per Kawasaki S2 350 Mach 72-73 JMP 5pz 4043981069051",
-        "url": "https://www.ebay.it/itm/407080411756",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/arIAAeSwINxqWoGH/s-l500.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:406403229974": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 24,81"
-          }
-        ],
-        "price_num": 24.81,
-        "price": "EUR 24,81",
-        "title": "KIT ATTREZZI SOTTO SEDILE UK 6-ON 1 Set Adatto Kawasaki S2 350 Mach 1972-1973",
-        "url": "https://www.ebay.it/itm/406403229974",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/nmEAAeSw6uBpMb~P/s-l500.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:376680485892": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 24,84"
-          }
-        ],
-        "price_num": 24.84,
-        "price": "EUR 24,84",
-        "title": "KIT ATTREZZI SOTTO SEDILE 6-ON per Kawasaki S2 350 Mach 1972-1973",
-        "url": "https://www.ebay.it/itm/376680485892",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/UfoAAeSwQIRpMbXK/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:198680697856": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 32,62"
-          }
-        ],
-        "price_num": 32.62,
-        "price": "EUR 32,62",
-        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
-        "url": "https://www.ebay.it/itm/198680697856",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/rZ4AAeSwQZpqMbBX/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:198680697871": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 15,19"
-          }
-        ],
-        "price_num": 15.19,
-        "price": "EUR 15,19",
-        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
-        "url": "https://www.ebay.it/itm/198680697871",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/j3EAAeSwEcFpzqkF/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:198664312111": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 38,08"
-          }
-        ],
-        "price_num": 38.08,
-        "price": "EUR 38,08",
-        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
-        "url": "https://www.ebay.it/itm/198664312111",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/Yz0AAeSw-ghqM0rn/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168715358084": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 34,81"
-          }
-        ],
-        "price_num": 34.81,
-        "price": "EUR 34,81",
-        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
-        "url": "https://www.ebay.it/itm/168715358084",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/36UAAeSwt1ZqOvT4/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168691030194": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 38,05"
-          }
-        ],
-        "price_num": 38.05,
-        "price": "EUR 38,05",
-        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
-        "url": "https://www.ebay.it/itm/168691030194",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/jN0AAeSwI2Ro-TQj/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:198643676695": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 21,74"
-          }
-        ],
-        "price_num": 21.74,
-        "price": "EUR 21,74",
-        "title": "Motorcycle Tool Kit Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1",
-        "url": "https://www.ebay.it/itm/198643676695",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/FqkAAeSw7thpk8nH/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:168688883345": {
-        "first_seen": "2026-10-08T07:33:33",
-        "misses": 0,
-        "last_seen": "2026-10-08T07:33:33",
-        "price_history": [
-          {
-            "date": "2026-10-08T07:33:33",
-            "price": "EUR 38,08"
-          }
-        ],
-        "price_num": 38.08,
-        "price": "EUR 38,08",
-        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
-        "url": "https://www.ebay.it/itm/168688883345",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/O-gAAeSwK8pqNFlE/s-l140.jpg",
-        "via": "tool kit (EN) · eBay"
-      },
-      "ebay:377472461194": {
-        "first_seen": "2026-10-11T09:04:19",
-        "misses": 0,
-        "last_seen": "2026-10-11T09:04:19",
-        "price_history": [
-          {
-            "date": "2026-10-11T09:04:19",
-            "price": "EUR 51,98"
-          }
-        ],
-        "price_num": 51.98,
-        "price": "EUR 51,98",
-        "title": "Bordwerkzeug Werkzeugtasche Zange Kawasaki ZR-7S ZR750F/H 01-04",
-        "url": "https://www.ebay.it/itm/377472461194",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/uCgAAeSwRUZqmvt2/s-l140.jpg",
-        "via": "bordwerkzeug (DE) · eBay"
-      },
-      "ebay:168665671585": {
-        "first_seen": "2026-10-11T09:04:19",
-        "misses": 0,
-        "last_seen": "2026-10-11T09:04:19",
-        "price_history": [
-          {
-            "date": "2026-10-11T09:04:19",
-            "price": "EUR 51,98"
-          }
-        ],
-        "price_num": 51.98,
-        "price": "EUR 51,98",
-        "title": "Bordwerkzeug Completo Tasche Chiavi Kawasaki ZR 7S ZR750F H 01-04",
-        "url": "https://www.ebay.it/itm/168665671585",
-        "portal": "eBay",
-        "location": "",
-        "image": "https://i.ebayimg.com/images/g/0fMAAeSwPmRqmwnq/s-l140.jpg",
-        "via": "bordwerkzeug (DE) · eBay"
-      }
-    }
+    "attrezzi-kawasaki-350-s2": {}
   },
-  "last_run": "2026-11-10T15:32:45",
+  "last_run": "2026-11-10T19:16:14",
   "archive": {
     "ktm-125-sachs": {
       "subito:id:ad:efa5b5c7-6908-4a53-9c57-662fd541983b:list:646465997": {
@@ -1849,6 +265,90 @@
         "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
         "via": "gs sachs · eBay.de",
         "archived_at": "2026-11-09T23:12:28"
+      },
+      "ebay:277951421651": {
+        "first_seen": "2026-07-06T18:14:07",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-06T18:14:07",
+            "price": "EUR 760,51"
+          },
+          {
+            "date": "2026-08-24T23:15:03",
+            "price": "EUR 745,43"
+          }
+        ],
+        "price_num": 745.43,
+        "price": "EUR 745,43",
+        "title": "1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro",
+        "url": "https://www.ebay.it/itm/277951421651",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg",
+        "via": "sachs · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:265105898416": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-10-11T09:04:19",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 638,00"
+          }
+        ],
+        "price_num": 638.0,
+        "price": "EUR 638,00",
+        "title": "KTM GS 125 SACHS 1974 - 1975 - SCARICO RACING - RACING EXHAUST - SITO",
+        "url": "https://www.ebay.it/itm/265105898416",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/yp0AAOSw1VxgYmP9/s-l140.jpg",
+        "via": "gs sachs · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:298682849505": {
+        "first_seen": "2026-09-17T20:04:21",
+        "misses": 0,
+        "last_seen": "2026-10-11T09:04:19",
+        "price_history": [
+          {
+            "date": "2026-09-17T20:04:21",
+            "price": "EUR 812,50"
+          }
+        ],
+        "price_num": 812.5,
+        "price": "EUR 812,50",
+        "title": "ktm dkw monark motore sachs 125 per parti di ricambio",
+        "url": "https://www.ebay.it/itm/298682849505",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/WnkAAeSwHWVqq-72/s-l140.jpg",
+        "via": "gs sachs · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:820172271438": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 764,78"
+          }
+        ],
+        "price_num": 764.78,
+        "price": "EUR 764,78",
+        "title": "1969-70 Penton KTM Acciaio Serbatoio Scarico Tubo 100 125 Sachs Ferro Cilindro",
+        "url": "https://www.ebay.it/itm/820172271438",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/efQAAeSwYodokPu-/s-l140.jpg",
+        "via": "sachs · eBay",
+        "archived_at": "2026-11-10T19:11:18"
       }
     },
     "ktm-175-sachs": {
@@ -8773,6 +7273,1090 @@
         "image": "https://i.ebayimg.com/images/g/ZL0AAeSwaeRpxaZ7/s-l140.jpg",
         "via": "schlüsselanhänger (DE) · eBay.de",
         "archived_at": "2026-11-09T23:12:28"
+      },
+      "ebay:318846959647": {
+        "first_seen": "2026-09-09T21:58:59",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 57,72"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 57,67"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 58,12"
+          }
+        ],
+        "price_num": 58.12,
+        "price": "EUR 58,12",
+        "title": "Harami chan Peluche Usami chan Portachiavi e Custodia Passaporto + Biglietto Kawasaki (Pilota",
+        "url": "https://www.ebay.it/itm/318846959647",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/cfsAAeSwMxFqoP0W/s-l500.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:800588203885": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 68,16"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 68,69"
+          }
+        ],
+        "price_num": 68.69,
+        "price": "EUR 68,69",
+        "title": "Anello Kawasaki Plaza portachiavi originale non vendita resina/pelle nero argento",
+        "url": "https://www.ebay.it/itm/800588203885",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/rxoAAeSwyTVqlLTl/s-l500.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:237028463697": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 177,94"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 179,31"
+          }
+        ],
+        "price_num": 179.31,
+        "price": "EUR 179,31",
+        "title": "Portachiavi originale Kawasaki Kawasaki GPX750R #5e86e5",
+        "url": "https://www.ebay.it/itm/237028463697",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/GcQAAeSwicVqjRcT/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:206472858133": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 6,28"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 6,33"
+          }
+        ],
+        "price_num": 6.33,
+        "price": "EUR 6,33",
+        "title": "Portachiavi ATV moto fuoribordo marino chiave originale Kawasaki OEM vintage",
+        "url": "https://www.ebay.it/itm/206472858133",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/bEoAAeSwMwFqdgmB/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:397528093146": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 5,50"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 5,98"
+          }
+        ],
+        "price_num": 5.98,
+        "price": "EUR 5,98",
+        "title": "Portachiavi Kawasaki ORIGINALE nero con logo nuovo",
+        "url": "https://www.ebay.it/itm/397528093146",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/K5oAAeSwejdpc6xY/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:236155031608": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 29,00"
+          }
+        ],
+        "price_num": 29.0,
+        "price": "EUR 29,00",
+        "title": "portachiavi vintage epoca non originale Kawasaki",
+        "url": "https://www.ebay.it/itm/236155031608",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/v3EAAOSwE-1oUZSd/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:116023141625": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 19,99"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 21,49"
+          }
+        ],
+        "price_num": 21.49,
+        "price": "EUR 21,49",
+        "title": "PORTACHIAVI KAWASAKI ORIGINALE NUOVO z650 NINJA ZX-10R Z900 Z400 Z H2 SE VERSYS",
+        "url": "https://www.ebay.it/itm/116023141625",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/rdUAAOSw96NljcPJ/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:192927194199": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 9,80"
+          }
+        ],
+        "price_num": 9.8,
+        "price": "EUR 9,80",
+        "title": "NUOVO ORIGINALE KAWASAKI Ninja Portachiavi 107SPM0025 Regalo Compleanno",
+        "url": "https://www.ebay.it/itm/192927194199",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/EoIAAOSw~7RieiVU/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:192927191156": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 9,80"
+          }
+        ],
+        "price_num": 9.8,
+        "price": "EUR 9,80",
+        "title": "Original OEM KAWASAKI Portachiavi ninja 107SPM0025 KEY RING Fan Articolo Merchan",
+        "url": "https://www.ebay.it/itm/192927191156",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/ICMAAOSw8Tpc5-9o/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:134990098483": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 3,20"
+          }
+        ],
+        "price_num": 3.2,
+        "price": "EUR 3,20",
+        "title": "Portachiavi Kawasaki Tessuto Nero 2  - Regalo Passione Auto Moto Estetica",
+        "url": "https://www.ebay.it/itm/134990098483",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/fkEAAOSwy-5l~tMx/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306683151282": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 9,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 8,66"
+          }
+        ],
+        "price_num": 8.66,
+        "price": "EUR 8,66",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle",
+        "url": "https://www.ebay.it/itm/306683151282",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/evAAAeSwr4lpUr1Q/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306683204398": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 8,50"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 6,52"
+          }
+        ],
+        "price_num": 6.52,
+        "price": "EUR 6,52",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
+        "url": "https://www.ebay.it/itm/306683204398",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/4TMAAeSw-Y5pUsi-/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:185681755335": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 24,90"
+          }
+        ],
+        "price_num": 24.9,
+        "price": "EUR 24,90",
+        "title": "Portachiavi Orginale Kawasaki a forma di pneumatico con tag removibile",
+        "url": "https://www.ebay.it/itm/185681755335",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/vygAAOSw4ixjieff/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306810157274": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 9,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 9,73"
+          }
+        ],
+        "price_num": 9.73,
+        "price": "EUR 9,73",
+        "title": "Portachiavi Kawasaki Ninja Ricamato in ecopelle Nera",
+        "url": "https://www.ebay.it/itm/306810157274",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/t1kAAeSww-VprXcl/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:226905220299": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 7,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 7,59"
+          }
+        ],
+        "price_num": 7.59,
+        "price": "EUR 7,59",
+        "title": "portachiavi Kawasaki ricamato 3 x 13 cm con anello portachiavi moto",
+        "url": "https://www.ebay.it/itm/226905220299",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/NLQAAeSwcPhokk3N/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:377323827388": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 3,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 3,31"
+          }
+        ],
+        "price_num": 3.31,
+        "price": "EUR 3,31",
+        "title": "Portachiavi Kawasaki",
+        "url": "https://www.ebay.it/itm/377323827388",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/st8AAeSww4BqTCu6/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:127611950493": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 12,70"
+          }
+        ],
+        "price_num": 12.7,
+        "price": "EUR 12,70",
+        "title": "Portachiavi Moto Cordino Portachiavi da Collo Verde Kawasaki z x Sgancio Rapido",
+        "url": "https://www.ebay.it/itm/127611950493",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/XT4AAeSwMsFpX-VX/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:395609931874": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 3,49"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 3,83"
+          }
+        ],
+        "price_num": 3.83,
+        "price": "EUR 3,83",
+        "title": "Kawasaki portachiavi antigraffio artigianale in legno",
+        "url": "https://www.ebay.it/itm/395609931874",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/CjgAAOSwzgtmxg~I/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:326969101102": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 11,50"
+          }
+        ],
+        "price_num": 11.5,
+        "price": "EUR 11,50",
+        "title": "portachiavi Kawasaki Ninja, GPZ ZX KZ ZR EX, 250 300 400 650 500 600",
+        "url": "https://www.ebay.it/itm/326969101102",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/0pMAAeSw6sppytvm/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168295827107": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 36,81"
+          }
+        ],
+        "price_num": 36.81,
+        "price": "EUR 36,81",
+        "title": "Portachiavi Tag Nero Verde Anello Chiave Accessori Kawasaki Universale",
+        "url": "https://www.ebay.it/itm/168295827107",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/rV4AAeSwb7Bp1nUT/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:127430702580": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 19,90"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 26,60"
+          }
+        ],
+        "price_num": 26.6,
+        "price": "EUR 26,60",
+        "title": "🔥PORTACHIAVI KAWASAKI NUOVO IN PELLE SCAMOSCIATO VARI COLORI",
+        "url": "https://www.ebay.it/itm/127430702580",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/DPMAAeSw6wpo7f8t/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306683182478": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 8,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 7,59"
+          }
+        ],
+        "price_num": 7.59,
+        "price": "EUR 7,59",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
+        "url": "https://www.ebay.it/itm/306683182478",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/rQkAAeSwqGRpUsfP/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:117376430102": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 13,99"
+          }
+        ],
+        "price_num": 13.99,
+        "price": "EUR 13,99",
+        "title": "Portachiavi MOTO PERSONALIZZATO compatibile    #Kawasaki",
+        "url": "https://www.ebay.it/itm/117376430102",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/AWkAAeSwOa9qjVy~/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:126353589652": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 6,80"
+          }
+        ],
+        "price_num": 6.8,
+        "price": "EUR 6,80",
+        "title": "PORTACHIAVI KAWASAKI Z ZXR NINJA VERSYS VULCAN KLE KXF CORDINO PORTA CHIAVI MOTO",
+        "url": "https://www.ebay.it/itm/126353589652",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/9NkAAOSw3ctl38w4/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:128043507273": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 13,99"
+          }
+        ],
+        "price_num": 13.99,
+        "price": "EUR 13,99",
+        "title": "Portachiavi MOTO PERSONALIZZATO compatibile    #Kawasaki",
+        "url": "https://www.ebay.it/itm/128043507273",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/8KUAAeSwJfhqjV~T/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:394974054658": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 4,99"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 5,44"
+          }
+        ],
+        "price_num": 5.44,
+        "price": "EUR 5,44",
+        "title": "Portachiavi Logo Kawasaki Personalizzato con Nome Interamente Stampato in 3D",
+        "url": "https://www.ebay.it/itm/394974054658",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/bekAAOSwVHJlQ2vi/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306683162248": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 9,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 9,73"
+          }
+        ],
+        "price_num": 9.73,
+        "price": "EUR 9,73",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
+        "url": "https://www.ebay.it/itm/306683162248",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/vVQAAeSwu5RpUsJV/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:127430696144": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 19,90"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 26,60"
+          }
+        ],
+        "price_num": 26.6,
+        "price": "EUR 26,60",
+        "title": "🔥PORTACHIAVI KAWASAKI Z900-Z650-Z500-Z400 COLOR PELLE CARBONIO",
+        "url": "https://www.ebay.it/itm/127430696144",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/exMAAeSwKCNo7f3x/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:257665311879": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 5,44"
+          }
+        ],
+        "price_num": 5.44,
+        "price": "EUR 5,44",
+        "title": "PORTACHIAVI MOTO KAWASAKI ACCESSORI MOTOCICLISTA BIKER COLLEZIONE GADGET",
+        "url": "https://www.ebay.it/itm/257665311879",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/ZPQAAeSwSJFqdHy-/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:357719706281": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 6,52"
+          }
+        ],
+        "price_num": 6.52,
+        "price": "EUR 6,52",
+        "title": "Portachiavi Ricamato Kawasaki Z 400",
+        "url": "https://www.ebay.it/itm/357719706281",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/VdgAAeSw8Cdo5qmv/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:317370659921": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 6,52"
+          }
+        ],
+        "price_num": 6.52,
+        "price": "EUR 6,52",
+        "title": "Portachiavi Kawasaki carbon look.",
+        "url": "https://www.ebay.it/itm/317370659921",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/Wt8AAeSwI29o4TV1/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306683203306": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 8,50"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 7,59"
+          }
+        ],
+        "price_num": 7.59,
+        "price": "EUR 7,59",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
+        "url": "https://www.ebay.it/itm/306683203306",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/tSYAAeSwx6NpUsg~/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:364917647786": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 4,99"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 5,44"
+          }
+        ],
+        "price_num": 5.44,
+        "price": "EUR 5,44",
+        "title": "Portachiavi KAWASAKI SBK Racing Team gomma morbida verde bianca",
+        "url": "https://www.ebay.it/itm/364917647786",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/Gc8AAOSwy9hmVrpm/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:157849592096": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 40,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 38,80"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 20,00"
+          }
+        ],
+        "price_num": 20.0,
+        "price": "EUR 20,00",
+        "title": "Portachiavi Kawasaki vintage originale Bagnara made in Italy",
+        "url": "https://www.ebay.it/itm/157849592096",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/IlwAAOSw~tJd-fzn/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:256872650414": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 4,99"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 5,44"
+          }
+        ],
+        "price_num": 5.44,
+        "price": "EUR 5,44",
+        "title": "PORTACHIAVI IN TESSUTO KAWASAKI KAWASEXY ACCESSORI MOTO BIKER MOTOCICLISTA",
+        "url": "https://www.ebay.it/itm/256872650414",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/87EAAeSwWbln5URf/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306683159546": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 9,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 9,73"
+          }
+        ],
+        "price_num": 9.73,
+        "price": "EUR 9,73",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
+        "url": "https://www.ebay.it/itm/306683159546",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/k7gAAeSw9JlpUsDx/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:227252490624": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 19,00"
+          }
+        ],
+        "price_num": 19.0,
+        "price": "EUR 19,00",
+        "title": "PORTACHIAVI MOTO Z250 IN LEGA + PELLE COLOR CARBONIO KEYCHAIN Z 250 Kawasaki",
+        "url": "https://www.ebay.it/itm/227252490624",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/bh8AAeSwzz9oefz6/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:358460561603": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 10,67"
+          }
+        ],
+        "price_num": 10.67,
+        "price": "EUR 10,67",
+        "title": "Portachiavi Kawasaki Logo Moto Anello Chiavi Portachiave 3D Stampato Ring",
+        "url": "https://www.ebay.it/itm/358460561603",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/RKcAAeSwxahp-OAR/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:407204105918": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 7,99"
+          }
+        ],
+        "price_num": 7.99,
+        "price": "EUR 7,99",
+        "title": "Portachiavi / portachiavi Kawasaki di alta qualità",
+        "url": "https://www.ebay.it/itm/407204105918",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/0X4AAeSwO-NqoUnf/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:306683160945": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 9,00"
+          },
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 9,73"
+          }
+        ],
+        "price_num": 9.73,
+        "price": "EUR 9,73",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle verde",
+        "url": "https://www.ebay.it/itm/306683160945",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/lpkAAeSwxWlpUsGU/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:126939599763": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 7,70"
+          }
+        ],
+        "price_num": 7.7,
+        "price": "EUR 7,70",
+        "title": "PORTACHIAVI YOSHIMURA LOGO PER CHIAVE MOTO YAMAHA HONDA SUZUKI KAWASAKI  DUCATI",
+        "url": "https://www.ebay.it/itm/126939599763",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/pVQAAOSwcJ5nritE/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:236402883002": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 15,90"
+          }
+        ],
+        "price_num": 15.9,
+        "price": "EUR 15,90",
+        "title": "Portachiavi eco pelle Kawasaki Z650 anello metallo nero verde accessorio moto",
+        "url": "https://www.ebay.it/itm/236402883002",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/GjcAAeSwxINo9pgg/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:298240327354": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 9,73"
+          }
+        ],
+        "price_num": 9.73,
+        "price": "EUR 9,73",
+        "title": "Portachiavi Kawasaki in metallo",
+        "url": "https://www.ebay.it/itm/298240327354",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/j2AAAeSwZLVp2SN6/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:196260200836": {
+        "first_seen": "2026-09-10T07:22:13",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-10T07:22:13",
+            "price": "EUR 9,99"
+          }
+        ],
+        "price_num": 9.99,
+        "price": "EUR 9,99",
+        "title": "PORTACHIAVI EFFETTO CAMOSCIO NERO IN METALLO MOTO PER KAWASAKI PORTA CHIAVE",
+        "url": "https://www.ebay.it/itm/196260200836",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/Y3YAAOSwAIxnDp6P/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:116438810691": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 11,86"
+          }
+        ],
+        "price_num": 11.86,
+        "price": "EUR 11,86",
+        "title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1",
+        "url": "https://www.ebay.it/itm/116438810691",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/r2wAAOSwYV5ne9YU/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:307164423323": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 8,12"
+          }
+        ],
+        "price_num": 8.12,
+        "price": "EUR 8,12",
+        "title": "Portachiavi Kawasaki Ricamato in ecopelle 8x2,5 cm",
+        "url": "https://www.ebay.it/itm/307164423323",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/evAAAeSwr4lpUr1Q/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:116438811953": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 10,99"
+          },
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 11,86"
+          }
+        ],
+        "price_num": 11.86,
+        "price": "EUR 11,86",
+        "title": "PORTACHIAVI KAWASAKI NINJA 125 650 ZX-10R ELIMINATOR 500 H2 SX VERSYS 1000 E-1",
+        "url": "https://www.ebay.it/itm/116438811953",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/mD0AAOSwKB9ne9cB/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:196801406175": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 9,99"
+          }
+        ],
+        "price_num": 9.99,
+        "price": "EUR 9,99",
+        "title": "PORTACHIAVI EFFETTO CAMOSCIO NERO IN METALLO PER KAWASAKI Z 900 RS PORTA CHIAVE",
+        "url": "https://www.ebay.it/itm/196801406175",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/Y3YAAOSwAIxnDp6P/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:165561757910": {
+        "first_seen": "2026-09-16T22:28:33",
+        "misses": 0,
+        "last_seen": "2026-09-16T22:28:33",
+        "price_history": [
+          {
+            "date": "2026-09-16T22:28:33",
+            "price": "EUR 12,40"
+          }
+        ],
+        "price_num": 12.4,
+        "price": "EUR 12,40",
+        "title": "Portachiavi motogp pvc bikeit Kawasaki zx6r",
+        "url": "https://www.ebay.it/itm/165561757910",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/JLoAAeSwDFxpwpo0/s-l140.jpg",
+        "via": "originale · eBay",
+        "archived_at": "2026-11-10T19:11:18"
       }
     },
     "attrezzi-kawasaki-350-s2": {
@@ -12103,6 +11687,554 @@
         "image": "https://i.ebayimg.com/images/g/-WgAAeSwiuRoA4eV/s-l140.jpg",
         "via": "codice 56008 · eBay.de",
         "archived_at": "2026-10-15T12:33:18"
+      },
+      "ebay:395978581531": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 25,35"
+          },
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 25,21"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 25,23"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 25,56"
+          }
+        ],
+        "price_num": 25.56,
+        "price": "EUR 25,56",
+        "title": "Kit attrezzi base sottosella 5pz per Kawasaki S2 350 Mach",
+        "url": "https://www.ebay.it/itm/395978581531",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/1MMAAOSwaANnVFCu/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168663798471": {
+        "first_seen": "2026-09-07T19:58:11",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 26,21"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 26,19"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 27,19"
+          }
+        ],
+        "price_num": 27.19,
+        "price": "EUR 27,19",
+        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
+        "url": "https://www.ebay.it/itm/168663798471",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/1mwAAeSwgQtqTqbk/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168661256958": {
+        "first_seen": "2026-09-07T19:58:11",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 33,55"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 33,53"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 34,80"
+          }
+        ],
+        "price_num": 34.8,
+        "price": "EUR 34,80",
+        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
+        "url": "https://www.ebay.it/itm/168661256958",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/xzAAAeSwFd5p1~8a/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:198610902306": {
+        "first_seen": "2026-09-07T19:58:11",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 9,40"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 9,75"
+          }
+        ],
+        "price_num": 9.75,
+        "price": "EUR 9,75",
+        "title": "Roll Up Tool Kit Bag Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1",
+        "url": "https://www.ebay.it/itm/198610902306",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/I0kAAeSwtH5qe4Mt/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168655933602": {
+        "first_seen": "2026-09-07T19:58:11",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 57,70"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 57,65"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 59,85"
+          }
+        ],
+        "price_num": 59.85,
+        "price": "EUR 59,85",
+        "title": "Roll Up Tool Kit Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1 Bag",
+        "url": "https://www.ebay.it/itm/168655933602",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/cIsAAOSwCPlm2Hs5/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:358836474995": {
+        "first_seen": "2026-09-07T19:58:11",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 117,64"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 117,54"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 122,02"
+          }
+        ],
+        "price_num": 122.02,
+        "price": "EUR 122,02",
+        "title": "KAWASAKI TOOL KIT TOOLS H1 500 H2 750 S1 S2 A1SS KZ Z1 900 KE F9 125 250 350 100",
+        "url": "https://www.ebay.it/itm/358836474995",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/5FQAAeSwBlVpaZoS/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168535755910": {
+        "first_seen": "2026-09-07T19:58:11",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 20,96"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 20,94"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 21,74"
+          }
+        ],
+        "price_num": 21.74,
+        "price": "EUR 21,74",
+        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
+        "url": "https://www.ebay.it/itm/168535755910",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/yboAAeSwG-Jpk8PW/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168506860984": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 31,89"
+          },
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 31,41"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 31,38"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 32,58"
+          }
+        ],
+        "price_num": 32.58,
+        "price": "EUR 32,58",
+        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
+        "url": "https://www.ebay.it/itm/168506860984",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/1-UAAOSwLJNno7Sv/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:336550506639": {
+        "first_seen": "2026-07-07T07:42:47",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-07-07T07:42:47",
+            "price": "EUR 26,60"
+          },
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 26,21"
+          },
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 26,19"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 27,19"
+          }
+        ],
+        "price_num": 27.19,
+        "price": "EUR 27,19",
+        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
+        "url": "https://www.ebay.it/itm/336550506639",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/dEYAAeSwqDtpzXf3/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168654331896": {
+        "first_seen": "2026-09-07T19:58:11",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-07T19:58:11",
+            "price": "EUR 10,50"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 10,89"
+          }
+        ],
+        "price_num": 10.89,
+        "price": "EUR 10,89",
+        "title": "KAWASAKI TOOL KIT PLIERS KZ1000 Z1000 TOOL KIT Z1 R  Z1-R 900 KZ900 H2 H1 S3 S2",
+        "url": "https://www.ebay.it/itm/168654331896",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/HGUAAOSwyNJigEkV/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:198630124816": {
+        "first_seen": "2026-09-09T21:58:59",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-09-09T21:58:59",
+            "price": "EUR 15,69"
+          },
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 16,29"
+          }
+        ],
+        "price_num": 16.29,
+        "price": "EUR 16,29",
+        "title": "Leather Tool Kit Bag Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1",
+        "url": "https://www.ebay.it/itm/198630124816",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/0JIAAeSwFSBqMctS/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:407080411756": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 24,45"
+          }
+        ],
+        "price_num": 24.45,
+        "price": "EUR 24,45",
+        "title": "Kit attrezzi sotto sedile 6-On per Kawasaki S2 350 Mach 72-73 JMP 5pz 4043981069051",
+        "url": "https://www.ebay.it/itm/407080411756",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/arIAAeSwINxqWoGH/s-l500.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:406403229974": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 24,81"
+          }
+        ],
+        "price_num": 24.81,
+        "price": "EUR 24,81",
+        "title": "KIT ATTREZZI SOTTO SEDILE UK 6-ON 1 Set Adatto Kawasaki S2 350 Mach 1972-1973",
+        "url": "https://www.ebay.it/itm/406403229974",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/nmEAAeSw6uBpMb~P/s-l500.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:376680485892": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 24,84"
+          }
+        ],
+        "price_num": 24.84,
+        "price": "EUR 24,84",
+        "title": "KIT ATTREZZI SOTTO SEDILE 6-ON per Kawasaki S2 350 Mach 1972-1973",
+        "url": "https://www.ebay.it/itm/376680485892",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/UfoAAeSwQIRpMbXK/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:198680697856": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 32,62"
+          }
+        ],
+        "price_num": 32.62,
+        "price": "EUR 32,62",
+        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
+        "url": "https://www.ebay.it/itm/198680697856",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/rZ4AAeSwQZpqMbBX/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:198680697871": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 15,19"
+          }
+        ],
+        "price_num": 15.19,
+        "price": "EUR 15,19",
+        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
+        "url": "https://www.ebay.it/itm/198680697871",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/j3EAAeSwEcFpzqkF/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:198664312111": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 38,08"
+          }
+        ],
+        "price_num": 38.08,
+        "price": "EUR 38,08",
+        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
+        "url": "https://www.ebay.it/itm/198664312111",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/Yz0AAeSw-ghqM0rn/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168715358084": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 34,81"
+          }
+        ],
+        "price_num": 34.81,
+        "price": "EUR 34,81",
+        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
+        "url": "https://www.ebay.it/itm/168715358084",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/36UAAeSwt1ZqOvT4/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168691030194": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 38,05"
+          }
+        ],
+        "price_num": 38.05,
+        "price": "EUR 38,05",
+        "title": "Tool Kit Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250 Tools",
+        "url": "https://www.ebay.it/itm/168691030194",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/jN0AAeSwI2Ro-TQj/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:198643676695": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 21,74"
+          }
+        ],
+        "price_num": 21.74,
+        "price": "EUR 21,74",
+        "title": "Motorcycle Tool Kit Kawasaki Super Sherpa 250 S1 S2 S3 SG250 MB1 MC1 MCM MT1 H1",
+        "url": "https://www.ebay.it/itm/198643676695",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/FqkAAeSw7thpk8nH/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168688883345": {
+        "first_seen": "2026-10-08T07:33:33",
+        "misses": 0,
+        "last_seen": "2026-10-08T07:33:33",
+        "price_history": [
+          {
+            "date": "2026-10-08T07:33:33",
+            "price": "EUR 38,08"
+          }
+        ],
+        "price_num": 38.08,
+        "price": "EUR 38,08",
+        "title": "Tool Kit Bag Kawasaki Ninja ZX6 ZX6R ZX6RR ZX7 ZX7R ZX7RR ZX9R S1 S2 S3 SG250",
+        "url": "https://www.ebay.it/itm/168688883345",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/O-gAAeSwK8pqNFlE/s-l140.jpg",
+        "via": "tool kit (EN) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:377472461194": {
+        "first_seen": "2026-10-11T09:04:19",
+        "misses": 0,
+        "last_seen": "2026-10-11T09:04:19",
+        "price_history": [
+          {
+            "date": "2026-10-11T09:04:19",
+            "price": "EUR 51,98"
+          }
+        ],
+        "price_num": 51.98,
+        "price": "EUR 51,98",
+        "title": "Bordwerkzeug Werkzeugtasche Zange Kawasaki ZR-7S ZR750F/H 01-04",
+        "url": "https://www.ebay.it/itm/377472461194",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/uCgAAeSwRUZqmvt2/s-l140.jpg",
+        "via": "bordwerkzeug (DE) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
+      },
+      "ebay:168665671585": {
+        "first_seen": "2026-10-11T09:04:19",
+        "misses": 0,
+        "last_seen": "2026-10-11T09:04:19",
+        "price_history": [
+          {
+            "date": "2026-10-11T09:04:19",
+            "price": "EUR 51,98"
+          }
+        ],
+        "price_num": 51.98,
+        "price": "EUR 51,98",
+        "title": "Bordwerkzeug Completo Tasche Chiavi Kawasaki ZR 7S ZR750F H 01-04",
+        "url": "https://www.ebay.it/itm/168665671585",
+        "portal": "eBay",
+        "location": "",
+        "image": "https://i.ebayimg.com/images/g/0fMAAeSwPmRqmwnq/s-l140.jpg",
+        "via": "bordwerkzeug (DE) · eBay",
+        "archived_at": "2026-11-10T19:11:18"
       }
     }
   }
